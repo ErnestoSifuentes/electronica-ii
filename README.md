@@ -18,6 +18,9 @@ los estudiantes.
 - `.github/workflows/`: publicación automática en GitHub Pages.
 - `scripts/`: construcción y verificación del sitio.
 
-No se ha definido una licencia de reutilización para los contenidos del libro.
-Antes de hacer público el repositorio, confirme los permisos de difusión de
-los materiales de terceros que contiene.
+## Licencias
+
+Los contenidos académicos originales se ofrecen bajo **CC BY-NC-SA 4.0** y el
+software original bajo **Apache License 2.0**. Los materiales de terceros
+conservan sus derechos y condiciones de uso. Consulte [LICENSE.md](LICENSE.md)
+y [LICENSE-APACHE-2.0.txt](LICENSE-APACHE-2.0.txt).
