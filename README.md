@@ -9,17 +9,6 @@ teórico, actividades, prácticas, ejercicios, simulaciones, materiales ampliado
 ligas a videos y Tutor IA. El contenido completo del repositorio se destina a
 los estudiantes.
 
-## Consultar el libro
-
-Una vez habilitada la publicación, GitHub Pages mostrará la dirección del
-sitio en **Settings → Pages**. El libro puede abrirse también de manera local
-mediante `ABRIR_LIBRO.html`.
-
-## Publicar la primera edición
-
-Consulte [PUBLICAR_EN_GITHUB_PAGES.md](PUBLICAR_EN_GITHUB_PAGES.md) para
-seguir las instrucciones con GitHub Desktop y activar la publicación.
-
 ## Organización del repositorio
 
 - `semanas/`, `index.qmd`, `tutor-ia.qmd`, `_quarto.yml`: fuentes editables.
