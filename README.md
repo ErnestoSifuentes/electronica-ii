@@ -7,7 +7,7 @@ Universidad Autónoma de Ciudad Juárez · Ingeniería Eléctrica
 
 > Comprender los fundamentos, analizar los circuitos, desarrollar modelos y contrastar la teoría con la simulación y la experimentación.
 
-**[Consultar el libro en línea](https://ernestosifuentes.github.io/electronica-ii/)** · [Calendario](https://ernestosifuentes.github.io/electronica-ii/calendario.html) · [Lecciones](https://ernestosifuentes.github.io/electronica-ii/lecciones.html) · [Tutor IA](https://ernestosifuentes.github.io/electronica-ii/tutor-ia.html)
+**[Consultar el curso en línea](https://ernestosifuentes.github.io/electronica-ii/)** · [Calendario](https://ernestosifuentes.github.io/electronica-ii/calendario.html) · [Lecciones](https://ernestosifuentes.github.io/electronica-ii/lecciones.html) · [Tutor IA](https://ernestosifuentes.github.io/electronica-ii/tutor-ia.html)
 
 ---
 
@@ -15,7 +15,7 @@ Universidad Autónoma de Ciudad Juárez · Ingeniería Eléctrica
 
 *Electrónica II* es un conjunto de apuntes universitarios concebido como material de apoyo para el aprendizaje de los circuitos analógicos. Su propósito es conectar la comprensión de los principios electrónicos con la capacidad de analizar, diseñar, simular y comprobar el comportamiento de circuitos reales.
 
-El libro se desarrolla a lo largo de **16 semanas** y reúne explicaciones teóricas, ecuaciones, figuras, ejemplos resueltos, ejercicios, prácticas de laboratorio y recursos complementarios. Los contenidos avanzan desde los fundamentos del amplificador operacional hasta sus aplicaciones en amplificación, acondicionamiento de señales, integración, diferenciación y filtrado analógico.
+El curso se desarrolla a lo largo de **16 semanas** y reúne explicaciones teóricas, ecuaciones, figuras, ejemplos resueltos, ejercicios, prácticas de laboratorio y recursos complementarios. Los contenidos avanzan desde los fundamentos del amplificador operacional hasta sus aplicaciones en amplificación, acondicionamiento de señales, integración, diferenciación y filtrado analógico.
 
 ## Organización académica
 
