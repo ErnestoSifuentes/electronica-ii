@@ -1,0 +1,67 @@
+# Ejercicios Lección 4 · Adaptación sensor–ADC {.unnumbered}
+
+La actividad de la Lección 4 propone diseñar y simular el acondicionamiento de un sensor TMP36 conectado a la entrada analógica A0 de un Arduino. Debe entregarse un **reporte de cálculos, resultados teóricos, simulación e interpretación de cada inciso**. El documento original contiene el enunciado y debe utilizarse como referencia principal.
+
+[Descargar enunciado original (PDF)](../../recursos/semana-06/ejercicios-originales.pdf){.course-button .course-button-primary} [Consultar la teoría del efecto de carga](adaptar-impedancias.qmd#sensor-adc-l4){.course-button}
+
+## Datos del enunciado {#datos-l4}
+
+| Magnitud | Valor proporcionado |
+|:--|:--|
+| Sensor | TMP36 |
+| Intervalo de ensayo | 20 a 100 °C, pasos de 10 °C |
+| Sensibilidad nominal | $10\ \mathrm{mV}/^\circ\mathrm C$ |
+| Exactitud indicada | $\pm2\ ^\circ\mathrm C$ |
+| Intervalo de alimentación TMP36 | 2.7 a 5.5 V |
+| Consumo medio indicado | $50\ \mu\mathrm A$ |
+| Resistencia de salida del sensor | $R_s\approx100\ \Omega$ |
+| Sistema receptor | Arduino, entradas A0–A7, ADC de 10 bits |
+| Intervalo de entrada del ADC del ejercicio | 0 a 5 V |
+| Resistencia de entrada **modelada por el enunciado** | $R_e=10\ \mathrm{k\Omega}$ |
+| Fuente disponible | Batería de 9 V |
+
+El enunciado solicita: (a) polarización correcta, (b) atenuación directa, (c) conexión para reducirla, (d) circuito integral y (e) simulación.
+
+## Guía para resolver {#guia-resolucion-l4}
+
+**a. Alimentación.** Dibuje una fuente regulada apropiada que convierta los 9 V de la batería a un voltaje compatible con el TMP36 y el Arduino. Distinga el voltaje de alimentación del sensor del voltaje de salida que se mide. No utilice un divisor resistivo como sustituto de un regulador para alimentar a un sistema de consumo variable.
+
+**b. Atenuación por entrada analógica.** En el **modelo resistivo solicitado**:
+
+$$
+\alpha=\frac{R_e}{R_s+R_e}
+=\frac{10\,000}{100+10\,000}=0.990099,
+\quad \varepsilon=0.9901\%.
+$$
+
+Diferencie este error de la cuantización del ADC. Con referencia de 5 V y 10 bits, la anchura nominal del código es $\Delta V=5/1024\approx4.883\ \mathrm{mV}$ por LSB; ello no sustituye la evaluación del error de carga.
+
+**c. Aislamiento.** Intercale un buffer cuyo rango de entrada, excursión de salida y alimentación sean compatibles con la señal y el microcontrolador. El objetivo es que la entrada del buffer absorba corriente despreciable del TMP36 y la salida pueda manejar la entrada ADC.
+
+**d. Circuito completo.** Señale la batería, el bloque de regulación, el TMP36, el seguidor, A0 y el retorno común; etiquete los voltajes en los nodos. Si se usan fuentes separadas, justifique la referencia de tierra.
+
+**e. Simulación.** Estime la salida del sensor en cada temperatura usando el modelo indicado en la **hoja de datos del sensor**. Compare conexión directa y con buffer. Reporte diferencia absoluta y porcentaje bajo el mismo criterio de referencia. La tabla de resultados puede estructurarse así:
+
+| Temperatura (°C) | Sensor en vacío (V) | A0 directo (V) | A0 con buffer (V) | Interpretación |
+|--:|:--:|:--:|:--:|:--|
+| 20, 30, …, 100 | — | — | — | Completar por cálculo y simulación |
+
+::: {.callout-note}
+### Tutor IA · Diseñe la interfaz TMP36–ADC {#tutor-tmp36-adc-l4}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor de Electrónica II y tráteme de usted. Estoy resolviendo los Ejercicios L4 sobre el sensor TMP36 conectado al ADC de 10 bits de Arduino, con resistencia de salida modelada de 100 Ω y resistencia de entrada de 10 kΩ indicada por el enunciado. Pídame el inciso a–e que estoy resolviendo, el esquema y mis cálculos. Realice una pregunta por turno, esperando mi respuesta. Guíeme para separar alimentación de la señal de salida, calcular la atenuación resistiva del modelo, distinguirla de la resolución ADC y justificar un buffer compatible con los voltajes de alimentación. Para cualquier ecuación temperatura–voltaje del TMP36, pídame consultar y citar la hoja de datos y comprobar las unidades; no invente la curva del sensor. No confunda el modelo de entrada de 10 kΩ del ejercicio con la impedancia dinámica de todos los ADC reales. Reserve el diseño terminado y la tabla final hasta que yo proponga la solución.
+:::
+
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+## Alcance del modelo
+
+El ADC de un Arduino real no necesariamente equivale a una resistencia estática de $10\ \mathrm{k\Omega}$. El dato se utiliza aquí porque figura explícitamente en el enunciado docente. Para seleccionar componentes reales debe revisarse el circuito de adquisición y las especificaciones del microcontrolador.
+:::
+
+**Entregable:** esquemático legible, modelo, sustitución de valores con unidades, tabla calculada y simulada, capturas de Multisim y conclusión que distinga las mejoras reales de las aproximaciones ideales.

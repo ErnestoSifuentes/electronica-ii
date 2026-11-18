@@ -1,0 +1,38 @@
+# Semana 11 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-11}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 31 | 120 min | **[Lección 7, sección 2.6 · Amplificador de instrumentación](amplificador-instrumentacion.qmd)**: topología de tres op-amp, análisis de funcionalidad, ganancia diferencial, modo común y aplicaciones. Entregar resumen manuscrito del [video de la Lección 7, parte 2](https://www.youtube.com/watch?v=-tf_ELNwyOw&t=4699s){target="_blank" rel="noopener"} (acceso desde 1:18:19) y simular los ejemplos. |
+| 32 | 120 min | **[Práctica 8 · Amplificador diferencial](practica-08-amplificador-diferencial.qmd)**: error de cero, $G_D$, $G_C$ y CMRR en función de la frecuencia. Entregar reporte de la **Práctica 7** y realizar la Práctica 8. |
+| 33 | 60 min | **[Cuestionario L7](cuestionario-l7.qmd)** y discusión de resultados. Entregar simulación de ejemplos L7 y transcripción de **Teoría Básica del Amplificador Diferencial (apuntes del profesor)**. |
+
+## Entregas {#entregas-semana-11}
+
+| Cuándo | Evidencia solicitada |
+|:--|:--|
+| Clase 31 | Resumen manuscrito del [video L7 (parte 2)](https://www.youtube.com/watch?v=-tf_ELNwyOw&t=4699s){target="_blank" rel="noopener"}, desde 1:18:19; [instrucciones](amplificador-instrumentacion.qmd#video-l7-parte-2). |
+| Clase 32 | Reporte de la [Práctica 7, opción 2](../10/practica-07-termometro-opcion-2.qmd). |
+| Clase 33 | Simulaciones de ejemplos L7 y transcripción de los apuntes básicos AD, conforme a la planificación de semana 11. |
+| Clase 3, Semana 12 | [Cuestionario L7](cuestionario-l7.qmd) contestado. |
+
+## Trabajo para la semana siguiente {#siguiente-semana-11}
+
+1. Consulte el [video de preparación indicado en la planificación](https://www.youtube.com/watch?v=WOLdf93fl-k){target="_blank" rel="noopener"} y prepare un resumen manuscrito para la **clase 1 de la semana 12**.
+2. Entregue el [Cuestionario L7](cuestionario-l7.qmd) en la **clase 3 de la semana 12**.
+3. Conserve las tablas y gráficas de la Práctica 8 para su análisis y reporte, verificando el cálculo del CMRR a partir de las mediciones.
+
+## Recursos de la semana {#recursos-semana-11}
+
+**Materiales ampliados y actividades de apoyo de esta semana:**
+
+- [Guía desarrollada de la Práctica 8 · Amplificador diferencial](practica-08-amplificador-diferencial.qmd)
+- [Cuestionario L7 · Amplificador de instrumentación](cuestionario-l7.qmd)
+
+::: {.course-actions}
+[Planificación original](../../recursos/semana-11/planificacion-semana-11.pdf){.course-button .course-button-primary}
+[Ver video L7 · Parte 2](https://www.youtube.com/watch?v=-tf_ELNwyOw&t=4699s){.course-button target="_blank" rel="noopener"}
+[Presentación completa L7](../../recursos/semana-10/presentacion-leccion-07.pdf){.course-button}
+[Práctica 8 original](../../recursos/semana-11/practica-08-amplificador-diferencial.pdf){.course-button}
+:::

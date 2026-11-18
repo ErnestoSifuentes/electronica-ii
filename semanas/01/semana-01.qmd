@@ -1,0 +1,28 @@
+# Semana 01 {.unnumbered}
+
+## Lecciones y actividades
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 1 | 120 min | [Encuadre del curso](encuadre.qmd) e inicio de la [lección del divisor de voltaje](divisor-de-voltaje.qmd). Registre sus notas y su reflexión diagnóstica, participe en la simulación en Multisim y forme un equipo de hasta tres integrantes. |
+| 2 | 120 min | [Verificación experimental del divisor](divisor-de-voltaje.qmd#verificacion-experimental). Conozca la tarjeta NI myDAQ y registre en su libreta las mediciones y observaciones de la sesión. |
+| 3 | 60 min | [Ejercicios propuestos](divisor-de-voltaje.qmd#ejercicios-propuestos). Resuelva los ejercicios en equipo y prepare su informe individual. |
+
+## Entregas
+
+| Evidencia | Entrega |
+|:--|:--|
+| Resumen manuscrito del video | Semana 2, primera clase (clase 4 del syllabus) |
+| Informe individual de ejercicios de la lección inicial | Semana 2, tercera clase (clase 6 del syllabus) |
+
+## Trabajo para la semana siguiente {#actividad-extraclase}
+
+Vea la presentación **Electrónica Lección 1_Introducción al Opamp** y elabore a mano un resumen que sintetice los conceptos principales, con una extensión acorde al contenido.
+
+[Abrir el video en YouTube](https://www.youtube.com/watch?v=u1MEtijf-PM){.course-button target="_blank" rel="noopener"}
+
+## Recursos de la semana
+
+- [Lección inicial · Divisor de voltaje](divisor-de-voltaje.qmd)
+- [Encuadre del curso](encuadre.qmd)
+- [Planificación de la semana (PDF)](../../recursos/semana-01/planificacion-semana-01.pdf)

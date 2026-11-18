@@ -1,0 +1,42 @@
+# Examen de la Unidad 2 · Problemas integradores {.unnumbered}
+
+**Clase 30 · 60 minutos.** La planificación de la semana 10 establece que el **Examen U2 se resuelve colaborativamente** y se entrega en la **clase 3 de la semana 13**. El PDF original reúne cinco problemas de amplificadores diferenciales y acondicionamiento de sensores.
+
+::: {.course-actions}
+[Examen original U2, 3 páginas (PDF)](../../recursos/semana-10/examen-u2.pdf){.course-button .course-button-primary}
+[Repaso de AD y CMRR](amplificador-diferencial.qmd){.course-button}
+[Ejercicios preparatorios L7](ejercicios-l7-ad.qmd){.course-button}
+:::
+
+## Competencias evaluadas {#examen-u2-competencias}
+
+| Ejercicio | Tema | Evidencia que debe incluir la solución del estudiante |
+|:--|:--|:--|
+| 1 | $G_D$, $G_C$, $V_o$ y CMRR con puente balanceado, desbalance de 5 % y peor caso de 1 %. | Tablas comparativas, ecuaciones y simulaciones. |
+| 2 | Diseñar un AD para $k=10$ y CMRR de 60 dB. | Selección de $R_1$ a $R_4$, tolerancia, fuentes y circuito. |
+| 3 | Recalcular CMRR para resistencias de 0.1 %. | Resultado y explicación de la mejora teórica. |
+| 4 | Circuito AD con referencia resistiva y dos voltajes del sensor. | Función de transferencia, sustitución y rango de salida. |
+| 5 | Termómetro LM35 para Arduino con 10 bits en 20–120 °C. | Diseño de la cadena y diagrama de margen dinámico. |
+
+Los problemas coinciden sustancialmente con los [Ejercicios propuestos L7](ejercicios-l7-ad.qmd), por lo que se recomienda usar las soluciones **propias y justificadas** como entrenamiento y no duplicar automáticamente una respuesta sin comprensión.
+
+## Criterios de revisión de cada respuesta {#examen-u2-revision}
+
+1. El esquema identifica entradas, resistencias, alimentación, modelo de op-amp y unidades.
+2. El desarrollo parte de las relaciones de circuito, no solo de una fórmula final sin justificación.
+3. El resultado simulado se identifica como simulación y es comparado con el cálculo.
+4. Se comenta qué supuesto podría explicar una discrepancia (balance, saturación, modelo, referencia, ruido).
+5. La conclusión es individual y expresa una interpretación del sistema.
+
+### Tutor IA · Preparación conceptual del Examen U2 {#tutor-examen-u2-s10}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor socrático de Electrónica II y tráteme de usted. Estoy preparando el Examen U2 de amplificador diferencial. No redacte el examen resuelto en mi nombre. Pregúnteme cuál de sus cinco problemas estudio, solicite mi intento y hágame una pregunta por turno para que yo mismo establezca las ecuaciones, cálculos, simulación y conclusión. Compruebe unidades, coherencia de CMRR en dB, pares resistivos, saturación y diferencias entre valores nominales y reales. Dé pistas graduadas y espere cada respuesta. Al final, pídame explicar en dos frases la interpretación física del problema.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+**Entrega programada:** clase 3 de la **semana 13**. El calendario del curso preserva esta fecha de la planificación específica; no se modifica porque la actividad haya empezado en la semana 10.

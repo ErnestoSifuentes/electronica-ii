@@ -1,0 +1,62 @@
+<script>
+(() => {
+  function copyWithSelection(text) {
+    const field = document.createElement('textarea');
+    const previousFocus = document.activeElement;
+    field.value = text;
+    field.readOnly = true;
+    field.style.position = 'fixed';
+    field.style.opacity = '0';
+    document.body.append(field);
+    field.select();
+    try {
+      return document.execCommand('copy');
+    } finally {
+      field.remove();
+      previousFocus?.focus();
+    }
+  }
+
+  async function copyText(text) {
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        return copyWithSelection(text);
+      }
+    }
+    return copyWithSelection(text);
+  }
+
+  for (const panel of document.querySelectorAll('.tutor-box')) {
+    const prompt = panel.querySelector('.tutor-texto');
+    const actions = panel.querySelector('.tutor-acciones');
+    if (!prompt || !actions) continue;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'course-button course-button-primary';
+    button.textContent = 'Copiar consigna';
+
+    const status = document.createElement('span');
+    status.className = 'tutor-estado';
+    status.setAttribute('role', 'status');
+    actions.prepend(button);
+    actions.append(status);
+
+    button.addEventListener('click', async () => {
+      const text = [...prompt.querySelectorAll('p')]
+        .map(paragraph => paragraph.innerText.trim())
+        .join('\n\n');
+      let copied = false;
+      try {
+        copied = await copyText(text);
+      } catch {
+        // The prompt remains selectable when the browser blocks clipboard access.
+      }
+      status.textContent = copied ? 'Consigna copiada.' : 'Seleccione el texto para copiarlo.';
+    });
+  }
+})();
+</script>

@@ -1,0 +1,40 @@
+# Semana 08 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-08}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 22 | 120 min | [Software de adquisición y procesamiento de señales](software-adquisicion-labview.qmd). Reconozca VIs, controles, indicadores, tipos de datos, flujo de datos y programación por eventos. Desarrolle los ejercicios de la presentación y abra los VI de ejemplo. |
+| 23 | 120 min | [Práctica 5 · Adquisición y análisis con LabVIEW](practica-05-labview.qmd). Construya el panel frontal, programe eventos, grafique lecturas, calcule estadísticas y registre datos. Entregue el informe de la Práctica 4. Consulte el [video de resolución](https://www.youtube.com/watch?v=r8cLWQdhjlg){target="_blank" rel="noopener"}. |
+| 24 | 60 min | [Ejercicios propuestos de medio semestre](ejercicios-medio-semestre.qmd). Plantee el análisis de circuitos, simulaciones y conclusiones; entregue los ejercicios L5. Fecha de entrega de los ejercicios de medio semestre: **clase 3 de la Semana 9**. |
+
+## Entregas {#entregas}
+
+| Entrega | Evidencia |
+|:--|:--|
+| Clase 23, Semana 8 | Reporte de la [Práctica 4](../07/practica-04-amplificadores.qmd). |
+| Clase 24, Semana 8 | [Ejercicios propuestos L5](../07/ejercicios-propuestos-l5.qmd). |
+| Clase 27, Semana 9 | [Informe de ejercicios de medio semestre](ejercicios-medio-semestre.qmd) con análisis teórico, simulaciones y conclusiones. |
+
+## Trabajo para la semana siguiente {#preparacion-semana-09}
+
+| Fecha indicada | Actividad |
+|:--|:--|
+| Clase 25, Semana 9 | Vea el [video preparatorio de la Lección 6](https://www.youtube.com/watch?v=sBOazMfdvmU){target="_blank" rel="noopener"} y elabore un resumen **manuscrito**. |
+| Clase 29, Semana 10 | Transcriba en su libreta la teoría básica y el diseño teórico de la [Práctica 6 · Termómetro con LM35 y myDAQ, opción 1](../09/practica-06-termometro-lm35.qmd), de acuerdo con la fecha consignada en la planificación de Semana 8. |
+
+## Recursos de la semana {#recursos-para-la-semana-8}
+
+**Materiales ampliados y actividades de apoyo de esta semana:**
+
+- [Adquisición y procesamiento con LabVIEW](software-adquisicion-labview.qmd)
+- [Resultado de una medida · Conceptos y ejemplos](resultado-de-medida.qmd)
+- [Guía desarrollada de la Práctica 5](practica-05-labview.qmd)
+- [Ejercicios integradores de medio semestre](ejercicios-medio-semestre.qmd)
+
+::: {.course-actions}
+[Planificación original (PDF)](../../recursos/semana-08/planificacion.pdf){.course-button}
+[Presentación de LabVIEW (PDF)](../../recursos/semana-08/presentacion-adquisicion-procesamiento.pdf){.course-button}
+[Práctica 5 original (PDF)](../../recursos/semana-08/practica-05-labview.pdf){.course-button}
+[Ejercicios de medio semestre (PDF)](../../recursos/semana-08/ejercicios-medio-semestre.pdf){.course-button}
+:::

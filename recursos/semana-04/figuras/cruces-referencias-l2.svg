@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 456" role="img">
+<title>Cruces de la triangular y duración del pulso</title>
+<style>
+text{fill:#203237;font:16px "Segoe UI",Arial,sans-serif}
+.s{font-size:13px}.b{font-weight:700}.x{text-anchor:middle}.y{text-anchor:end}
+.a{fill:none;stroke:#263a40;stroke-width:1.5}
+.w{fill:none;stroke:#263a40;stroke-width:2}
+.g{fill:none;stroke:#a2afb3;stroke-dasharray:5 4}
+.t{fill:none;stroke:#1d615d;stroke-width:3}
+.d{fill:none;stroke:#45566c;stroke-width:3;stroke-dasharray:8 4}
+.p{fill:#1d615d}.r{fill:#f4f7f6;stroke:#263a40;stroke-width:2}
+</style>
+<rect width="780" height="456" fill="white"/>
+<path class="a" d="M90 28V174H690 M90 255H690 M90 328H690 M90 401H690 M90 423H690"/>
+<path class="g" d="M90 65H690 M90 100H690 M90 135H690 M165 135V255 M615 135V255 M240 100V328 M540 100V328 M315 65V401 M465 65V401"/>
+<path class="t" d="M90 170L390 30L690 170 M90 255H165V220H615V255H690 M90 328H240V293H540V328H690 M90 401H315V366H465V401H690"/>
+<text x="93" y="21" class="b">Entrada triangular (V)</text>
+<g class="y s"><text x="78" y="34">+4</text><text x="78" y="69">+2</text><text x="78" y="104">0</text><text x="78" y="139">−2</text><text x="78" y="174">−4</text></g>
+<text x="97" y="207" class="s">Salida · referencia −2 V · 75 %</text>
+<text x="97" y="280" class="s">Salida · referencia 0 V · 50 %</text>
+<text x="97" y="353" class="s">Salida · referencia +2 V · 25 %</text>
+<g class="x s"><text x="90" y="443">0</text><text x="240" y="443">T/4</text><text x="390" y="443">T/2</text><text x="540" y="443">3T/4</text><text x="690" y="443">T</text></g>
+<text x="704" y="427" class="s">Tiempo</text>
+</svg>

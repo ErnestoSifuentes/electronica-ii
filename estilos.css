@@ -1,0 +1,309 @@
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('recursos/tipografia/source-sans-3.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'STIX Two Text';
+  src: url('recursos/tipografia/stix-two-text.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  --course-ink: #202f37;
+  --course-muted: #526168;
+  --course-accent: #225c59;
+  --course-accent-hover: #163f3e;
+  --course-line: #dce2df;
+  --course-paper: #f5f7f5;
+  --course-display: 'STIX Two Text', Georgia, serif;
+  --bs-body-font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  --bs-body-color: var(--course-ink);
+}
+
+body {
+  color: var(--course-ink);
+  font-size: 1.06rem;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--course-line);
+}
+
+.navbar .navbar-brand {
+  color: var(--course-ink);
+  font-family: var(--course-display);
+  font-size: 1.34rem;
+  font-weight: 600;
+}
+
+.navbar .nav-link {
+  font-weight: 600;
+}
+
+#quarto-sidebar {
+  border-color: var(--course-line);
+}
+
+#quarto-sidebar .sidebar-item-text {
+  color: var(--course-muted);
+  font-size: 0.98rem;
+}
+
+#quarto-sidebar .sidebar-item-text.active,
+#quarto-sidebar .sidebar-item-text:hover {
+  color: var(--course-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+#quarto-document-content section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+#quarto-document-content h1,
+#quarto-document-content h2 {
+  font-family: var(--course-display);
+  color: var(--course-ink);
+  letter-spacing: -0.018em;
+}
+
+.inicio-etiqueta > h1 {
+  display: none;
+}
+
+#quarto-document-content h1.title {
+  font-size: clamp(2.15rem, 4vw, 3.55rem);
+  line-height: 1.04;
+  font-weight: 600;
+}
+
+#quarto-document-content h2 {
+  font-size: clamp(1.68rem, 2.8vw, 2.05rem);
+  border-color: var(--course-line);
+}
+
+#quarto-document-content h3 {
+  font-size: 1.28rem;
+  font-weight: 700;
+}
+
+#quarto-document-content a:not(.course-button):not(.anchorjs-link) {
+  text-underline-offset: 0.18em;
+}
+
+.course-intro {
+  max-width: 60ch;
+  margin: 1rem 0 2rem;
+}
+
+.course-intro > p:first-child {
+  color: var(--course-muted);
+  font-size: 0.97rem;
+}
+
+.course-actions,
+.tutor-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.75rem;
+  margin: 1rem 0;
+}
+
+.course-actions > p,
+.tutor-acciones > p {
+  display: contents;
+}
+
+.course-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.65rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--course-accent);
+  border-radius: 0.28rem;
+  background: white;
+  color: var(--course-accent-hover);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.course-button:hover {
+  background: #e9f0ec;
+  color: var(--course-accent-hover);
+}
+
+.course-button-primary {
+  background: var(--course-accent);
+  color: white;
+}
+
+.course-button-primary:hover {
+  background: var(--course-accent-hover);
+  color: white;
+}
+
+.course-button:focus-visible {
+  outline: 2px solid var(--course-accent-hover);
+  outline-offset: 3px;
+}
+
+.featured-lesson {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  border: 1px solid var(--course-line);
+  border-radius: 0.4rem;
+  background: var(--course-paper);
+}
+
+.featured-lesson h3 {
+  margin: 0 0 0.7rem;
+}
+
+.featured-lesson p:last-child {
+  margin-bottom: 0;
+}
+
+.featured-lesson > p {
+  margin: 0;
+}
+
+.featured-lesson img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--course-line);
+  border-radius: 0.25rem;
+}
+
+#quarto-document-content table {
+  font-size: 0.99rem;
+}
+
+#quarto-document-content thead {
+  background: var(--course-paper);
+}
+
+#quarto-document-content th,
+#quarto-document-content td {
+  padding: 0.6rem 0.65rem;
+  overflow-wrap: break-word;
+  vertical-align: top;
+}
+
+#quarto-document-content figcaption {
+  color: var(--course-muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+#quarto-document-content math[display='block'] {
+  max-width: 100%;
+  padding: 0.35rem 0;
+  overflow-x: auto;
+}
+
+.tutor-box {
+  margin: 1rem 0 1.55rem;
+  padding: 1.05rem 1.15rem 0.9rem;
+  border: 1px solid var(--course-line);
+  border-left: 0.25rem solid var(--course-accent);
+  border-radius: 0.32rem;
+  background: var(--course-paper);
+}
+
+.tutor-acciones {
+  margin-bottom: 0;
+}
+
+.tutor-estado {
+  color: var(--course-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 575px) {
+  #quarto-document-content section[id] {
+    scroll-margin-top: 8.5rem;
+  }
+
+  .featured-lesson {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .featured-lesson img {
+    max-width: 20rem;
+  }
+
+  #quarto-document-content th,
+  #quarto-document-content td {
+    padding: 0.45rem 0.35rem;
+  }
+}
+
+
+/* Extensiones discretas para lecciones 4 y 5; coherentes con el tema del libro. */
+#quarto-document-content .callout-note,#quarto-document-content .callout-warning {padding:1rem 1.2rem;margin:1.2rem 0;background:#f5f7f5;border-left:4px solid #72817b;border-radius:0.2rem;}
+#quarto-document-content .callout-warning {border-left-color:#92765e;background:#f9f7f2;}
+#quarto-document-content figure{margin:1.35rem auto;max-width:100%;}
+#quarto-document-content figure img{max-width:100%;height:auto;border:1px solid #e0e4e2;border-radius:0.2rem;}
+#quarto-document-content figure figcaption{font-size:0.9rem;color:#4e5e65;text-align:center;line-height:1.5;}
+#quarto-document-content .table{font-size:0.96rem;}
+#quarto-document-content math[display="block"] {display:block;overflow-x:auto;padding:.25rem 0;}
+
+
+/* Presentación académica: tablas de clases alineadas a la izquierda. */
+#quarto-document-content section[id^="lecciones-y-actividades"] table th,
+#quarto-document-content section[id^="lecciones-y-actividades"] table td,
+#quarto-document-content section[id^="agenda-semana-"] table th,
+#quarto-document-content section[id^="agenda-semana-"] table td {
+  text-align: left !important;
+}
+
+/* Ecuaciones centradas, con desplazamiento horizontal solo en pantallas estrechas. */
+#quarto-document-content math[display="block"] {
+  display: block;
+  margin-inline: auto;
+  max-width: 100%;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#quarto-document-content .math.display,
+#quarto-document-content .MathJax_Display,
+#quarto-document-content .katex-display,
+#quarto-document-content mjx-container[display="true"],
+#quarto-document-content .math-display {
+  display: block;
+  text-align: center !important;
+  margin-inline: auto !important;
+  max-width: 100%;
+  overflow-x: auto;
+}
+#quarto-document-content p:has(> math[display="block"]),
+#quarto-document-content p:has(> .math.display) {
+  text-align: center;
+}
+
+
+/* La tabla de cada agenda conserva alineación izquierda, incluidos encabezados. */
+#quarto-document-content table.tabla-clases th,
+#quarto-document-content table.tabla-clases td {
+  text-align:left !important;
+}
+#quarto-document-content p:has(> math[display="block"]) {
+  display:flex;
+  justify-content:center;
+  overflow-x:auto;
+  max-width:100%;
+}

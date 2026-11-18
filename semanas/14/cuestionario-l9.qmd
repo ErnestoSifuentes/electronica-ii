@@ -1,0 +1,68 @@
+# Cuestionario L9 · Filtros analógicos {.unnumbered}
+
+**Semana 14 · Asignación en clase 42 · Entrega: clase 45 (semana 15)**
+
+La planificación solicita resolver el **Cuestionario L9**, cuyo documento original tiene **22 reactivos**. Esta página organiza el trabajo por bloques temáticos; las preguntas completas se conservan en el PDF, incluido para consulta y entrega. El Tutor IA acompaña el razonamiento, sin anticipar la solución.
+
+::: {.course-actions}
+[Descargar Cuestionario L9 original (PDF)](../../recursos/semana-14/cuestionario-l9.pdf){.course-button .course-button-primary}
+[Volver a la Lección 9](introduccion-al-filtrado-analogico.qmd){.course-button}
+[Agenda](semana-14.qmd#entregas-semana-14){.course-button}
+:::
+
+## Distribución de los 22 reactivos {#l9-bloques-cuestionario}
+
+| Reactivos originales | Tema principal | Evidencia recomendada |
+|:--|:--|:--|
+| **1–4** | Definición, clasificación, componentes y principio de funcionamiento. | Explicación física y clasificación. |
+| **5–9** | Respuesta en frecuencia, orden, aplicaciones y comparación de filtros de primer y segundo orden. | Dibujo de las curvas y descripción de corte y pendiente. |
+| **10–11** | Diferencia entre filtrado analógico y digital; corte y resonancia. | Ejemplo razonado y unidades. |
+| **12–16** | Pasa-bajas y pasa-altas, funciones de transferencia, filtros activos y pasivos. | Ecuaciones $H(s)$, esquemas e interpretación. |
+| **17–20** | Factor $Q$, experimentación temporal, Butterworth y Chebyshev. | Conceptos, hipótesis y procedimiento de medición. |
+| **21** | Diseñar pasa-bajas RC de **1 kHz** con $R=10\ \mathrm{k\Omega}$. | Despeje de $C$, valor comercial, comprobación en Multisim. |
+| **22** | Diseñar pasa-altas RC de **100 Hz** con $R=10\ \mathrm{k\Omega}$. | Despeje de $C$, valor comercial, comprobación en Multisim. |
+
+## Guía para los problemas de diseño {#l9-problemas-cuestionario}
+
+Para cada uno de los reactivos **21 y 22**:
+
+1. Dibuje la topología adecuada y especifique **dónde está medida la salida**.
+2. Escriba $H(s)$ y deduzca $f_c=1/(2\pi RC)$.
+3. Despeje $C=1/(2\pi R f_c)$ con **$R=10\ \mathrm{k\Omega}$** y convierta las unidades.
+4. Seleccione el capacitor disponible y **recalcule** la frecuencia de corte que efectivamente obtendrá.
+5. Compruebe en Multisim magnitud y fase en varias frecuencias; entregue capturas, datos y conclusión.
+
+### Tutor IA · Cuestionario conceptual {#tutor-l9-cuestionario-s14}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor socrático de Electrónica II y tráteme de usted. Estoy resolviendo los reactivos 1 a 20 del Cuestionario L9. Pregunte qué número estoy trabajando y pídame primero una respuesta propia. Haga una sola pregunta por turno, revise conceptos, precisión y coherencia de unidades o esquemas. Si hay un error, dé una pista y solicite corrección. No entregue la respuesta final del cuestionario sin que yo razone.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+### Tutor IA · Diseño pasa-bajas 1 kHz (reactivo 21) {#tutor-l9-diseno-pb-s14}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Tráteme de usted, como estudiante de Electrónica II. Ayúdeme a resolver el reactivo 21 del Cuestionario L9, sin darme el resultado directamente. Quiero diseñar pasa-bajas RC de fc=1 kHz, R=10 kΩ. Haga exactamente una pregunta por turno: diagrama, transferencia, despeje de C, unidades, valor comercial y verificación en Multisim. Revise mis cálculos y pídame justificar una tolerancia razonable.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+### Tutor IA · Diseño pasa-altas 100 Hz (reactivo 22) {#tutor-l9-diseno-pa-s14}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Tráteme de usted y acompáñeme con una pregunta por turno en el reactivo 22 del Cuestionario L9. Debo diseñar pasa-altas RC a fc=100 Hz con R=10 kΩ y verificar en Multisim. Primero pídame ubicar R, C y salida; después deducir H(s), despejar C, convertir unidades, elegir un valor comercial y comparar magnitud y fase. No proporcione el resultado numérico hasta que presente mi procedimiento.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+**Entrega:** se conserva el plazo expreso de la planificación de la semana 14: **clase 3 de la semana 15, es decir, clase 45**. No se confunde con el reporte de los experimentos L9, que corresponde a la clase 42.

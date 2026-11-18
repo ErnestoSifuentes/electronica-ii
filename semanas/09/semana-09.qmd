@@ -1,0 +1,40 @@
+# Semana 09 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-09}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 25 | 120 min | [Lección 6 · Sumar y amplificar voltajes](sumar-y-amplificar-voltajes.qmd). Analice el sumador inversor, las ponderaciones y aplicaciones; entregue el resumen del video y simule los ejemplos de la lección en Multisim. Las simulaciones se entregan en la clase 27. |
+| 26 | 120 min | [Práctica 6 · Termómetro con LM35 y NI myDAQ (opción 1)](practica-06-termometro-lm35.qmd). Entregue el reporte de la Práctica 5 y la transcripción del diseño teórico de la Práctica 6; monte e integre la cadena de medición. |
+| 27 | 60 min | [Ejercicios propuestos L6](ejercicios-propuestos-l6.qmd). Resuelva el promedio de voltajes y el acondicionamiento con sumadores; entregue los [ejercicios de medio semestre](../08/ejercicios-medio-semestre.qmd). Los ejercicios L6 se entregan en la clase 3 de la Semana 10. |
+
+## Entregas {#entregas}
+
+| Entrega | Evidencia |
+|:--|:--|
+| Clase 25, Semana 9 | Resumen manuscrito del [video de la Lección 6](https://www.youtube.com/watch?v=sBOazMfdvmU){target="_blank" rel="noopener"}; [consigna completa](sumar-y-amplificar-voltajes.qmd#video-l6). |
+| Clase 26, Semana 9 | [Reporte de Práctica 5](../08/practica-05-labview.qmd) y transcripción de teoría/diseño de [Práctica 6](practica-06-termometro-lm35.qmd). |
+| Clase 27, Semana 9 | [Simulaciones de ejemplos L6](sumar-y-amplificar-voltajes.qmd#simulaciones-l6) y [ejercicios de medio semestre](../08/ejercicios-medio-semestre.qmd). |
+| Clase 30, Semana 10 | [Ejercicios propuestos L6](ejercicios-propuestos-l6.qmd), según la planificación. |
+
+## Trabajo para la semana siguiente {#preparacion-semana-10}
+
+| Fecha indicada | Actividad |
+|:--|:--|
+| Clase 30, Semana 10 | Transcribir teoría básica y diseño teórico de la **Práctica 7 · Termómetro con LM35 y myDAQ (opción 2)**. Ese documento todavía no forma parte de los materiales recibidos. |
+| Clase 28, Semana 10 | Ver la presentación preparatoria y elaborar un resumen manuscrito. [Video proporcionado en la planificación](https://www.youtube.com/watch?v=96MRWQ4XVJw){target="_blank" rel="noopener"}. |
+
+## Recursos de la semana {#recursos-para-la-semana-9}
+
+**Materiales ampliados y actividades de apoyo de esta semana:**
+
+- [Guía desarrollada de la Práctica 6 · Termómetro LM35](practica-06-termometro-lm35.qmd)
+- [Ejercicios propuestos de la Lección 6](ejercicios-propuestos-l6.qmd)
+
+::: {.course-actions}
+[Ver video L6](https://www.youtube.com/watch?v=sBOazMfdvmU){.course-button .course-button-primary target="_blank" rel="noopener"}
+[Planificación original (PDF)](../../recursos/semana-09/planificacion.pdf){.course-button}
+[Presentación de la Lección 6 (PDF)](../../recursos/semana-09/presentacion-leccion-06.pdf){.course-button}
+[Guía original de la Práctica 6 (PDF)](../../recursos/semana-09/practica-06-termometro-lm35.pdf){.course-button}
+[Ejercicios propuestos L6 (PDF)](../../recursos/semana-09/ejercicios-l6.pdf){.course-button}
+:::

@@ -1,0 +1,36 @@
+# Ejercicios propuestos L3 {.unnumbered}
+
+Resuelva los ejercicios en equipo. Entregue el informe en la [clase 18, tercera sesión de la Semana 6](../06/semana-06.qmd#entregas). Incluya sus cálculos, resultados teóricos, resultados simulados y una conclusión por ejercicio que explique cómo se comparan.
+
+::: {.course-actions}
+[Descargar los ejercicios propuestos (PDF)](../../recursos/semana-05/ejercicios-propuestos-l3.pdf){.course-button .course-button-primary}
+[Revisar los ejercicios demostrativos L3](ejercicios-demostrativos-l3.qmd){.course-button}
+:::
+
+## Ejercicios 1 a 3. Ganancia y voltajes en el no inversor {#ejercicios-ganancia}
+
+- Use $R_1=20\,\mathrm{k\Omega}$ y $R_2=100\,\mathrm{k\Omega}$ en los casos A y B del ejercicio 1. Identifique el valor de $A_{oc}$ de cada caso y exprese todas las ganancias en V/V antes de sustituir.
+- En el ejercicio 2, compruebe el caso B en Multisim. Registre $V_s$, $V_f$, $V_d$, $V_o$ y $A_{CL}$ en la tabla del enunciado, con la precisión que permita el modelo.
+- En el ejercicio 3, use los valores de $V_s$ y $A_{oc}$ de las dos tablas. Explique con sus datos cómo cambia $A_{CL}$ al aumentar $A_{oc}$.
+
+## Ejercicio 4. Ancho de banda {#ejercicio-ancho-de-banda}
+
+Use los valores de $f_c$ y $\beta$ del enunciado. Determine la meseta de ganancia de baja frecuencia para cada configuración y busque en la gráfica la caída de −3 dB respecto de ella. Ajuste las resistencias o el factor de realimentación al caso propuesto si toma como base uno de los archivos demostrativos.
+
+### Tutor IA · Revise su frecuencia de corte {#tutor-frecuencia-corte}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor de Electrónica II y tráteme de usted. Estoy resolviendo el ejercicio 4 de los Ejercicios propuestos L3. Pídame los datos del enunciado, mis conversiones de unidades, el esquema de Multisim y la gráfica de ganancia. Hágame una pregunta a la vez y espere mi respuesta.
+
+Guíeme para obtener la frecuencia de corte a partir del modelo de polo dominante y para localizar el punto de −3 dB respecto de la meseta de baja frecuencia. Si mi cálculo difiere de la simulación, ayúdeme a comprobar el factor de retroalimentación, el modelo y el rango del barrido. Pídame que explique la diferencia con los datos que ya tengo.
+:::
+
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+## Ejercicios 5 y 6. Métodos de análisis {#ejercicios-metodos}
+
+Use la figura 1 del enunciado y los dos métodos de las diapositivas 14 y 15. Indique en su desarrollo qué supuestos usa para relacionar $V_p$ y $V_n$ y para calcular la corriente en el nodo inversor.

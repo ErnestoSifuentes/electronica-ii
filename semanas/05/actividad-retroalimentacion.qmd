@@ -1,0 +1,54 @@
+# Actividad L3 · Retroalimentación con NI myDAQ {.unnumbered}
+
+Las dos guías de la actividad estudian cómo cambia el comportamiento del amplificador operacional al realimentar la salida. Consulte el esquema y las tablas del documento que esté trabajando.
+
+::: {.course-actions}
+[Descargar la actividad experimental (Word)](../../recursos/semana-05/actividad-l3-ventajas-retroalimentacion.docx){.course-button .course-button-primary download="actividad-l3-ventajas-retroalimentacion.docx"}
+[Descargar la guía de medición con NI myDAQ (Word)](../../recursos/semana-05/experimento-l3-retroalimentacion-mydaq.docx){.course-button download="experimento-l3-retroalimentacion-mydaq.docx"}
+:::
+
+## Experimento 1. Zona lineal y ancho de banda {#experimento-1}
+
+| Documento | Trabajo del experimento 1 |
+|:--|:--|
+| Actividad experimental, *Ventajas de la retroalimentación* | En lazo abierto, conecte $V_n$ a tierra. Observe si la salida permanece en zona lineal para las dos amplitudes de entrada de la guía, 1 y 10 mV pico a pico. |
+| Guía de medición con NI myDAQ | En lazo cerrado, use el no inversor con $R_1=1\,\mathrm{k\Omega}$ y los tres valores de $R_2$ de la guía. Mida $V_o/V_s$ frente a la frecuencia con entrada de 10 mV pico a pico. |
+
+::: {.course-actions}
+[Experimento 1 en lazo abierto (.ms14)](../../recursos/semana-05/simulaciones/experimento-01-lazo-abierto.ms14){.course-button download="experimento-01-lazo-abierto.ms14"}
+[Experimento 1 (.ms14)](../../recursos/semana-05/simulaciones/experimento-01.ms14){.course-button download="experimento-01.ms14"}
+:::
+
+Antes de medir, compruebe la amplitud real de la señal pequeña entregada por AO0. Use el mismo tipo de amplitud para $V_s$ y $V_o$. Con la salida dentro del rango lineal, tome la meseta de baja frecuencia de cada configuración como referencia para encontrar el punto de −3 dB. Si la curva aún no cae 3 dB al finalizar el barrido, indique que la frecuencia de corte queda fuera del intervalo medido. Calcule $GBW\approx A_{CL}(0) f_{c,\mathrm{CL}}$ cuando pueda distinguir el corte.
+
+La fuente dual del op-amp y el rango de medición de la NI myDAQ son parámetros distintos. Las entradas analógicas de uso general admiten una medición de hasta ±10 V. Compruebe también el voltaje de cada terminal AI respecto de AGND. Para medir una salida que pueda superar ese rango, use el osciloscopio de banco o el acondicionamiento indicado por el profesor. Este punto se aplica en especial a la prueba en lazo abierto.
+
+[Manual de usuario de NI myDAQ (PDF)](../../recursos/semana-04/ni-mydaq-user-guide.pdf) · [Especificaciones de NI myDAQ (PDF)](https://download.ni.com/support/manuals/373061g.pdf){target="_blank" rel="noopener"}
+
+## Experimento 2. Error diferencial y ganancia en lazo abierto {#experimento-2}
+
+Monte el no inversor con $R_1=10\,\mathrm{k\Omega}$ y $R_2=90\,\mathrm{k\Omega}$. Use la señal senoidal de 50 a 100 mV pico a pico de la guía y registre $V_o$, $V_p$ y $V_n$ a las frecuencias del ensayo. $V_\varepsilon=V_p-V_n$ es una diferencia de señales. Obtenga su amplitud a partir de la diferencia punto a punto con la referencia temporal adecuada. Si calcula con fasores, haga la resta antes de tomar la magnitud.
+
+Estime $|A_{oc}|$ con el cociente de amplitudes $|V_o|/|V_\varepsilon|$ en operación lineal cuando el error diferencial esté por encima del ruido y la resolución del instrumento. Si no puede resolver la diferencia, consigne esa limitación en la tabla. Las entradas analógicas comparten un convertidor y las muestras de ambos canales pueden estar desplazadas en el tiempo.
+
+### Tutor IA · Compruebe su medición de lazo cerrado {#tutor-medicion-l3}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor de Electrónica II y tráteme de usted. Estoy trabajando con la Actividad L3 y NI myDAQ. Pídame el numeral del experimento, el modelo del op-amp, las resistencias, la amplitud, la frecuencia y las capturas o tablas que ya completé. Hágame una pregunta a la vez y espere mi respuesta.
+
+Si estoy midiendo ancho de banda, guíeme para ubicar la meseta y el punto de −3 dB antes de calcular GBW. Si estoy midiendo el error diferencial, ayúdeme a verificar cómo obtuve Vp − Vn y si el instrumento permite resolver esa diferencia. Pídame que cierre con una conclusión sustentada en mis mediciones.
+:::
+
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+## Experimento 3. Seguidor de voltaje {#experimento-3}
+
+El ensayo es opcional en ambas guías. Conecte el op-amp como seguidor y aplique la senoidal de 1 kHz indicada. Observe la diferencia entre las entradas y compárela con lo que esperaría de un seguidor ideal.
+
+## Informe {#informe}
+
+Use el formato de la guía correspondiente. Incluya portada, tablas con unidades, capturas, respuestas al cuestionario y de tres a cinco conclusiones. Identifique los resultados teóricos, los resultados de Multisim y los medidos en el montaje.

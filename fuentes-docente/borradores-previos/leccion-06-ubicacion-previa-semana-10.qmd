@@ -1,0 +1,11 @@
+# Lección 6 · Sumar y amplificar voltajes {.unnumbered}
+
+La lección estudia circuitos que combinan señales de entrada y ajustan su amplitud. El syllabus vincula este bloque con la primera opción del termómetro con LM35 y NI myDAQ.
+
+## Trabajo previsto
+
+| Clase | Actividad |
+|--:|:--|
+| [28](../10/semana-10.qmd) | Prepare el resumen y la simulación de los ejemplos. |
+| [29](../10/semana-10.qmd) | Realice la Práctica 6 y prepare su transcripción teórica y la evidencia experimental. |
+| [30](../10/semana-10.qmd) | Resuelva los ejercicios propuestos de la Lección 6. |

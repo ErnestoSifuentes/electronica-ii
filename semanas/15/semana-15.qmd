@@ -1,0 +1,41 @@
+# Semana 15 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-15}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| **43** | **120 min** | **[Lección 10, primer orden](filtros-pasa-bajas-primer-orden.qmd)**. Revisión de los tres videos de filtros pasa-bajas de primer orden, deducciones de circuitos con seguidor, amplificador no inversor e inversor, y diseño mediante funciones normalizadas. Prepare los apuntes manuscritos solicitados. |
+| **44** | **120 min** | **[Lección 10, segundo orden](filtros-pasa-bajas-segundo-orden.qmd)**. Revisión de los videos 4 y 5: filtros Sallen–Key, frecuencia natural, $Q$, ganancia y métodos de diseño. Prepare los apuntes correspondientes. |
+| **45** | **60 min** | **Examen U3 A** indicado en la planificación de semana 15. Entrega de los apuntes de los videos de primer orden y del **[Cuestionario L9](../14/cuestionario-l9.qmd)** previsto desde la semana 14. |
+
+## Entregas {#entregas-semana-15}
+
+| Cuándo | Evidencia solicitada |
+|:--|:--|
+| **Clase 45** | Apuntes manuscritos de los videos **1, 2 y 3** de la Lección 10, sobre filtros de primer orden. |
+| **Clase 45** | [Cuestionario L9](../14/cuestionario-l9.qmd), asignado en la semana 14. |
+| **Clase 45** | Realización del **Examen U3 A** previsto en la planificación de semana 15. Su entrega está fijada para la **clase 48**, tercera sesión de la semana 16. |
+| **Clase 47 · Semana 16** | Apuntes manuscritos de los videos **4 y 5** de la Lección 10, sobre filtros Sallen–Key de segundo orden. |
+
+## Trabajo para la semana siguiente {#siguiente-semana-15}
+
+1. Completar los apuntes manuscritos de segundo orden para la clase 47.
+2. Continuar la resolución de los [ejercicios de diseño y simulación L10](ejercicios-l10-primer-orden.qmd) con cálculos, función de transferencia y contrastes con Multisim.
+3. Preparar la [Actividad 3 de segundo orden](../16/actividad-3-sallen-key-bessel.qmd), así como la evidencia del examen U3 A para su entrega en la clase 48.
+
+## Recursos de la semana {#recursos-semana-15}
+
+**Presentaciones, apuntes ampliados, ejercicios, simulaciones y documentación:**
+
+- [Ejercicios L10 · Primer orden y simulación](ejercicios-l10-primer-orden.qmd).
+- [Presentación de la Lección 10 (PDF)](../../recursos/semana-15/presentacion-leccion-10.pdf).
+- [Apuntes ampliados · Parte 1 (Word)](../../recursos/semana-15/apuntes-leccion-10-parte-1.docx).
+- [Apuntes ampliados · Parte 2 (Word)](../../recursos/semana-15/apuntes-leccion-10-parte-2.docx).
+- [Apuntes ampliados · Parte 3 (Word)](../../recursos/semana-15/apuntes-leccion-10-parte-3.docx).
+- [Minitutoriales complementarios de filtros](../../recursos/semana-15/minitutoriales/Sallen-Key%20Filters.pdf), junto con otros PDF en el directorio de recursos.
+
+::: {.course-actions}
+[Planificación Semana 15 (PDF)](../../recursos/semana-15/planificacion-semana-15.pdf){.course-button .course-button-primary}
+[Ejercicios L10 (PDF)](../../recursos/semana-15/ejercicios-l10-primer-orden.pdf){.course-button}
+[Circuito de Multisim](../../recursos/semana-15/simulaciones/ejercicio-1-l10.ms14){.course-button}
+:::

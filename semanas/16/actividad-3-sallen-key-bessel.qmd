@@ -1,0 +1,45 @@
+# Actividad 3 · Diseño y validación de un filtro Sallen–Key Bessel {.unnumbered}
+
+**Unidad III · Semana 16 · Actividad integradora**
+
+La actividad requiere **diseñar un filtro pasa-bajas activo de segundo orden**, de tipo **Bessel**, con configuración **Sallen–Key**, ganancia de **10 V/V** y frecuencia de referencia indicada como **150 Hz** en la guía.
+
+## Desarrollo del trabajo
+
+1. Realice el **diseño teórico**, documentando la elección de la función normalizada, la convención empleada para la frecuencia característica y los cálculos de $R$ y $C$.
+2. Proponga y ejecute una **verificación mediante simulación**, mostrando función de transferencia, magnitud, fase, región de paso y rechazo.
+3. Proponga un **procedimiento experimental** para validar el filtro, con instrumentos, conexiones y magnitudes medibles. La guía indica expresamente que **no se realizará físicamente**.
+4. Elabore un **informe tipo práctica**: título, objetivo, introducción, teoría, diseño, procedimiento de simulación, procedimiento experimental propuesto, resultados de simulación, conclusiones y bibliografía.
+5. Presente el trabajo mediante **diapositivas y un video explicativo**, como solicita la guía.
+
+La comparación debe distinguir lo calculado de lo simulado. En particular, para filtros Bessel identifique cómo se normalizó la frecuencia antes de comparar el resultado con la especificación de 150 Hz.
+
+::: {.course-actions}
+[Descargar la Actividad 3 original (PDF)](../../recursos/semana-16/actividad-3-filtro-sallen-key.pdf){.course-button .course-button-primary}
+[Abrir simulación original](../../recursos/semana-16/simulaciones/actividad-3-sallen-key.ms14){.course-button}
+[Lección 10 · Segundo orden](../15/filtros-pasa-bajas-segundo-orden.qmd){.course-button}
+[Tutor IA](../../tutor-ia.qmd#consignas-semana-16){.course-button}
+:::
+
+
+### Tutor IA · Síntesis de filtro Bessel {#tutor-actividad3-bessel-s16}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Tráteme de usted y haga una pregunta a la vez. Debo diseñar un filtro Sallen–Key Bessel de segundo orden con ganancia de 10 y frecuencia de referencia de 150 Hz. Pregúnteme primero por la normalización del polinomio Bessel y por la definición de frecuencia de corte, después por el esquema, el escalamiento, Q, valores comerciales y simulación. No invente resultados experimentales: solo se requiere propuesta de procedimiento físico.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+### Tutor IA · Reporte y presentación técnica {#tutor-actividad3-informe-s16}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Ayúdeme como tutor de Electrónica II, de usted y mediante preguntas secuenciales. Para la Actividad 3 de segundo orden, revise conmigo el índice del informe, la tabla de cálculos, el procedimiento de validación por simulación, la propuesta experimental no ejecutada y una presentación en video. Solicite mis evidencias, detecte omisiones y pídame explicar por qué seleccioné cada valor de componente. No redacte ni invente resultados por mí.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::

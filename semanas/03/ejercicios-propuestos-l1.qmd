@@ -1,0 +1,52 @@
+# Ejercicios propuestos L1 {.unnumbered}
+
+Resuelva los ejercicios en equipo. Entregue un informe en la [tercera sesión de la Semana 5](../05/semana-05.qmd#entregas), clase 15. Incluya los cálculos, las capturas de Multisim y una conclusión por ejercicio que explique cómo se comparan los resultados. Use las tablas del enunciado para registrar sus datos.
+
+::: {.course-actions}
+[Descargar los ejercicios propuestos (PDF)](../../recursos/semana-03/ejercicios-propuestos-l1.pdf){.course-button .course-button-primary}
+[Consultar los ejercicios demostrativos resueltos (PDF)](../../recursos/semana-03/ejercicios-demostrativos-l1-resueltos.pdf){.course-button}
+:::
+
+Use la [solución de los ejercicios demostrativos](../02/ejercicios-demostrativos-l1.qmd) como guía del procedimiento. Para sus cálculos y simulaciones, tome los valores y el componente del enunciado de los ejercicios propuestos.
+
+## Ejercicios 1 y 2. Efecto de carga {#ejercicios-carga}
+
+Aplique el [modelo de dos puertos de la Lección 1](../02/introduccion-opamp.qmd#amplificador-y-carga) a los dos casos del enunciado. La fuente tiene 0.1 V pico y 100 Hz en ambos casos.
+
+| Parámetro | Caso A | Caso B |
+|:--|--:|--:|
+| $R_s$ | 25 kΩ | 1 kΩ |
+| $R_i$ | 100 kΩ | 1 MΩ |
+| $R_o$ | 100 Ω | 100 Ω |
+| $R_L$ | 300 Ω | 10 kΩ |
+| $A_{oc}$ | 200 V/V | 200 V/V |
+
+1. Obtenga los factores de atenuación de entrada y salida. Use su producto con $A_{oc}$ para calcular la ganancia entre la fuente y la carga.
+2. Obtenga $V_o$ para el caso ideal y el caso con carga. Para el ideal, use $R_i\to\infty$ y $R_o=0$ con la misma ganancia interna. Exprese los voltajes en valores pico y RMS.
+3. Compruebe los cálculos en Multisim con el modelo de fuente dependiente del enunciado. Si parte de los archivos de la Semana 2, sustituya sus parámetros por los de esta tabla antes de ejecutar la simulación.
+
+### Tutor IA · Compare la carga en ambos puertos {#tutor-carga-amplificador}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor de Electrónica II y tráteme de usted. Estoy resolviendo los Ejercicios propuestos L1 sobre un amplificador de voltaje con carga. Pídame mi esquema, los valores de un caso y mis cálculos del factor de entrada y del factor de salida. Hágame una pregunta a la vez para que identifique qué dos resistencias forman cada divisor y dónde se mide cada voltaje. Espere mi respuesta antes de dar la siguiente pista.
+
+Cuando haya calculado la ganancia, pídame que justifique cuál de los dos puertos introduce más atenuación y que compare mi resultado con la simulación. Ayúdeme a revisar que usé valores pico o RMS de forma consistente y reserve el resultado hasta que yo explique mi procedimiento.
+:::
+
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+## Ejercicios 3 a 5. Características del TL084CN {#ejercicios-tl084cn}
+
+| Ejercicio | Trabajo solicitado |
+|--:|:--|
+| 3 | Estime el [*slew rate* del TL084CN en Multisim](../02/caracterizacion-tl084.qmd#experimento-slew-rate). Compare la pendiente con la especificación del fabricante bajo las condiciones indicadas. |
+| 4 | Estime $A_{oc}$ a partir de dos puntos de la [región lineal del barrido DC](practica-01-primer-contacto-opamp.qmd#barrido-dc). Declare el modelo y las condiciones con que hace la comparación. |
+| 5 | Use $A_{oc}=200\,\mathrm{V/mV}$ para calcular el $V_d$ que requeriría una salida de 10 V con alimentación de $\pm10\,\mathrm{V}$ en el modelo lineal. Dibuje el circuito y su curva de transferencia. Con $\pm15\,\mathrm{V}$, estime y grafique el intervalo lineal de $V_d$. |
+
+Para el ejercicio 5, distinga los rieles del límite de excursión de salida que adopte. Indique el supuesto en el cálculo y compruebe en la simulación si el nivel de salida solicitado es alcanzable para esa alimentación y carga.
+
+[Hoja de datos del TL084 de Texas Instruments](https://www.ti.com/lit/ds/symlink/tl084.pdf){target="_blank" rel="noopener"}

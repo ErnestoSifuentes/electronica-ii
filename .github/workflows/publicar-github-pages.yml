@@ -1,0 +1,38 @@
+name: Publicar libro Electrónica II
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Descargar archivos del repositorio
+        uses: actions/checkout@v6
+      - name: Preparar sitio con todos los recursos
+        run: python3 scripts/construir_sitio.py
+      - name: Validar navegación y materiales
+        run: python3 scripts/validar_sitio.py
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Subir sitio preparado
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _publicar
+      - name: Publicar sitio
+        id: deploy
+        uses: actions/deploy-pages@v4

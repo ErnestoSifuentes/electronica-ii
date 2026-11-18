@@ -1,0 +1,38 @@
+# Semana 06 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-06}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 16 | 120 min | [Lección 4 · Adaptar impedancias](adaptar-impedancias.qmd). Estudie el seguidor de voltaje y sus dos métodos de análisis, y simule los ejemplos de la presentación en Multisim. Entregue el resumen manuscrito del [video L4](adaptar-impedancias.qmd#video-l4). |
+| 17 | 120 min | [Práctica 3 · Seguidor de voltaje](practica-03-seguidor.qmd). Compare el efecto de carga con y sin buffer, efectúe las mediciones y entregue el reporte de la Práctica 2. |
+| 18 | 60 min | Examen de la Unidad I, desarrollado colaborativamente según lo indicado en la agenda. Entregue las [simulaciones de la Lección 4](adaptar-impedancias.qmd#simulaciones-l4). |
+
+## Entregas {#entregas}
+
+| Entrega | Evidencia |
+|:--|:--|
+| Clase 16, Semana 6 | Resumen manuscrito del [video de la Lección 4](adaptar-impedancias.qmd#video-l4). |
+| Clase 17, Semana 6 | Informe de la [Práctica 2 · Comparador de voltaje](../04/practica-02-comparador-voltaje.qmd#informe). |
+| Clase 18, Semana 6 | Simulaciones de los ejemplos de la [Lección 4](adaptar-impedancias.qmd#simulaciones-l4). |
+
+## Trabajo para la semana siguiente {#preparacion-semana-7}
+
+| Entrega | Evidencia |
+|:--|:--|
+| [Clase 19, Semana 7](../07/semana-07.qmd#entregas) | Vea el [video preparatorio de la Lección 5](https://www.youtube.com/watch?v=N_pxayWx7eg){target="_blank" rel="noopener"} y elabore a mano un resumen con extensión proporcional al contenido. |
+| [Clase 21, Semana 7](../07/semana-07.qmd#entregas) | Entregue el examen de la Unidad I resuelto en la clase 18, según la planificación. |
+
+## Recursos de la semana {#recursos-para-la-semana-6}
+
+Consulte los [Ejercicios L4](ejercicios-l4.qmd) como complemento del análisis y la simulación. Para preparar la siguiente lección, repase la [ganancia del amplificador no inversor](../05/retroalimentacion-negativa.qmd#ganancia). El instrumento del examen se conserva únicamente en la carpeta docente del proyecto; no se publica como recurso abierto.
+
+**Materiales ampliados y actividades de apoyo de esta semana:**
+
+- [Guía desarrollada de la Práctica 3 · Seguidor de voltaje](practica-03-seguidor.qmd)
+- [Ejercicios L4 · Adaptación de impedancias](ejercicios-l4.qmd)
+
+::: {.course-actions}
+[Consultar la planificación original (PDF)](../../recursos/semana-06/planificacion.pdf){.course-button}
+[Presentación de la Lección 4 (PDF)](../../recursos/semana-06/presentacion-leccion.pdf){.course-button}
+:::

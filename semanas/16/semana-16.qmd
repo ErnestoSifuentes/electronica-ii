@@ -1,0 +1,36 @@
+# Semana 16 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-16}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| **46** | **120 min** | Análisis y simulación de **[filtros activos pasa-bajas de primer orden](../15/filtros-pasa-bajas-primer-orden.qmd)**. Avance de los [ejercicios L10](../15/ejercicios-l10-primer-orden.qmd), cálculo de corte, magnitud y fase. |
+| **47** | **120 min** | Análisis de **[filtros Sallen–Key de segundo orden](../15/filtros-pasa-bajas-segundo-orden.qmd)**. Presentación de los apuntes de los videos 4 y 5, con entrega prevista para esta clase. Revisión del diseño Bessel de la [Actividad 3](actividad-3-sallen-key-bessel.qmd). |
+| **48** | **60 min** | Cierre y revisión de evidencias del curso. **Entrega del Examen U3 A** según lo establecido en la planificación de la semana 15. |
+
+## Entregas {#entregas-semana-16}
+
+| Cuándo | Evidencia solicitada |
+|:--|:--|
+| **Clase 47** | Apuntes manuscritos de los videos de **segundo orden**, partes 4 y 5. |
+| **Clase 48** | Entrega del **Examen U3 A** asignado en la clase 45 (semana 15). |
+| **Según indicación docente** | [Actividad 3](actividad-3-sallen-key-bessel.qmd): diseño teórico, simulación, propuesta experimental, reporte técnico y presentación en video. La guía original no establece una fecha de entrega. |
+
+## Trabajo para la semana siguiente {#siguiente-semana-16}
+
+Organice la carpeta final de evidencias con los cálculos, simulaciones, informes y gráficos solicitados; verifique la concordancia entre los diseños teóricos y la respuesta simulada. No incluya mediciones experimentales que no se hayan realizado.
+
+## Recursos de la semana {#recursos-semana-16}
+
+**Materiales ampliados y actividades de apoyo correspondientes a la semana:**
+
+- [Actividad 3 · Filtro Bessel Sallen–Key de segundo orden](actividad-3-sallen-key-bessel.qmd).
+- [Examen U3 · Filtros activos](examen-u3.qmd), documento original como material de evaluación.
+- [Apuntes ampliados · Parte 4 (Word)](../../recursos/semana-16/apuntes-leccion-10-parte-4.docx).
+- [Apuntes ampliados · Parte 5 (Word)](../../recursos/semana-16/apuntes-leccion-10-parte-5.docx).
+
+::: {.course-actions}
+[Guía original Actividad 3 (PDF)](../../recursos/semana-16/actividad-3-filtro-sallen-key.pdf){.course-button .course-button-primary}
+[Simulación original Multisim](../../recursos/semana-16/simulaciones/actividad-3-sallen-key.ms14){.course-button}
+[Examen U3 original (PDF)](../../recursos/semana-16/examen-u3.pdf){.course-button}
+:::

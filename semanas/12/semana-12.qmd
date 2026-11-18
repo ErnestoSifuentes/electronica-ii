@@ -1,0 +1,38 @@
+# Semana 12 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-12}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 34 | 120 min | **[Lección 8, parte 1 · Integrar y diferenciar voltajes](integrar-y-diferenciar-parte-1.qmd)**: inversor generalizado, integrador y derivador, ejemplos teóricos y análisis en tiempo/frecuencia. Entregar el **resumen manuscrito** del [video L8, parte 1](https://www.youtube.com/watch?v=WOLdf93fl-k){target="_blank" rel="noopener"}; iniciar los [ejemplos de Multisim](simulaciones-ejemplos-l8.qmd). |
+| 35 | 120 min | **[Práctica 9 · Termómetro LM35 y NI myDAQ, opción 3](practica-09-termometro-opcion-3.qmd)**: acondicionamiento mediante amplificador diferencial de cuatro resistencias, referencia con buffer, adquisición y LabVIEW. Entregar el reporte de la **[Práctica 8](../11/practica-08-amplificador-diferencial.qmd)**. |
+| 36 | 60 min | Continuar la **[Práctica 9](practica-09-termometro-opcion-3.qmd)**. Entregar el **[Cuestionario L7](../11/cuestionario-l7.qmd)** y las **[simulaciones de los ejemplos de L8, parte 1](simulaciones-ejemplos-l8.qmd)**. |
+
+## Entregas {#entregas-semana-12}
+
+| Cuándo | Evidencia solicitada |
+|:--|:--|
+| Clase 34 | Resumen **elaborado a mano** del [video de la Lección 8 (parte 1)](https://www.youtube.com/watch?v=WOLdf93fl-k){target="_blank" rel="noopener"}; [instrucciones del resumen](integrar-y-diferenciar-parte-1.qmd#video-l8-parte-1). |
+| Clase 35 | Reporte de la **[Práctica 8 · Amplificador diferencial](../11/practica-08-amplificador-diferencial.qmd)**. |
+| Clase 36 | **[Cuestionario L7](../11/cuestionario-l7.qmd)** contestado y **[simulaciones L8 (parte 1)](simulaciones-ejemplos-l8.qmd)**, conforme a la planificación de esta semana. |
+
+## Trabajo para la semana siguiente {#siguiente-semana-12}
+
+1. Ver la [presentación en YouTube asignada por la planificación de esta semana](https://www.youtube.com/watch?v=aGGxoPQJmRg){target="_blank" rel="noopener"} y elaborar a mano un resumen de los conceptos principales, con extensión proporcional al contenido. **Entrega: clase 1, semana 13 (clase 37)**.
+2. Conservar las simulaciones de los ejemplos de la Lección 8 y documentar sus valores de componentes y condiciones iniciales para continuar el análisis.
+3. Guardar el VI modificado del termómetro con AD, sus registros y las fotografías del montaje de la Práctica 9.
+
+## Recursos de la semana {#recursos-semana-12}
+
+**Materiales ampliados y actividades de apoyo de esta semana:**
+
+- [Guía desarrollada de la Práctica 9 · LM35 (opción 3)](practica-09-termometro-opcion-3.qmd)
+- [Simulaciones guiadas de la Lección 8 (parte 1)](simulaciones-ejemplos-l8.qmd)
+
+::: {.course-actions}
+[Planificación original (PDF)](../../recursos/semana-12/planificacion-semana-12.pdf){.course-button .course-button-primary}
+[Ver video L8, parte 1](https://www.youtube.com/watch?v=WOLdf93fl-k){.course-button target="_blank" rel="noopener"}
+[Presentación L8 (PDF)](../../recursos/semana-12/presentacion-leccion-08-integrar-y-derivar.pdf){.course-button}
+[Práctica 9 (PDF)](../../recursos/semana-12/practica-09-termometro-lm35-opcion-3.pdf){.course-button}
+[Archivos Multisim](simulaciones-ejemplos-l8.qmd){.course-button}
+:::

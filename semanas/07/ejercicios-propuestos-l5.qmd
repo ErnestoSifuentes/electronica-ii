@@ -1,0 +1,115 @@
+# Ejercicios propuestos L5 · Amplificadores {.unnumbered}
+
+Esta actividad complementa la Lección 5 con cinco problemas de diseño y análisis. El **documento del profesor** contiene las figuras y datos originales; estas indicaciones explican qué método aplicar, sin reemplazar los esquemas suministrados. La planificación establece **entrega en la clase 3 de la Semana 8**.
+
+::: {.course-actions}
+[Ejercicios originales (PDF)](../../recursos/semana-07/ejercicios-originales.pdf){.course-button .course-button-primary}
+[Versión original editable (Word)](../../recursos/semana-07/ejercicios-originales.docx){.course-button}
+[Teoría de la Lección 5](amplificar-e-invertir-voltajes.qmd){.course-button}
+:::
+
+## Ejercicio 1. No inversor con ganancia variable {#ej-1-l5}
+
+El ejercicio solicita una ganancia ajustable en el intervalo $1<A_{CL}<10$ con un potenciómetro que permite $R_2\le100\ \mathrm{k\Omega}$. Para un no inversor ideal:
+
+$$
+A_{CL}=1+\frac{R_2}{R_1},\qquad R_1=\frac{R_{2,\max}}{A_{CL,\max}-1}.
+$$
+
+Determine $R_1$ respetando la condición **estricta** para la ganancia máxima, y seleccione un valor comercial razonable. Analice qué sucede cuando el cursor llega al extremo de $R_2=0$ (ganancia exactamente 1), y explique si se alcanzan o solo se aproximan los límites estrictos dados. Compruebe el circuito de la **figura 1 original** mediante un barrido del potenciómetro.
+
+## Ejercicio 2. Superposición de fuentes {#ej-2-l5}
+
+El circuito de la figura 2 contiene **dos fuentes de señal**. El método pedido es el de superposición:
+
+1. Conserve una fuente activa y reemplace la otra fuente de voltaje ideal por su cortocircuito equivalente; calcule su aportación $V_{o1}$.
+2. Repita con la segunda fuente activa para obtener $V_{o2}$.
+3. Verifique que, para el circuito lineal, $V_o=V_{o1}+V_{o2}$, conservando el signo y las unidades de cada término.
+4. Simule cada caso y la excitación simultánea. Si hay saturación o una fuente no ideal, explique por qué puede invalidarse la superposición utilizada.
+
+La topología y los valores específicos deben tomarse de la **figura 2 del PDF**, no de un circuito genérico.
+
+## Ejercicio 3. Ganancia abierta finita según el op-amp {#ej-3-l5}
+
+El enunciado proporciona $V_s=0.5\ \mathrm V$, $R_1=10\ \mathrm{k\Omega}$, $R_2=100\ \mathrm{k\Omega}$ y cuatro valores de $A_{oc}$ para un **amplificador inversor**. Use
+
+$$
+\alpha=\frac{100}{110},\qquad \beta=\frac{10}{110},\qquad
+A_{CL,\mathrm{real}}=-\frac{\alpha A_{oc}}{1+\beta A_{oc}},
+\qquad A_{CL,\mathrm{ideal}}=-10.
+$$
+
+Complete los voltajes reales e ideales en la tabla siguiente y, para cada modelo, compruebe el resultado previsto frente a la tensión de alimentación del circuito antes de asumir una salida lineal.
+
+| Dispositivo (según enunciado) | $A_{oc}$ (V/V) | Ganancia real | Ganancia ideal | $V_{o,\mathrm{real}}$ | $V_{o,\mathrm{ideal}}$ |
+|:--|--:|:--:|--:|:--:|:--:|
+| OP-77 | $12\times10^6$ | — | −10 | — | — |
+| OP-07 | $4\times10^5$ | — | −10 | — | — |
+| TL084 | $2\times10^5$ | — | −10 | — | — |
+| TLC274 | $23\times10^3$ | — | −10 | — | — |
+
+Los valores son los **nominales dados para el ejercicio**, no una especificación universal para todos los lotes o condiciones de uso.
+
+## Ejercicio 4. Amplificador inversor con red en T {#ej-4-l5}
+
+La figura 4 sustituye la realimentación resistiva sencilla por una **red en T**. Aplique la ley de corrientes de Kirchhoff en el nodo inversor (cercano a tierra virtual) y en el nodo central $V_x$. Identifique y etiquete cada una de las tres resistencias de la T antes de reducir el circuito.
+
+Para la red T **convencional** formada por $R_a$ (entre el nodo inversor y $V_x$), $R_b$ (entre $V_x$ y la salida) y $R_c$ (entre $V_x$ y tierra), se obtiene, con op-amp ideal:
+
+$$
+\frac{V_s}{R_1}=\frac{-V_x}{R_a},\quad
+\frac{V_x}{R_a}+\frac{V_x-V_o}{R_b}+\frac{V_x}{R_c}=0,
+$$
+
+$$
+\boxed{\frac{V_o}{V_s}=-\frac{R_a+R_b+R_aR_b/R_c}{R_1}}.
+$$
+
+**Verifique que la figura original coincida con esa conexión antes de sustituir la fórmula.** Si sus nodos o conexiones son distintos, resuelva directamente el esquema de la fuente. Explique cómo la red T puede producir una **resistencia de realimentación equivalente grande** a partir de componentes de valores más moderados.
+
+### Tutor IA · Analice la red de realimentación en T {#tutor-red-t-l5}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor de Electrónica II y tráteme de usted. Estoy resolviendo el Ejercicio 4 de la Lección 5, amplificador inversor con red T. Pídame la figura 4 original y que etiquete las tres resistencias de la T y los nodos antes de aceptar una fórmula. Haga una sola pregunta por turno y espere mi respuesta. Guíeme para aplicar LCK en el nodo inversor y en el nodo intermedio, identificar correctamente la conexión a tierra y deducir la ganancia con sus signos. No traslade ecuaciones de otra topología si mi dibujo no coincide. Revise unidades y magnitudes; reserve el resultado numérico hasta que yo demuestre las ecuaciones nodales. Finalice pidiéndome un ensayo de Multisim que compruebe la ganancia.
+:::
+
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+## Ejercicio 5. Preamplificador de micrófono {#ej-5-l5}
+
+Se pide diseñar una etapa para un micrófono con $V_{s,\max}=12\ \mathrm{mV_{RMS}}$ y $R_s=1\ \mathrm{k\Omega}$, de forma que la salida alcance $1.2\ \mathrm{V_{RMS}}$. La resistencia de entrada debe ser mayor que la de salida del micrófono y **todas las resistencias empleadas menores a $500\ \mathrm{k\Omega}$**.
+
+El módulo de ganancia total requerido, medido desde la fuente ideal del micrófono, es
+
+$$
+|A_{total}|=\frac{1.2}{0.012}=100.
+$$
+
+Si utiliza un inversor, no olvide considerar **también** la resistencia serie del micrófono:
+
+$$
+\frac{V_o}{V_s}\approx-\frac{R_2}{R_s+R_1},\qquad
+R_{in,\mathrm{etapa}}\approx R_1.
+$$
+
+Diseñe $R_1>R_s$ y elija $R_2$ para cumplir la ganancia total; compruebe que ambos valores cumplen los límites. Si selecciona otra topología o inserta un buffer previo, explique sus ventajas y cómo cambia la transferencia. Revise el ruido de entrada, la respuesta en frecuencia y el margen de salida para una señal de audio real.
+
+### Tutor IA · Diseñe el preamplificador de micrófono {#tutor-microfono-l5}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor de diseño de Electrónica II y tráteme de usted. Resuelvo el Ejercicio 5 de la Lección 5: micrófono de 12 mV RMS, resistencia interna 1 kΩ y salida deseada 1.2 V RMS; todas las resistencias deben ser menores de 500 kΩ y la resistencia de entrada de la etapa mayor que la del micrófono. Pídame mi propuesta de configuración y los valores que seleccioné. Trabaje una pregunta por turno y espere mi respuesta. Ayúdeme a distinguir la ganancia total desde la fuente de la ganancia de la etapa, considerando el efecto de la resistencia serie del micrófono. Compruebe márgenes de salida, ruido, banda de audio, unidades y las restricciones estrictas de resistencias. No ofrezca un juego de valores definitivo antes de que yo proponga uno. Pídame un plan de simulación que permita verificar la meta y detectar recorte.
+:::
+
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+## Presentación del reporte {#reporte-l5}
+
+Para cada ejercicio incluya **enunciado resumido, esquemático original identificado, hipótesis, ecuaciones, sustitución numérica, resultados teóricos, simulación y una conclusión específica**. No entregue únicamente la captura del osciloscopio: relacione cada resultado con las ecuaciones del modelo. La [planificación de la Semana 7](semana-07.qmd#entregas) señala su entrega durante la Semana 8.

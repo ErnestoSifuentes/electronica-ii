@@ -1,0 +1,34 @@
+# Ejercicios demostrativos L1 {.unnumbered}
+
+En la segunda sesión de la [Semana 2](semana-02.qmd) resolverá con el profesor los ejercicios de la Lección 1. Para cada caso, documente los cálculos, los valores simulados, la comparación y una conclusión que explique las diferencias.
+
+::: {.course-actions}
+[Descargar los enunciados originales (PDF)](../../recursos/semana-02/ejercicios-demostrativos-l1.pdf){.course-button .course-button-primary}
+[Consultar los ejercicios demostrativos resueltos (PDF)](../../recursos/semana-03/ejercicios-demostrativos-l1-resueltos.pdf){.course-button}
+:::
+
+Al revisar la solución de los ejercicios 1 y 2, mantenga $V_s$ como el voltaje de la fuente y $V_i$ como el voltaje en la entrada del amplificador. En la tabla teórica de la página 4, las amplitudes pico de 0.08 V y 0.097 V corresponden a $V_i$. Con los valores nominales del caso B y los dos factores sin redondear, se obtiene $V_o/V_s\approx96.60\,\mathrm{V/V}$ y $V_o\approx9.66\,\mathrm{V}$ pico.
+
+## Ejercicios 1 y 2. Efecto de carga {#ejercicios-carga}
+
+1. Aplique el [modelo del amplificador de voltaje](introduccion-opamp.qmd#amplificador-y-carga) a los casos A y B. Calcule por separado la atenuación en la entrada y en la salida. Obtenga el voltaje de salida y la ganancia entre fuente y carga.
+2. Compare los resultados con el caso ideal, definido aquí por $R_i\to\infty$ y $R_o=0$ para la misma ganancia interna. Registre los voltajes en amplitud pico y en RMS. Para una senoidal sin componente de continua, $V_{\mathrm{RMS}}=V_{\mathrm{pico}}/\sqrt{2}$.
+3. Compruebe los dos casos en Multisim. Use la misma representación de amplitud en el numerador y el denominador cuando calcule la ganancia.
+
+| Archivo para Multisim | Uso |
+|:--|:--|
+| [Amplificador de voltaje A (.ms14)](../../recursos/semana-02/simulaciones/amplificador-de-voltaje-a.ms14){download="amplificador-de-voltaje-a.ms14"} | Modelo del amplificador de voltaje. |
+| [Ejercicio 2A (.ms14)](../../recursos/semana-02/simulaciones/ejercicio-02a-efecto-de-carga.ms14){download="ejercicio-02a-efecto-de-carga.ms14"} | Comprobación del efecto de carga en el caso A. |
+| [Ejercicio 2B (.ms14)](../../recursos/semana-02/simulaciones/ejercicio-02b-efecto-de-carga.ms14){download="ejercicio-02b-efecto-de-carga.ms14"} | Comprobación del efecto de carga en el caso B. |
+
+## Ejercicios 3 a 5. Parámetros y lazo abierto {#ejercicios-lazo-abierto}
+
+| Ejercicio | Qué debe comprobar | Archivo para Multisim |
+|--:|:--|:--|
+| 3 | Estime la velocidad de respuesta del LM358 a partir de la pendiente del tramo de salida indicado en el ejercicio. | [Slew rate del LM358 (.ms14)](../../recursos/semana-02/simulaciones/ejercicio-03-slew-rate-lm358.ms14){download="ejercicio-03-slew-rate-lm358.ms14"} |
+| 4 | Estime la ganancia en lazo abierto del LM358. Use el tramo lineal de la curva de transferencia y compare con el valor indicado en el enunciado. | [Lazo abierto del LM358 (.ms14)](../../recursos/semana-02/simulaciones/ejercicio-04-lazo-abierto-lm358.ms14){download="ejercicio-04-lazo-abierto-lm358.ms14"} |
+| 5 | Use el LM101A del enunciado para representar la curva de transferencia. Declare los límites de salida que supone en cada cálculo. | Implemente el modelo indicado en el enunciado. |
+
+[Simulación adicional de ganancia en lazo abierto del LM358 (.ms13)](../../recursos/semana-02/simulaciones/ganancia-lazo-abierto-lm358-adicional.ms13){download="ganancia-lazo-abierto-lm358-adicional.ms13"}.
+
+Para revisar la selección de puntos de un barrido DC, utilice la [consigna del Tutor IA sobre la región lineal](introduccion-opamp.qmd#tutor-curva-transferencia).

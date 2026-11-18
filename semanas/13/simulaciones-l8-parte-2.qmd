@@ -1,0 +1,51 @@
+# Lección 8, parte 2 · Simulaciones Multisim {.unnumbered}
+
+**Entrega oficial: clase 39, tercera sesión de la semana 13.** La planificación solicita implementar y entregar los ejemplos de la Lección 8 (parte 2). Los archivos siguientes se han copiado de las simulaciones originales del docente; no son simulaciones ejecutadas o resultados experimentales obtenidos en este entorno.
+
+## 1. Circuitos originales disponibles {#sim-l8p2-archivos}
+
+| Configuración | Archivo editable Multisim | Revisión sugerida |
+|:--|:--|:--|
+| Derivador, ejemplo 1 | [Abrir `.ms14`](../../recursos/semana-13/simulaciones/derivador-ejemplo-1.ms14) | Triangular de periodo 2 s; niveles ±5 V de salida ideal. |
+| Derivador, ejemplo 2 | [Abrir `.ms14`](../../recursos/semana-13/simulaciones/derivador-ejemplo-2.ms14) | Magnitud a 1, 100 y 1000 Hz; resistencia serie y frecuencia de transición. |
+| Integrador, ejemplo 1 | [Abrir `.ms14`](../../recursos/semana-13/simulaciones/integrador-ejemplo-1.ms14) | Pendiente de integración y condición inicial. |
+| Integrador, ejemplo 2 | [Abrir `.ms14`](../../recursos/semana-13/simulaciones/integrador-ejemplo-2.ms14) | Respuesta a escalón y límites de saturación. |
+| Integrador, ejemplo 3 | [Abrir `.ms14`](../../recursos/semana-13/simulaciones/integrador-ejemplo-3.ms14) | Resistencia de realimentación en paralelo al capacitor. |
+
+La carpeta docente original incluye además **copias de seguridad** de algunos circuitos. Se conserva el [ZIP original de la semana 13](../../fuentes-docente/semana-13/Semana_13_original.zip) para consulta; las copias de seguridad no se confunden con circuitos adicionales de tarea.
+
+## 2. Protocolo de comprobación {#sim-l8p2-protocolo}
+
+1. Abra el circuito y confirme valores, conexiones, modelo del op-amp y tensiones de alimentación antes de iniciar la simulación.
+2. Para **tiempo**, capture $V_s(t)$ y $V_o(t)$ en la misma base temporal y lea pendientes o niveles; observe los cambios de signo y la posible saturación.
+3. Para **frecuencia**, mida $|V_o/V_s|$ y, cuando el instrumento lo permita, el desfase; compruebe unidades (Hz, rad/s, V/V o dB).
+4. Compare resultados con los [ejemplos teóricos de la parte 2](integrar-y-diferenciar-parte-2.qmd#l8-p2-ejemplo1), especialmente con la magnitud del derivador práctico a 1 Hz.
+5. Entregue circuito `.ms14`, captura etiquetada, operación analítica y conclusión breve. Indique si el resultado es teórico o procede de simulación.
+
+## 3. Hoja de verificación de la parte 2 {#sim-l8p2-comparacion}
+
+| Ejemplo | Magnitud esperada a calcular | Resultado Multisim | Explicación |
+|:--|:--|:--|:--|
+| Derivador 1, $R_FC_1=1$ s | Derivadas de los tramos: $\pm5$ V/s; salida ideal de signo contrario | — | — |
+| Derivador 2, 1 Hz | $|H|\simeq0.0628$ V/V | — | — |
+| Derivador 2, 100 Hz | $|H|\simeq5.320$ V/V | — | — |
+| Derivador 2, 1000 Hz | $|H|\simeq9.876$ V/V | — | — |
+
+El ejemplo 1 se revisa como respuesta **temporal** y el ejemplo 2 como respuesta **en frecuencia**. La diapositiva original indica otro resultado para 1 Hz; documente la diferencia sin alterar las fuentes.
+
+### Tutor IA · Evidencia de Multisim de L8, parte 2 {#tutor-sim-l8p2-s13}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Tráteme de usted, sea un tutor de Electrónica II y realice solo una pregunta por turno. Estoy entregando simulaciones L8, parte 2. Solicite cuál circuito `.ms14` utilicé, su conexión, datos de señal y capturas. Ayúdeme a calcular primero la salida teórica del derivador triangular o la magnitud del derivador práctico, luego a contrastar esos valores con Multisim y a identificar saturación, error de escala o frecuencia. No invente mediciones ni asuma que ejecutó la simulación por mí. Termine pidiéndome justificar la discrepancia más importante.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+::: {.course-actions}
+[Lección 8, parte 2](integrar-y-diferenciar-parte-2.qmd){.course-button .course-button-primary}
+[Presentación original](../../recursos/semana-13/presentacion-leccion-08-parte2.pdf){.course-button}
+[Agenda semana 13](semana-13.qmd){.course-button}
+:::

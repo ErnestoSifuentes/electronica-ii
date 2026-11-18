@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8"/>
+<meta content="Pandoc HTML content using original Quarto 1.11.9 site shell" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Lección 7 · Restar y amplificar voltajes: amplificador de instrumentación (2.6) – Electrónica II</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta content="../../" name="quarto:offset"/>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet"/>
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" id="quarto-text-highlighting-styles" rel="stylesheet"/>
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet"/>
+<link append-hash="true" data-mode="light" href="../../site_libs/bootstrap/bootstrap-d6970b4ea02e6afb950d4af755796862.min.css" id="quarto-bootstrap" rel="stylesheet"/>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<link href="../../estilos.css" rel="stylesheet"/>
+<link href="semana-11.html" rel="prev"/><link href="practica-08-amplificador-diferencial.html" rel="next"/></head>
+<body class="nav-sidebar docked nav-fixed quarto-light"><a class="visually-hidden-focusable" href="#quarto-document-content" id="quarto-skip-link">Saltar al contenido principal</a>
+<div id="quarto-search-results"></div>
+<header class="headroom fixed-top" id="quarto-header">
+<nav aria-label="Sitio web" class="navbar navbar-expand-lg" data-bs-theme="dark">
+<div class="navbar-container container-fluid">
+<div class="navbar-brand-container mx-auto">
+<a class="navbar-brand" href="../../index.html">
+<span class="navbar-title">Electrónica II</span>
+</a>
+</div>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+<a aria-current="page" class="nav-link active" href="../../calendario.html">
+<span class="menu-text">Calendario</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../lecciones.html">
+<span class="menu-text">Lecciones</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../tutor-ia.html">
+<span class="menu-text">Tutor IA</span></a>
+</li>
+</ul>
+</div> <!-- /navcollapse -->
+<div class="quarto-navbar-tools">
+</div>
+<div class="" id="quarto-search" title="Buscar"></div>
+</div> <!-- /container-fluid -->
+</nav>
+<nav aria-label="Barra de herramientas" class="quarto-secondary-nav">
+<div class="container-fluid d-flex">
+<button aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" class="quarto-btn-toggle btn" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="button" type="button">
+<i class="bi bi-layout-text-sidebar-reverse"></i>
+</button>
+<nav aria-label="Hilo de Ariadna" class="quarto-page-breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./semana-11.html">Semana 11</a></li><li class="breadcrumb-item"><a href="./amplificador-instrumentacion.html">Lección 7 · Restar y amplificar voltajes: amplificador de instrumentación (2.6)</a></li></ol></nav>
+<a class="flex-grow-1" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+</a>
+</div>
+</nav>
+</header>
+<!-- content -->
+<div class="quarto-container page-columns page-rows-contents page-layout-article page-navbar" id="quarto-content">
+<!-- sidebar -->
+<nav aria-label="Sección" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" id="quarto-sidebar">
+<div class="sidebar-menu-container">
+<ul class="list-unstyled mt-1"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../../index.html"><span class="menu-text">Inicio</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../../calendario.html"><span class="menu-text">Calendario</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../../lecciones.html"><span class="menu-text">Lecciones</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../../tutor-ia.html"><span class="menu-text">Tutor IA</span></a></div></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../01/semana-01.html"><span class="menu-text" id="quarto-sidebar-section-1-label">Semana 01</span></a><button aria-controls="quarto-sidebar-section-1" aria-expanded="false" aria-label="Alternar sección: Semana 01" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-1" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-1"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../01/encuadre.html"><span class="menu-text">Encuadre del curso</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../01/divisor-de-voltaje.html"><span class="menu-text">Lección inicial · Divisor de voltaje</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../02/semana-02.html"><span class="menu-text" id="quarto-sidebar-section-2-label">Semana 02</span></a><button aria-controls="quarto-sidebar-section-2" aria-expanded="false" aria-label="Alternar sección: Semana 02" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-2" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-2"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../02/introduccion-opamp.html"><span class="menu-text">Lección 1 · Introducción al op-amp</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../02/ejercicios-demostrativos-l1.html"><span class="menu-text">Ejercicios demostrativos L1</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../02/caracterizacion-tl084.html"><span class="menu-text">Actividad L1 · Caracterización del TL084</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../03/semana-03.html"><span class="menu-text" id="quarto-sidebar-section-3-label">Semana 03</span></a><button aria-controls="quarto-sidebar-section-3" aria-expanded="false" aria-label="Alternar sección: Semana 03" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-3" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-3"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../03/practica-01-primer-contacto-opamp.html"><span class="menu-text">Práctica 1 · Primer contacto con un op-amp</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../03/ejercicios-propuestos-l1.html"><span class="menu-text">Ejercicios propuestos L1</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../04/semana-04.html"><span class="menu-text" id="quarto-sidebar-section-4-label">Semana 04</span></a><button aria-controls="quarto-sidebar-section-4" aria-expanded="false" aria-label="Alternar sección: Semana 04" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-4" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-4"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../04/comparador-de-voltaje.html"><span class="menu-text">Lección 2 · Comparar voltajes</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../04/practica-02-comparador-voltaje.html"><span class="menu-text">Práctica 2 · Comparador de voltaje</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/semana-05.html"><span class="menu-text" id="quarto-sidebar-section-5-label">Semana 05</span></a><button aria-controls="quarto-sidebar-section-5" aria-expanded="false" aria-label="Alternar sección: Semana 05" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-5" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-5"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/retroalimentacion-negativa.html"><span class="menu-text">Lección 3 · Retroalimentación negativa</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/ejercicios-demostrativos-l3.html"><span class="menu-text">Ejercicios demostrativos L3</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/ejercicios-propuestos-l3.html"><span class="menu-text">Ejercicios propuestos L3</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/actividad-retroalimentacion.html"><span class="menu-text">Actividad L3 · Retroalimentación con NI myDAQ</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../06/semana-06.html"><span class="menu-text" id="quarto-sidebar-section-6-label">Semana 06</span></a><button aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Alternar sección: Semana 06" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-6" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-6"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../06/adaptar-impedancias.html"><span class="menu-text">Lección 4 · Adaptar impedancias</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../06/practica-03-seguidor.html"><span class="menu-text">Práctica 3 · Seguidor de voltaje (Buffer)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../06/ejercicios-l4.html"><span class="menu-text">Ejercicios Lección 4 · Adaptación sensor–ADC</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/semana-07.html"><span class="menu-text" id="quarto-sidebar-section-7-label">Semana 07</span></a><button aria-controls="quarto-sidebar-section-7" aria-expanded="false" aria-label="Alternar sección: Semana 07" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-7" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-7"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/amplificar-e-invertir-voltajes.html"><span class="menu-text">Lección 5 · Amplificar e invertir voltajes</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/practica-04-amplificadores.html"><span class="menu-text">Práctica 4 · Amplificador inversor y no inversor</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/ejercicios-propuestos-l5.html"><span class="menu-text">Ejercicios propuestos L5 · Amplificadores</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/adquisicion-con-labview.html"><span class="menu-text">Adquisición y procesamiento con LabVIEW</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/semana-08.html"><span class="menu-text" id="quarto-sidebar-section-8-label">Semana 08</span></a><button aria-controls="quarto-sidebar-section-8" aria-expanded="false" aria-label="Alternar sección: Semana 08" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-8" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-8"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/software-adquisicion-labview.html"><span class="menu-text">Software de adquisición y procesamiento de señales</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/resultado-de-medida.html"><span class="menu-text">El resultado de una medida: media, dispersión e incertidumbre</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/practica-05-labview.html"><span class="menu-text">Práctica 5 · Adquisición y análisis de señales con LabVIEW</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/ejercicios-medio-semestre.html"><span class="menu-text">Ejercicios integradores de medio semestre</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../09/semana-09.html"><span class="menu-text" id="quarto-sidebar-section-9-label">Semana 09</span></a><button aria-controls="quarto-sidebar-section-9" aria-expanded="false" aria-label="Alternar sección: Semana 09" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-9" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-9"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../09/sumar-y-amplificar-voltajes.html"><span class="menu-text">Lección 6 · Sumar y amplificar voltajes</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../09/practica-06-termometro-lm35.html"><span class="menu-text">Práctica 6 · Termómetro con LM35 y NI myDAQ (opción 1)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../09/ejercicios-propuestos-l6.html"><span class="menu-text">Ejercicios propuestos L6 · Suma y acondicionamiento</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/semana-10.html"><span class="menu-text" id="quarto-sidebar-section-10-label">Semana 10</span></a><button aria-controls="quarto-sidebar-section-10" aria-expanded="false" aria-label="Alternar sección: Semana 10" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-10" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-10"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/amplificador-diferencial.html"><span class="menu-text">Lección 7 · Restar y amplificar voltajes: amplificador diferencial (2.5)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/teoria-basica-ad.html"><span class="menu-text">Teoría básica del amplificador diferencial · Apuntes del profesor</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/practica-07-termometro-opcion-2.html"><span class="menu-text">Práctica 7 · Termómetro con LM35 y NI myDAQ (opción 2)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/ejercicios-l7-ad.html"><span class="menu-text">Ejercicios propuestos L7 · Amplificador diferencial</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/examen-unidad-2.html"><span class="menu-text">Examen de la Unidad 2 · Problemas integradores</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="./semana-11.html"><span class="menu-text" id="quarto-sidebar-section-11-label">Semana 11</span></a><button aria-controls="quarto-sidebar-section-11" aria-expanded="true" aria-label="Alternar sección: Semana 11" class="sidebar-item-toggle text-start" data-bs-target="#quarto-sidebar-section-11" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1 show" id="quarto-sidebar-section-11"><li class="sidebar-item"><div class="sidebar-item-container"><a aria-current="page" class="sidebar-item-text sidebar-link active" href="./amplificador-instrumentacion.html"><span class="menu-text">Lección 7 · Restar y amplificar voltajes: amplificador de instrumentación (2.6)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="./practica-08-amplificador-diferencial.html"><span class="menu-text">Práctica 8 · Amplificador diferencial (AD)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="./cuestionario-l7.html"><span class="menu-text">Cuestionario L7 · Amplificador de instrumentación</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../12/semana-12.html"><span class="menu-text" id="quarto-sidebar-section-12-label">Semana 12</span></a><button aria-controls="quarto-sidebar-section-12" aria-expanded="false" aria-label="Alternar sección: Semana 12" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-12" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-12-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-12"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../12/integrar-y-diferenciar-parte-1.html"><span class="menu-text">Lección 8 · Integrar y diferenciar voltajes, parte 1</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../12/practica-09-termometro-opcion-3.html"><span class="menu-text">Práctica 9 · Termómetro LM35 y NI myDAQ (opción 3)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../12/simulaciones-ejemplos-l8.html"><span class="menu-text">Lección 8 · Simulaciones guiadas en Multisim</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/semana-13.html"><span class="menu-text" id="quarto-sidebar-section-13-label">Semana 13</span></a><button aria-controls="quarto-sidebar-section-13" aria-expanded="false" aria-label="Alternar sección: Semana 13" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-13" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-13-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-13"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/integrar-y-diferenciar-parte-2.html"><span class="menu-text">Lección 8 · Integrar y diferenciar voltajes, parte 2</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/practica-10-amplificador-instrumentacion.html"><span class="menu-text">Práctica 10 · Amplificador de instrumentación (AI)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/simulaciones-l8-parte-2.html"><span class="menu-text">Lección 8, parte 2 · Simulaciones Multisim</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/lecturas-integrador-derivador.html"><span class="menu-text">Material complementario · Integradores y derivadores</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/semana-14.html"><span class="menu-text" id="quarto-sidebar-section-14-label">Semana 14</span></a><button aria-controls="quarto-sidebar-section-14" aria-expanded="false" aria-label="Alternar sección: Semana 14" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-14" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-14-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-14"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/introduccion-al-filtrado-analogico.html"><span class="menu-text">Lección 9 · Introducción al filtrado analógico</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/experimentos-filtros-l9.html"><span class="menu-text">Experimentos de la Lección 9 · Filtros RC y LabVIEW</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/practica-11-rtd-puente-ai.html"><span class="menu-text">Práctica 11 · Termómetro TD5A, puente de Wheatstone y amplificador de instrumentación</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/cuestionario-l9.html"><span class="menu-text">Cuestionario L9 · Filtros analógicos</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../15/semana-15.html"><span class="menu-text" id="quarto-sidebar-section-15-label">Semana 15</span></a><button aria-controls="quarto-sidebar-section-15" aria-expanded="false" aria-label="Alternar sección: Semana 15" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-15" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-15-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-15"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../15/filtros-pasa-bajas-primer-orden.html"><span class="menu-text">Lección 10 · Primer orden</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../15/filtros-pasa-bajas-segundo-orden.html"><span class="menu-text">Lección 10 · Segundo orden</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../15/ejercicios-l10-primer-orden.html"><span class="menu-text">Ejercicios L10 · Primer orden</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../16/semana-16.html"><span class="menu-text" id="quarto-sidebar-section-16-label">Semana 16</span></a><button aria-controls="quarto-sidebar-section-16" aria-expanded="false" aria-label="Alternar sección: Semana 16" class="sidebar-item-toggle text-start" data-bs-target="#quarto-sidebar-section-16" data-bs-toggle="collapse" type="button"><i class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-16-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-16"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../16/actividad-3-sallen-key-bessel.html"><span class="menu-text">Actividad 3 · Filtro Bessel Sallen–Key</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../16/examen-u3.html"><span class="menu-text">Examen U3 · Filtros activos</span></a></div></li></ul></li></ul>
+</div>
+</nav>
+<div class="quarto-sidebar-collapse-item" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" id="quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+<div class="sidebar margin-sidebar" id="quarto-margin-sidebar">
+<nav aria-labelledby="toc-title" class="toc-active" id="TOC" role="doc-toc"><h2 id="toc-title">En esta página</h2><ul><li><a class="nav-link" data-scroll-target="#ai-introduccion" href="#ai-introduccion" id="toc-ai-introduccion">1. Del amplificador diferencial al amplificador de instrumentación</a></li><li><a class="nav-link" data-scroll-target="#ai-primera-etapa" href="#ai-primera-etapa" id="toc-ai-primera-etapa">2. Análisis de la etapa de entrada</a></li><li><a class="nav-link" data-scroll-target="#ai-ganancia-total" href="#ai-ganancia-total" id="toc-ai-ganancia-total">3. Etapa diferencial y ganancia total</a></li><li><a class="nav-link" data-scroll-target="#ai-cmrr" href="#ai-cmrr" id="toc-ai-cmrr">4. Rechazo al modo común y tolerancias</a></li><li><a class="nav-link" data-scroll-target="#ai-ejemplos" href="#ai-ejemplos" id="toc-ai-ejemplos">5. Ejemplos y proyectos de diseño</a></li><li><a class="nav-link" data-scroll-target="#ai-simulacion" href="#ai-simulacion" id="toc-ai-simulacion">6. Protocolo de simulación L7, parte 2</a></li><li><a class="nav-link" data-scroll-target="#cierre-de-la-lección" href="#cierre-de-la-lección" id="toc-cierre-de-la-lección">7. Cierre de la lección</a></li></ul></nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1"><header class="quarto-title-block default" id="title-block-header"><nav aria-label="Hilo de Ariadna" class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../semanas/07/semana-07.html">Semana 07</a></li><li class="breadcrumb-item"><a href="../../semanas/07/amplificar-e-invertir-voltajes.html">Lección 5 · Amplificar e invertir voltajes</a></li></ol></nav><div class="quarto-title"><h1 class="title">Lección 7 · Restar y amplificar voltajes: amplificador de instrumentación (2.6)</h1></div><div class="quarto-title-meta"></div></header>
+<p> La sección 2.6 continúa la <a href="../10/amplificador-diferencial.html">sección 2.5 sobre amplificador diferencial</a>El objetivo es resolver sus dos principales limitaciones para instrumentación: baja impedancia de entrada y rechazo limitado del modo común cuando las resistencias están desbalanceadas.</p>
+<div class="course-actions" id="video-l7-parte-2">
+<p><a class="course-button course-button-primary" href="https://www.youtube.com/watch?v=-tf_ELNwyOw&amp;t=4699s" rel="noopener" target="_blank">Ver video de la Lección 7 · Parte 2 (desde 1:18:19)</a> <a class="course-button" href="https://www.youtube.com/watch?v=96MRWQ4XVJw" rel="noopener" target="_blank">Video L7 · Parte 1 (repaso)</a> <a class="course-button" href="../../../recursos/semana-10/presentacion-leccion-07.pdf">Presentación L7 del profesor, págs. 20–41</a> <a class="course-button" href="cuestionario-l7.html">Cuestionario L7</a> <a class="course-button" href="practica-08-amplificador-diferencial.html">Práctica 8 de laboratorio</a></p>
+</div>
+<p><strong>Actividad de video — Lección 7, parte 2.</strong> Vea la presentación en video y elabore <strong>a mano un resumen</strong> que sintetice los conceptos principales, con extensión proporcional al contenido. <strong>Entrega: clase 31 (primera sesión de la semana 11).</strong> Consulte las <a href="semana-11.html#entregas-semana-11">entregas de la Semana 11</a>. El video comienza en el minuto <strong>1:18:19</strong>.</p>
+<h2 class="anchored" data-anchor-id="ai-introduccion" id="ai-introduccion">1. Del amplificador diferencial al amplificador de instrumentación</h2>
+<p>Un amplificador de instrumentación (AI) amplifica una pequeña diferencia entre dos voltajes en presencia de voltajes comunes que pueden ser considerablemente mayores. El circuito clásico de <strong>tres amplificadores operacionales</strong> consta de:</p>
+<ol type="1">
+<li><strong>Etapa de entrada:</strong> dos op-amp no inversores con alta impedancia de entrada; sus nodos de realimentación se conectan mediante <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math>.</li>
+<li><strong>Etapa diferencial:</strong> un restador de cuatro resistencias que amplifica la diferencia entre las salidas de la primera etapa.</li>
+</ol>
+<p>La topología presentada contiene <strong>siete resistencias</strong>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>1</mn></msub><annotation encoding="application/x-tex">R_1</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>2</mn></msub><annotation encoding="application/x-tex">R_2</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>3</mn></msub><annotation encoding="application/x-tex">R_3</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>4</mn></msub><annotation encoding="application/x-tex">R_4</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>A</mi></msub><annotation encoding="application/x-tex">R_A</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>B</mi></msub><annotation encoding="application/x-tex">R_B</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math>. Cambiar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math> ajusta la ganancia sin cambiar las parejas resistivas de la segunda etapa.</p>
+<figure>
+<img alt="Diagrama conceptual de las dos etapas del AI de tres op-amp." data-fig-alt="Entradas Vs1 y Vs2 hacia etapa de dos opamps, amplificador diferencial y salida Vo." src="../../../recursos/semana-11/figuras/ia-tres-opamps-bloques.svg"/>
+<figcaption aria-hidden="true">Diagrama conceptual de las dos etapas del AI de tres op-amp.</figcaption>
+</figure>
+<figure>
+<img alt="Circuito de tres op-amp de la presentación original: página 28." data-fig-alt="Presentación del profesor: circuito de amplificador de instrumentación de tres operacionales y siete resistencias." src="../../../recursos/semana-11/figuras/presentacion-leccion-07-p28.jpg"/>
+<figcaption aria-hidden="true">Arquitectura del amplificador de instrumentación de tres operacionales.</figcaption>
+</figure>
+<h2 class="anchored" data-anchor-id="ai-primera-etapa" id="ai-primera-etapa">2. Análisis de la etapa de entrada</h2>
+<p>Para simplificar la demostración tomamos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>A</mi></msub><mo>=</mo><msub><mi>R</mi><mi>B</mi></msub><mo>=</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">R_A=R_B=R</annotation></semantics></math> y op-amps ideales en su región lineal. Si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">V_{s1}</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>s</mi><mn>2</mn></mrow></msub><annotation encoding="application/x-tex">V_{s2}</annotation></semantics></math> se aplican a los terminales no inversores, el corto virtual establece esos mismos voltajes en los nodos internos de realimentación. Así, la corriente en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math> es</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>G</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>V</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>2</mn></mrow></msub></mrow><msub><mi>R</mi><mi>G</mi></msub></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">I_G=\frac{V_{s1}-V_{s2}}{R_G}.</annotation></semantics></math></p>
+<p>Por LCK en los nodos internos, con las etiquetas <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>A</mi></msub><annotation encoding="application/x-tex">V_A</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>B</mi></msub><annotation encoding="application/x-tex">V_B</annotation></semantics></math> elegidas para preservar la polaridad de la presentación:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>A</mi></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub><mo>+</mo><mfrac><mi>R</mi><msub><mi>R</mi><mi>G</mi></msub></mfrac><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>2</mn></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">V_A=V_{s1}+\frac{R}{R_G}(V_{s1}-V_{s2}),</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>B</mi></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>2</mn></mrow></msub><mo>−</mo><mfrac><mi>R</mi><msub><mi>R</mi><mi>G</mi></msub></mfrac><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>2</mn></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">V_B=V_{s2}-\frac{R}{R_G}(V_{s1}-V_{s2}).</annotation></semantics></math></p>
+<p>Restando:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><menclose notation="box"><mrow><msub><mi>V</mi><mi>A</mi></msub><mo>−</mo><msub><mi>V</mi><mi>B</mi></msub><mo>=</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mi>R</mi></mrow><msub><mi>R</mi><mi>G</mi></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>2</mn></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow></mrow></menclose><mi>.</mi></mrow><annotation encoding="application/x-tex">\boxed{V_A-V_B=\left(1+\frac{2R}{R_G}\right)(V_{s1}-V_{s2})}.</annotation></semantics></math></p>
+<p>Por tanto, la <strong>ganancia diferencial de la primera etapa</strong> es</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><menclose notation="box"><mrow><msub><mi>G</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mi>R</mi></mrow><msub><mi>R</mi><mi>G</mi></msub></mfrac></mrow></menclose><mi>.</mi></mrow><annotation encoding="application/x-tex">\boxed{G_1=1+\frac{2R}{R_G}}.</annotation></semantics></math></p>
+<p>Cuando <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">V_{s1}=V_{s2}</annotation></semantics></math>, la corriente por <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math> es cero y ambas salidas de la primera etapa siguen el mismo voltaje común. A diferencia de un restador resistivo simple, ambas señales se aplican a las <strong>entradas no inversoras de alta impedancia</strong> de los operacionales.</p>
+<h2 class="anchored" data-anchor-id="ai-ganancia-total" id="ai-ganancia-total">3. Etapa diferencial y ganancia total</h2>
+<p>Si la segunda etapa está balanceada, se cumple</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>R</mi><mn>2</mn></msub><msub><mi>R</mi><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>R</mi><mn>4</mn></msub><msub><mi>R</mi><mn>3</mn></msub></mfrac><mo>=</mo><mi>k</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\frac{R_2}{R_1}=\frac{R_4}{R_3}=k.</annotation></semantics></math></p>
+<p>De acuerdo con la conexión de polaridades de la presentación, su ecuación es <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>o</mi></msub><mo>=</mo><mi>k</mi><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>V</mi><mi>A</mi></msub><mo>−</mo><msub><mi>V</mi><mi>B</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">V_o=k(V_A-V_B)</annotation></semantics></math>. Sustituyendo la primera etapa:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><menclose notation="box"><mrow><msub><mi>V</mi><mi>o</mi></msub><mo>=</mo><munder><munder><mrow><mi>k</mi><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mi>R</mi></mrow><msub><mi>R</mi><mi>G</mi></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow></mrow><mo accent="true">⏟</mo></munder><msub><mi>G</mi><mi>D</mi></msub></munder><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>2</mn></mrow></msub><mo form="postfix" stretchy="true">)</mo></mrow></mrow></menclose><mi>.</mi></mrow><annotation encoding="application/x-tex">\boxed{V_o=\underbrace{k\left(1+\frac{2R}{R_G}\right)}_{G_D}(V_{s1}-V_{s2})}.</annotation></semantics></math></p>
+<p>En consecuencia,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><menclose notation="box"><mrow><msub><mi>G</mi><mi>D</mi></msub><mo>=</mo><mfrac><msub><mi>R</mi><mn>2</mn></msub><msub><mi>R</mi><mn>1</mn></msub></mfrac><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><msub><mi>R</mi><mi>A</mi></msub></mrow><msub><mi>R</mi><mi>G</mi></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow></mrow></menclose><mspace width="1.0em"></mspace><mrow><mtext mathvariant="normal">si </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>R</mi><mi>A</mi></msub><mo>=</mo><msub><mi>R</mi><mi>B</mi></msub><mo>,</mo><mspace width="1.0em"></mspace><mfrac><msub><mi>R</mi><mn>2</mn></msub><msub><mi>R</mi><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>R</mi><mn>4</mn></msub><msub><mi>R</mi><mn>3</mn></msub></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">\boxed{G_D=\frac{R_2}{R_1}\left(1+\frac{2R_A}{R_G}\right)}\quad\text{si }R_A=R_B,\quad\frac{R_2}{R_1}=\frac{R_4}{R_3}.</annotation></semantics></math></p>
+<p>En el modelo resistivo ideal y balanceado, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>C</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">G_C=0</annotation></semantics></math>. El signo de salida depende de <strong>qué terminal de la etapa diferencial se identifique como entrada positiva</strong>: una inversión del cableado cambia el signo de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>o</mi></msub><annotation encoding="application/x-tex">V_o</annotation></semantics></math>, aunque no la magnitud de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>G</mi><mi>D</mi></msub><annotation encoding="application/x-tex">G_D</annotation></semantics></math>.</p>
+<h3 class="anchored" data-anchor-id="tutor-deduccion-ai-s11" id="tutor-deduccion-ai-s11">Tutor IA · Deducir el AI de tres operacionales</h3>
+<div class="tutor-box">
+<div class="tutor-texto">
+<p>Sea mi tutor socrático de Electrónica II y tráteme de usted. Estudio el AI clásico de tres op-amp y siete resistencias de la Lección 7, sección 2.6. Primero pregúnteme qué ocurre con los nodos inversores en presencia de realimentación negativa; espere mi respuesta. Después solicite deducir la corriente en RG, los voltajes VA y VB de la primera etapa y la función de la segunda etapa diferencial, una pregunta por turno. Ayúdeme a comprobar las condiciones RA=RB y R2/R1=R4/R3 antes de deducir GD. No invente mediciones ni me entregue toda la demostración antes de mi intento. Revise la polaridad según el esquema que le muestre.</p>
+</div>
+<div class="tutor-acciones">
+<p><a class="course-button" href="https://chatgpt.com/" rel="noopener" target="_blank">Abrir ChatGPT</a></p>
+</div>
+</div>
+<h2 class="anchored" data-anchor-id="ai-cmrr" id="ai-cmrr">4. Rechazo al modo común y tolerancias</h2>
+<p>El AI ideal exhibe <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>o</mi></msub><mo>=</mo><msub><mi>G</mi><mi>D</mi></msub><msub><mi>V</mi><mrow><mi>i</mi><mi>D</mi></mrow></msub></mrow><annotation encoding="application/x-tex">V_o=G_DV_{iD}</annotation></semantics></math> y elimina la componente <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mrow><mi>i</mi><mi>C</mi></mrow></msub><annotation encoding="application/x-tex">V_{iC}</annotation></semantics></math> de ambas entradas. En un circuito real, la etapa diferencial aún depende de su puente resistivo y del CMRR propio de los tres op-amps.</p>
+<p>Para parejas resistivas balanceadas se obtiene <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>C</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">G_C=0</annotation></semantics></math> en el modelo ideal. Si existe desbalance, debe calcularse el término residual <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>C</mi></msub><msub><mi>V</mi><mrow><mi>i</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">G_CV_{iC}</annotation></semantics></math>, incluso si <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math> se eligió para una ganancia diferencial alta.</p>
+<p>La presentación expresa el efecto de una pequeña tolerancia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> mediante</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>CMRR</mo><mrow><mi>A</mi><mi>I</mi><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></mrow></msub><mo>≈</mo><mn>20</mn><msub><mo>log</mo><mn>10</mn></msub><mrow><mo form="prefix" stretchy="true">[</mo><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><msub><mi>R</mi><mi>A</mi></msub></mrow><msub><mi>R</mi><mi>G</mi></msub></mfrac><mo form="postfix" stretchy="true">)</mo></mrow><mfrac><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mrow><mn>4</mn><mi>α</mi></mrow></mfrac><mo form="postfix" stretchy="true">]</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><mi>k</mi><mo>=</mo><mfrac><msub><mi>R</mi><mn>2</mn></msub><msub><mi>R</mi><mn>1</mn></msub></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">\operatorname{CMRR}_{AI,\mathrm{dB}}\approx20\log_{10}\left[\left(1+\frac{2R_A}{R_G}\right)\frac{k+1}{4\alpha}\right],\qquad k=\frac{R_2}{R_1},</annotation></semantics></math></p>
+<p><strong>solo como aproximación de la contribución resistiva</strong> para una etapa de entrada simétrica. Se debe medir o consultar el rechazo propio de los op-amps y su variación con frecuencia antes de atribuir ese CMRR al equipo completo.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Propiedad</th>
+<th style="text-align: left;">AD de cuatro resistencias</th>
+<th style="text-align: left;">AI de tres op-amp</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Impedancia de entrada</td>
+<td style="text-align: left;">Finita, depende de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mn>1</mn></msub><annotation encoding="application/x-tex">R_1</annotation></semantics></math> en excitación diferencial</td>
+<td style="text-align: left;">Elevada; determinada principalmente por las entradas del op-amp</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ajuste de ganancia</td>
+<td style="text-align: left;">Requiere modificar parejas y mantener razones</td>
+<td style="text-align: left;">Puede modificarse mediante <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rechazo al modo común</td>
+<td style="text-align: left;">Afectado por desbalance del puente</td>
+<td style="text-align: left;">Mejora potencialmente, pero sigue limitado por desbalance y op-amps</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Complejidad</td>
+<td style="text-align: left;">Un op-amp, cuatro resistencias</td>
+<td style="text-align: left;">Tres op-amps, siete resistencias</td>
+</tr>
+</tbody>
+</table>
+<h2 class="anchored" data-anchor-id="ai-ejemplos" id="ai-ejemplos">5. Ejemplos y proyectos de diseño</h2>
+<h3 class="anchored" data-anchor-id="ejemplo-1-ganancia-ajustable-con-un-potenciómetro" id="ejemplo-1-ganancia-ajustable-con-un-potenciómetro">Ejemplo 1 · Ganancia ajustable con un potenciómetro</h3>
+<p>La presentación pide ganancia ajustable entre <strong>2 y 10</strong>, potenciómetro <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math> de <strong>100 kΩ</strong>, y propone <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><msub><mi>R</mi><mn>3</mn></msub><mo>=</mo><msub><mi>R</mi><mn>4</mn></msub><mo>=</mo><msub><mi>R</mi><mi>A</mi></msub><mo>=</mo><msub><mi>R</mi><mi>B</mi></msub><mo>=</mo><mn>50</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow><annotation encoding="application/x-tex">R_1=R_2=R_3=R_4=R_A=R_B=50\ \mathrm{k\Omega}</annotation></semantics></math> con una resistencia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>x</mi></msub><mo>=</mo><mn>10.1</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow><annotation encoding="application/x-tex">R_x=10.1\ \mathrm{k\Omega}</annotation></semantics></math> en serie con el potenciómetro. La fórmula correspondiente es</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>D</mi></msub><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>R</mi><mi>G</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>100</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow><mrow><msub><mi>R</mi><mi>G</mi></msub><mo>+</mo><mn>10.1</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">G_D(R_G)=1+\frac{100\ \mathrm{k\Omega}}{R_G+10.1\ \mathrm{k\Omega}}.</annotation></semantics></math></p>
+<p>Con los valores propuestos se obtiene <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>D</mi></msub><mo>≈</mo><mn>10.90</mn></mrow><annotation encoding="application/x-tex">G_D\approx10.90</annotation></semantics></math> para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>G</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">R_G=0</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>D</mi></msub><mo>≈</mo><mn>1.91</mn></mrow><annotation encoding="application/x-tex">G_D\approx1.91</annotation></semantics></math> para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>G</mi></msub><mo>=</mo><mn>100</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow><annotation encoding="application/x-tex">R_G=100\ \mathrm{k\Omega}</annotation></semantics></math>. Los extremos nominales de ganancia requieren ajustar la red resistiva.</p>
+<p>Para obtener una ganancia nominal ajustable entre 2 y 10 con un potenciómetro de 0–100 kΩ y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k=1</annotation></semantics></math>, se resuelve</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mi>R</mi></mrow><msub><mi>R</mi><mi>x</mi></msub></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mn>2</mn><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mi>R</mi></mrow><mrow><msub><mi>R</mi><mi>x</mi></msub><mo>+</mo><mn>100</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow></mfrac><mo>,</mo></mrow><annotation encoding="application/x-tex">10=1+\frac{2R}{R_x},\qquad2=1+\frac{2R}{R_x+100\ \mathrm{k\Omega}},</annotation></semantics></math></p>
+<p>lo que conduce a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>56.25</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow><annotation encoding="application/x-tex">R=56.25\ \mathrm{k\Omega}</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>x</mi></msub><mo>=</mo><mn>12.5</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow><annotation encoding="application/x-tex">R_x=12.5\ \mathrm{k\Omega}</annotation></semantics></math>. Los valores normalizados y tolerancias se deben simular antes de implementarlos.</p>
+<figure>
+<img alt="Ganancias calculadas en la propuesta del material original y en la extensión de diseño con extremos exactos." data-fig-alt="Curva de GD contra RG para dos opciones de resistencias; se distinguen valores nominales del profesor y la extensión didáctica." src="../../../recursos/semana-11/figuras/ia-ganancia-variable.svg"/>
+<figcaption aria-hidden="true">Ganancias calculadas en la propuesta del material original y en la extensión de diseño con extremos exactos.</figcaption>
+</figure>
+<figure>
+<img alt="Página 30 de la presentación original: diseño con potenciómetro de 100 kΩ." data-fig-alt="Diapositiva original del ejemplo de amplificador de instrumentación con ganancia ajustable." src="../../../recursos/semana-11/figuras/presentacion-leccion-07-p30.jpg"/>
+<figcaption aria-hidden="true">Configuración del amplificador de instrumentación con ganancia ajustable.</figcaption>
+</figure>
+<h3 class="anchored" data-anchor-id="ejemplo-2-ganancia-5-y-requisito-de-cmrr" id="ejemplo-2-ganancia-5-y-requisito-de-cmrr">Ejemplo 2 · Ganancia 5 y requisito de CMRR</h3>
+<p>La presentación propone una segunda etapa con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>=</mo><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><msub><mi>R</mi><mn>3</mn></msub><mo>=</mo><msub><mi>R</mi><mn>4</mn></msub><mo>=</mo><mn>10</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow><annotation encoding="application/x-tex">R_1=R_2=R_3=R_4=10\ \mathrm{k\Omega}</annotation></semantics></math> (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k=1</annotation></semantics></math>), <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>A</mi></msub><mo>=</mo><msub><mi>R</mi><mi>B</mi></msub><mo>=</mo><mn>10</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow><annotation encoding="application/x-tex">R_A=R_B=10\ \mathrm{k\Omega}</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>G</mi></msub><mo>=</mo><mn>5</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow><annotation encoding="application/x-tex">R_G=5\ \mathrm{k\Omega}</annotation></semantics></math>; se obtiene</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>D</mi></msub><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mrow><mo form="prefix" stretchy="true">(</mo><mn>10</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow><mo form="postfix" stretchy="true">)</mo></mrow></mrow><mrow><mn>5</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow></mrow></mfrac><mo>=</mo><mn>5</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">G_D=1+\frac{2(10\ \mathrm{k\Omega})}{5\ \mathrm{k\Omega}}=5.</annotation></semantics></math></p>
+<p>Para <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></mrow><annotation encoding="application/x-tex">70\ \mathrm{dB}</annotation></semantics></math> como objetivo <strong>idealizado por desbalance</strong>, el mismo modelo requiere <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>≲</mo><mn>5</mn><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>+</mo><mn>1</mn><mo form="postfix" stretchy="true">)</mo></mrow><mi>/</mi><mrow><mo form="prefix" stretchy="true">(</mo><mn>4</mn><mo>×</mo><msup><mn>10</mn><mrow><mn>70</mn><mi>/</mi><mn>20</mn></mrow></msup><mo form="postfix" stretchy="true">)</mo></mrow><mo>≈</mo><mn>0.000791</mn></mrow><annotation encoding="application/x-tex">\alpha\lesssim 5(1+1)/(4\times10^{70/20})\approx0.000791</annotation></semantics></math>, aproximadamente <strong>0.079 %</strong>. Resistencias de 0.1 % darían <strong>unos 68 dB</strong> según esa aproximación, no 70 dB garantizados. La diapositiva 33 mezcla objetivos de 70 y 80 dB; conviene tratar esos datos como consignas para verificar, no como valores automáticamente satisfechos.</p>
+<figure>
+<img alt="Ejemplo de circuito y resistencias de la diapositiva 33." data-fig-alt="Amplificador de instrumentación con tres opamps, resistencias de 10k, RG de 5k y alimentación dual." src="../../../recursos/semana-11/figuras/presentacion-leccion-07-p33.jpg"/>
+<figcaption aria-hidden="true">Ejemplo de circuito y resistencias de la figura.</figcaption>
+</figure>
+<h3 class="anchored" data-anchor-id="ejemplo-3-puente-no-balanceado" id="ejemplo-3-puente-no-balanceado">Ejemplo 3 · Puente no balanceado</h3>
+<p>En este ejemplo se modifica una de las resistencias del puente de la etapa final. <strong>Procedimiento:</strong> obtenga primero <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>A</mi></msub><annotation encoding="application/x-tex">V_A</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>B</mi></msub><annotation encoding="application/x-tex">V_B</annotation></semantics></math> por LCK, después calcule <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>o</mi></msub><annotation encoding="application/x-tex">V_o</annotation></semantics></math> con la <strong>ecuación general no balanceada</strong> del AD, y finalmente reorganice en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>D</mi></msub><msub><mi>V</mi><mrow><mi>i</mi><mi>D</mi></mrow></msub><mo>+</mo><msub><mi>G</mi><mi>C</mi></msub><msub><mi>V</mi><mrow><mi>i</mi><mi>C</mi></mrow></msub></mrow><annotation encoding="application/x-tex">G_DV_{iD}+G_CV_{iC}</annotation></semantics></math>. Compruebe el valor y signo de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>G</mi><mi>C</mi></msub><annotation encoding="application/x-tex">G_C</annotation></semantics></math> a partir de la conexión real, en vez de aplicar la fórmula del puente ideal.</p>
+<h3 class="anchored" data-anchor-id="ejemplo-4-medición-resistiva-mediante-divisor-y-ai" id="ejemplo-4-medición-resistiva-mediante-divisor-y-ai">Ejemplo 4 · Medición resistiva mediante divisor y AI</h3>
+<p>El ejemplo incluye un circuito con una resistencia variable <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>x</mi></msub><mo>=</mo><mn>2</mn><mspace width="0.222em"></mspace><mrow><mi mathvariant="normal">k</mi><mi mathvariant="normal">Ω</mi></mrow><mrow><mo form="prefix" stretchy="true">(</mo><mn>1</mn><mo>+</mo><mi>x</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">R_x=2\ \mathrm{k\Omega}(1+x)</annotation></semantics></math>, con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>≤</mo><mi>x</mi><mo>≤</mo><mn>0.3</mn></mrow><annotation encoding="application/x-tex">0\le x\le0.3</annotation></semantics></math>, y un AI. La señal diferencial surge del desbalance de un divisor y la ganancia la aporta el AI. Analice primero ambos divisores, después el AI, y verifique los puntos extremos mediante simulación. Un incremento de resistencia puede alterar la salida de forma <strong>no lineal</strong> si el voltaje del divisor depende racionalmente de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</p>
+<h3 class="anchored" data-anchor-id="ejemplo-5-puente-de-wheatstone-y-sensor-resistivo-td5a" id="ejemplo-5-puente-de-wheatstone-y-sensor-resistivo-td5a">Ejemplo 5 · Puente de Wheatstone y sensor resistivo TD5A</h3>
+<p>La presentación plantea una aplicación con sensor TD5A, un cuarto de puente de Wheatstone y Arduino Uno, para temperatura entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>20</mn><annotation encoding="application/x-tex">20</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>140</mn><msup><mspace width="0.222em"></mspace><mo>∘</mo></msup><mi mathvariant="normal">C</mi></mrow><annotation encoding="application/x-tex">140\ ^\circ\mathrm C</annotation></semantics></math> y resolución deseada de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.15</mn><msup><mspace width="0.222em"></mspace><mo>∘</mo></msup><mi mathvariant="normal">C</mi></mrow><annotation encoding="application/x-tex">0.15\ ^\circ\mathrm C</annotation></semantics></math>. El esquema plantea la cadena <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>→</mo><msub><mi>R</mi><mi>x</mi></msub><mo>→</mo><msub><mi>V</mi><mrow><mi>i</mi><mi>D</mi></mrow></msub><mo>→</mo><msub><mi>V</mi><mi>o</mi></msub><mo>→</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">T\to R_x\to V_{iD}\to V_o\to D</annotation></semantics></math>. <strong>No es posible determinar numéricamente <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>x</mi></msub><mrow><mo form="prefix" stretchy="true">(</mo><mi>T</mi><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">R_x(T)</annotation></semantics></math> con los documentos recibidos</strong>, pues no se incluye una tabla de calibración o función de transferencia específica del TD5A. Se conserva el ejemplo como secuencia de modelado, sin inventar parámetros del sensor.</p>
+<h2 class="anchored" data-anchor-id="ai-simulacion" id="ai-simulacion">6. Protocolo de simulación L7, parte 2</h2>
+<ol type="1">
+<li>Reproduzca la topología de tres amplificadores operacionales; identifique alimentación de cada etapa y polaridad de salida.</li>
+<li>Inyecte señales diferenciales conocidas y compruebe <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>G</mi><mi>D</mi></msub><annotation encoding="application/x-tex">G_D</annotation></semantics></math> sin saturación.</li>
+<li>Aplique señales comunes iguales; mida la salida residual con puente nominal y con desbalance intencional.</li>
+<li>Varíe <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math> en una lista de valores y trace <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mi>D</mi></msub><mo>=</mo><mi>f</mi><mrow><mo form="prefix" stretchy="true">(</mo><msub><mi>R</mi><mi>G</mi></msub><mo form="postfix" stretchy="true">)</mo></mrow></mrow><annotation encoding="application/x-tex">G_D=f(R_G)</annotation></semantics></math>; contraste con la curva calculada.</li>
+<li>Compare op-amp ideal y OPA4345 en alimentación unipolar como indica la presentación. Verifique el rango de modo común y el margen de salida con el modelo utilizado.</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Caso de prueba</th>
+<th style="text-align: left;">Valores a registrar</th>
+<th style="text-align: left;">Pregunta de interpretación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math> mínimo</td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>G</mi><mi>D</mi></msub><annotation encoding="application/x-tex">G_D</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>o</mi></msub><annotation encoding="application/x-tex">V_o</annotation></semantics></math> y saturación</td>
+<td style="text-align: left;">¿Se alcanza el máximo antes de los límites físicos?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mi>G</mi></msub><annotation encoding="application/x-tex">R_G</annotation></semantics></math> máximo</td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>G</mi><mi>D</mi></msub><annotation encoding="application/x-tex">G_D</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>o</mi></msub><annotation encoding="application/x-tex">V_o</annotation></semantics></math></td>
+<td style="text-align: left;">¿Coincide con el mínimo de la ecuación?</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Modo común</td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mrow><mi>s</mi><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>V</mi><mrow><mi>s</mi><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">V_{s1}=V_{s2}</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>o</mi></msub><annotation encoding="application/x-tex">V_o</annotation></semantics></math></td>
+<td style="text-align: left;">¿Cómo queda afectado el CMRR?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Puente desequilibrado</td>
+<td style="text-align: left;">Relaciones de resistencias, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>G</mi><mi>C</mi></msub><annotation encoding="application/x-tex">G_C</annotation></semantics></math></td>
+<td style="text-align: left;">¿Qué resistencia afecta el resultado?</td>
+</tr>
+</tbody>
+</table>
+<h3 class="anchored" data-anchor-id="tutor-diseno-ai-s11" id="tutor-diseno-ai-s11">Tutor IA · Diseñar y simular un AI</h3>
+<div class="tutor-box">
+<div class="tutor-texto">
+<p>Actúe como tutor de diseño electrónico y tráteme de usted. Debo simular los ejemplos de la Lección 7, sección 2.6, de amplificador de instrumentación. Pídame primero cuál ejemplo resuelvo y el circuito con sus siete resistencias; espere mi respuesta. Ayúdeme una pregunta por turno a calcular GD, prever polaridad, configurar la fuente y comprobar límites de los op-amp. Para el potenciómetro de 100 kΩ exíjame sustituir ambos extremos en la ecuación real antes de afirmar 2–10. Si analizo CMRR, distinga el efecto del puente del rechazo propio del op-amp. Nunca invente simulaciones y termine pidiéndome una comparación de cálculo y esquema.</p>
+</div>
+<div class="tutor-acciones">
+<p><a class="course-button" href="https://chatgpt.com/" rel="noopener" target="_blank">Abrir ChatGPT</a></p>
+</div>
+</div>
+<h2 class="anchored" data-anchor-id="cierre-de-la-lección" id="cierre-de-la-lección">7. Cierre de la lección</h2>
+<p>El amplificador de instrumentación conserva la función diferencial del restador, pero añade dos etapas de entrada de alta impedancia y ofrece un ajuste más sencillo de ganancia. Su correcta selección exige verificar <strong>CMRR, intervalo de modo común, rango de salida, ruido, offset y precisión de resistencias</strong>, en lugar de caracterizarlo únicamente por <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>G</mi><mi>D</mi></msub><annotation encoding="application/x-tex">G_D</annotation></semantics></math>.</p>
+</main> <!-- /main -->
+<script>
+(() => {
+  function copyWithSelection(text) {
+    const field = document.createElement('textarea');
+    const previousFocus = document.activeElement;
+    field.value = text;
+    field.readOnly = true;
+    field.style.position = 'fixed';
+    field.style.opacity = '0';
+    document.body.append(field);
+    field.select();
+    try {
+      return document.execCommand('copy');
+    } finally {
+      field.remove();
+      previousFocus?.focus();
+    }
+  }
+
+  async function copyText(text) {
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        return copyWithSelection(text);
+      }
+    }
+    return copyWithSelection(text);
+  }
+
+  for (const panel of document.querySelectorAll('.tutor-box')) {
+    const prompt = panel.querySelector('.tutor-texto');
+    const actions = panel.querySelector('.tutor-acciones');
+    if (!prompt || !actions) continue;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'course-button course-button-primary';
+    button.textContent = 'Copiar consigna';
+
+    const status = document.createElement('span');
+    status.className = 'tutor-estado';
+    status.setAttribute('role', 'status');
+    actions.prepend(button);
+    actions.append(status);
+
+    button.addEventListener('click', async () => {
+      const text = [...prompt.querySelectorAll('p')]
+        .map(paragraph => paragraph.innerText.trim())
+        .join('\n\n');
+      let copied = false;
+      try {
+        copied = await copyText(text);
+      } catch {
+        // The prompt remains selectable when the browser blocks clipboard access.
+      }
+      status.textContent = copied ? 'Consigna copiada.' : 'Seleccione el texto para copiarlo.';
+    });
+  }
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Código desplazable","output":"Salida desplazable"};
+  </script>
+<nav aria-label="Página" class="page-navigation"><div class="nav-page nav-page-previous"><a class="pagination-link" href="semana-11.html"><span class="nav-page-text">Semana 11</span></a></div><div class="nav-page nav-page-next"><a class="pagination-link" href="practica-08-amplificador-diferencial.html"><span class="nav-page-text">Practica 08 amplificador diferencial</span></a></div></nav>
+</div> <!-- /content -->
+</body></html>

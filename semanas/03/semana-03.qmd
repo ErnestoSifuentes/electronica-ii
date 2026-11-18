@@ -1,0 +1,34 @@
+# Semana 03 {.unnumbered}
+
+## Lecciones y actividades
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 7 | 120 min | [Continuación de la Lección 1. Op-amp en lazo abierto](../02/introduccion-opamp.qmd). Participe en la discusión de los ejemplos y consulte los [ejercicios demostrativos L1 resueltos (PDF)](../../recursos/semana-03/ejercicios-demostrativos-l1-resueltos.pdf). |
+| 8 | 120 min | [Práctica 1. Primer contacto con un op-amp](practica-01-primer-contacto-opamp.qmd). Entregue la transcripción de la teoría básica y comience la práctica con la orientación del profesor. |
+| 9 | 60 min | [Continuación de la Práctica 1](practica-01-primer-contacto-opamp.qmd). Avance en la verificación experimental y entregue el cuestionario L1 y la Actividad L1. Para redactar su informe, consulte el [ejemplo de reporte de la Práctica 1](practica-01-primer-contacto-opamp.qmd#informe). |
+
+## Entregas {#entregas}
+
+| Clase | Evidencia |
+|--:|:--|
+| 8 | Transcripción en la libreta de la teoría básica de la [guía de la Práctica 1 (PDF)](../../recursos/semana-03/practica-01-primer-contacto-opamp.pdf), páginas 1 a 3. |
+| 9 | [Cuestionario L1 (PDF)](../../recursos/semana-02/cuestionario-l1.pdf) e [informe de la Actividad L1 sobre el TL084](../02/caracterizacion-tl084.qmd#informe). |
+
+## Trabajo para la semana siguiente {#trabajo-para-la-semana-4}
+
+| Entrega | Evidencia |
+|:--|:--|
+| [Semana 4, segunda sesión](../04/semana-04.qmd#entregas-de-la-semana-3) (clase 11) | Vea la presentación de la Lección 2, *Comparador de voltaje*, y elabore un resumen proporcional a la duración del video. |
+| [Semana 5, tercera sesión](../05/semana-05.qmd#entregas) (clase 15) | Resuelva en equipo los [Ejercicios propuestos L1](ejercicios-propuestos-l1.qmd) y prepare el informe con cálculos, simulaciones y conclusiones. |
+
+::: {.course-actions}
+[Ver el video del comparador desde 2:09](https://www.youtube.com/watch?v=2ypst8wHYQw&t=129s){.course-button .course-button-primary target="_blank" rel="noopener"}
+
+:::
+
+## Recursos de la semana
+
+- [Práctica 1 · Primer contacto con un op-amp](practica-01-primer-contacto-opamp.qmd)
+- [Ejercicios propuestos L1](ejercicios-propuestos-l1.qmd)
+- [Planificación de la semana (PDF)](../../recursos/semana-03/planificacion-semana-03.pdf)

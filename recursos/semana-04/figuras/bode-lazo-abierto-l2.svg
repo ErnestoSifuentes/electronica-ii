@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 442" role="img">
+<title>Magnitud y fase del ejemplo de 100 Hz</title>
+<style>
+text{fill:#203237;font:16px "Segoe UI",Arial,sans-serif}
+.s{font-size:13px}.b{font-weight:700}.x{text-anchor:middle}.y{text-anchor:end}
+.a{fill:none;stroke:#263a40;stroke-width:1.5}
+.w{fill:none;stroke:#263a40;stroke-width:2}
+.g{fill:none;stroke:#a2afb3;stroke-dasharray:5 4}
+.t{fill:none;stroke:#1d615d;stroke-width:3}
+.d{fill:none;stroke:#45566c;stroke-width:3;stroke-dasharray:8 4}
+.p{fill:#1d615d}.r{fill:#f4f7f6;stroke:#263a40;stroke-width:2}
+</style>
+<rect width="780" height="442" fill="white"/>
+<path class="g" d="M90 66H690 M90 114H690 M90 162H690 M90 282H690 M90 336H690 M210 56V390 M330 56V390 M450 56V390 M570 56V390 M690 56V390"/>
+<path class="a" d="M90 56V210H690 M90 282V390H690"/>
+<polyline class="t" points="90.0,66.0 105.0,66.0 120.0,66.0 135.0,66.0 150.0,66.0 165.0,66.0 180.0,66.0 195.0,66.1 210.0,66.1 225.0,66.2 240.0,66.3 255.0,66.6 270.0,67.0 285.0,67.7 300.0,68.9 315.0,70.7 330.0,73.2 345.0,76.7 360.0,80.9 375.0,85.7 390.0,91.0 405.0,96.6 420.0,102.3 435.0,108.2 450.0,114.1 465.0,120.1 480.0,126.0 495.0,132.0 510.0,138.0 525.0,144.0 540.0,150.0 555.0,156.0 570.0,162.0 585.0,168.0 600.0,174.0 615.0,180.0 630.0,186.0 645.0,192.0 660.0,198.0 675.0,204.0 690.0,210.0"/><polyline class="t" points="90.0,282.7 105.0,282.9 120.0,283.2 135.0,283.6 150.0,284.2 165.0,284.9 180.0,285.9 195.0,287.1 210.0,288.9 225.0,291.1 240.0,294.1 255.0,298.0 270.0,303.1 285.0,309.4 300.0,317.2 315.0,326.2 330.0,336.0 345.0,345.8 360.0,354.8 375.0,362.6 390.0,368.9 405.0,374.0 420.0,377.9 435.0,380.9 450.0,383.1 465.0,384.9 480.0,386.1 495.0,387.1 510.0,387.8 525.0,388.4 540.0,388.8 555.0,389.1 570.0,389.3 585.0,389.5 600.0,389.6 615.0,389.7 630.0,389.8 645.0,389.8 660.0,389.9 675.0,389.9 690.0,389.9"/>
+<circle class="p" cx="330" cy="73.2" r="4"/><circle class="p" cx="330" cy="336" r="4"/>
+<text x="98" y="40" class="b">Magnitud (dB)</text><text x="98" y="261" class="b">Fase (grados)</text>
+<text x="342" y="60" class="s">−3.01 dB</text><text x="342" y="324" class="s">−45°</text>
+<g class="y s"><text x="78" y="70">100</text><text x="78" y="118">80</text><text x="78" y="166">60</text><text x="78" y="214">40</text><text x="78" y="286">0</text><text x="78" y="340">−45</text><text x="78" y="394">−90</text></g>
+<g class="x s"><text x="90" y="410">1</text><text x="210" y="410">10</text><text x="330" y="410">100</text><text x="450" y="410">1 000</text><text x="570" y="410">10 000</text><text x="690" y="410">100 000</text></g>
+<text x="390" y="432" class="x">Frecuencia (Hz, escala logarítmica)</text>
+</svg>

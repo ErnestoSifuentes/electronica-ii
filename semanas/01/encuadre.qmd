@@ -1,0 +1,31 @@
+# Encuadre del curso {.unnumbered}
+
+**Electrónica II · IEC2704-96**  
+Programa de Ingeniería Eléctrica, Instituto de Ingeniería y Tecnología  
+Universidad Autónoma de Ciudad Juárez  
+Profesor Ernesto Sifuentes de la Hoya
+
+## Objetivo
+
+Adquirir experiencia en el análisis, el diseño y la implementación de circuitos electrónicos analógicos con amplificadores operacionales. Durante el curso analizará circuitos para el procesamiento de señales de baja amplitud, comprobará su funcionamiento mediante experimentación y comunicará sus resultados en informes técnicos.
+
+## Trabajo semanal
+
+El curso es presencial y comprende 80 horas en 16 semanas. Cada semana se dedican tres horas al aula, dos al laboratorio y se contemplan seis horas de estudio y trabajo fuera del aula. Consulte el [calendario](../../calendario.qmd) para ubicar cada lección, práctica y evidencia.
+
+## Evaluación
+
+| Criterio | Ponderación |
+|:--|--:|
+| Primer examen parcial | 10 % |
+| Segundo examen parcial | 10 % |
+| Tercer examen parcial | 10 % |
+| Examen departamental | 10 % |
+| Actividades | 30 % |
+| Prácticas de laboratorio | 30 % |
+| **Total** | **100 %** |
+
+La evaluación considera las siguientes ponderaciones. Se requiere un mínimo de 80 % de asistencia. Los trabajos se presentarán con redacción propia y con las referencias correspondientes.
+
+
+[Consultar la presentación original del encuadre (PDF)](../../recursos/semana-01/encuadre-electronica-ii.pdf)

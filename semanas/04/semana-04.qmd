@@ -1,0 +1,27 @@
+# Semana 04 {.unnumbered}
+
+## Lecciones y actividades
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 10 | 120 min | Resuelva con el profesor los [Ejercicios demostrativos L1](../02/ejercicios-demostrativos-l1.qmd) y revise el [documento resuelto (PDF)](../../recursos/semana-03/ejercicios-demostrativos-l1-resueltos.pdf). |
+| 11 | 120 min | [Lección 2 · Comparar voltajes en lazo abierto](comparador-de-voltaje.qmd). Compare los detectores inversor y no inversor. Entregue el resumen del [video de la Lección 2](comparador-de-voltaje.qmd#video-l2). |
+| 12 | 60 min | [Práctica 2 · Comparador de voltaje](practica-02-comparador-voltaje.qmd). Simule los detectores y observe en el laboratorio cómo la salida cambia al cruzar la referencia. |
+
+## Entregas {#entregas-de-la-semana-3}
+
+| Entrega | Evidencia |
+|:--|:--|
+| Clase 11, Semana 4 | Resumen del [video de la Lección 2](comparador-de-voltaje.qmd#video-l2). |
+
+## Trabajo para la semana siguiente {#trabajo-para-la-semana-5}
+
+| Entrega | Evidencia |
+|:--|:--|
+| [Clase 13, Semana 5](../05/semana-05.qmd#entregas) | Vea el [video de la Lección 3](../05/retroalimentacion-negativa.qmd#video-l3) y sintetice a mano sus conceptos principales con una extensión proporcional al contenido. |
+| [Clase 15, Semana 5](../05/semana-05.qmd#entregas) | Resuelva por equipo los [Ejercicios propuestos L1](../03/ejercicios-propuestos-l1.qmd). Consulte los ejercicios demostrativos resueltos. |
+
+## Recursos de la semana
+
+- [Práctica 2 · Comparador de voltaje](practica-02-comparador-voltaje.qmd)
+- [Planificación de la semana (PDF)](../../recursos/semana-04/planificacion-semana-04.pdf)

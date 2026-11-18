@@ -1,0 +1,26 @@
+# Adquisición y procesamiento con LabVIEW {.unnumbered}
+
+El syllabus dedica tres clases a la introducción a LabVIEW, la programación y la adquisición y análisis de señales.
+
+Consulte el [desarrollo de software de adquisición de la Semana 8](../08/software-adquisicion-labview.qmd), que incorpora la presentación original.
+
+## Trabajo previsto
+
+| Clase | Actividad |
+|--:|:--|
+| [21](../07/semana-07.qmd) | Registre en sus apuntes los elementos del entorno de programación. |
+| [22](../08/semana-08.qmd) | Realice los ejercicios de programación para adquisición y procesamiento. |
+| [23](../08/semana-08.qmd) | Documente la Práctica 5, adquisición y análisis de señales con LabVIEW. |
+
+### Tutor IA · Identifique el entorno de LabVIEW {#tutor-labview-intro-s7}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor introductorio de Electrónica II y tráteme de usted. La clase 21 inicia el reconocimiento del entorno LabVIEW para adquisición y procesamiento; la presentación original se desarrolla en la Semana 8. Pídame primero una captura del entorno que estoy utilizando y el objetivo del ejercicio, sin suponer la versión del programa ni inventar instrucciones de una práctica no proporcionada. Haga una pregunta por turno y espere mi respuesta. Ayúdeme a identificar, a partir de mi captura, el panel frontal, el diagrama de bloques, un control, un indicador y el flujo de datos. Si no tengo captura, solicite que describa lo que aparece en pantalla. Para cerrar, pídame que explique cómo verificaría la relación entre un control de entrada y un indicador de salida.
+:::
+
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+

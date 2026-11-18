@@ -1,0 +1,34 @@
+# Semana 05 {.unnumbered}
+
+## Lecciones y actividades
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 13 | 120 min | [Lección 3 · Retroalimentación negativa](retroalimentacion-negativa.qmd). Entregue el resumen del video y comience la [simulación de los ejemplos](retroalimentacion-negativa.qmd#ejemplos-en-multisim). |
+| 14 | 120 min | Resuelva con el profesor los [Ejercicios demostrativos L3](ejercicios-demostrativos-l3.qmd) y compare el cálculo con Multisim. |
+| 15 | 60 min | Resuelva en equipo los [Ejercicios propuestos L3](ejercicios-propuestos-l3.qmd). Entregue la simulación de los ejemplos L3 y el informe de los Ejercicios propuestos L1. |
+
+## Entregas {#entregas}
+
+| Entrega | Evidencia |
+|:--|:--|
+| Clase 13, Semana 5 | Resumen manuscrito del [video de la Lección 3](retroalimentacion-negativa.qmd#video-l3). |
+| Clase 15, Semana 5 | [Simulación de los ejemplos de la Lección 3](retroalimentacion-negativa.qmd#informe-de-simulacion) y [Ejercicios propuestos L1](../03/ejercicios-propuestos-l1.qmd). |
+
+## Trabajo para la semana siguiente {#trabajo-para-la-semana-6}
+
+| Entrega | Evidencia |
+|:--|:--|
+| [Clase 16, Semana 6](../06/semana-06.qmd#entregas) | Vea el [video de la Lección 4](../06/adaptar-impedancias.qmd#video-l4) y elabore a mano un resumen con una extensión proporcional al contenido. |
+| [Clase 18, Semana 6](../06/semana-06.qmd#entregas) | Informe de los [Ejercicios propuestos L3](ejercicios-propuestos-l3.qmd). |
+
+## Recursos de la semana
+
+### Guías para experimentar con NI myDAQ {#guías-para-experimentar-con-ni-mydaq}
+
+En la [Actividad L3 con NI myDAQ](actividad-retroalimentacion.qmd) encontrará los dos documentos para comparar los circuitos con y sin realimentación, medir la respuesta en frecuencia y estimar el error diferencial.
+
+- [Ejercicios demostrativos L3](ejercicios-demostrativos-l3.qmd)
+- [Ejercicios propuestos L3](ejercicios-propuestos-l3.qmd)
+- [Actividad con NI myDAQ](actividad-retroalimentacion.qmd)
+- [Planificación de la semana (PDF)](../../recursos/semana-05/planificacion-semana-05.pdf)

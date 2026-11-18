@@ -1,0 +1,26 @@
+# Examen U3 · Filtros activos {.unnumbered}
+
+**Unidad III · Material original de evaluación**
+
+El examen de la Unidad 3 reúne **27 reactivos** sobre funciones de transferencia, Bode, clasificación de filtros, realizaciones activas, aproximaciones Butterworth, Chebyshev y Bessel, y problemas de diseño con verificación en Multisim. Consulte el PDF para trabajar sobre los enunciados completos.
+
+Como preparación, compruebe que puede justificar el denominador de primer y segundo orden, calcular las ganancias y las frecuencias características, y seleccionar la estructura apropiada. Para los problemas de diseño, presente ecuaciones, componentes y curvas, no solamente el circuito.
+
+::: {.course-actions}
+[Consultar examen original (PDF)](../../recursos/semana-16/examen-u3.pdf){.course-button .course-button-primary}
+[Lección 10 · Primer orden](../15/filtros-pasa-bajas-primer-orden.qmd){.course-button}
+[Lección 10 · Segundo orden](../15/filtros-pasa-bajas-segundo-orden.qmd){.course-button}
+[Tutor IA](../../tutor-ia.qmd#consignas-semana-16){.course-button}
+:::
+
+
+### Tutor IA · Preparación razonada de examen {#tutor-examen-u3-s16}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Tráteme de usted y formule una sola pregunta por turno. Quiero prepararme para el examen U3 de filtros activos. Solicite que elija uno de los 27 reactivos y explique mi intento. Ayúdeme a revisar suposiciones, polinomios normalizados, topologías y unidades sin dar las respuestas del examen. Use ejemplos análogos cuando sea necesario, no respuestas directas a preguntas evaluativas.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::

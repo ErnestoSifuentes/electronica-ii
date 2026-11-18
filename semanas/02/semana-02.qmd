@@ -1,0 +1,28 @@
+# Semana 02 {.unnumbered}
+
+## Lecciones y actividades
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 4 | 120 min | [Lección 1. Introducción al op-amp en lazo abierto](introduccion-opamp.qmd). Participe en los ejemplos de la lección, tome apuntes y entregue el [resumen manuscrito del video](../01/semana-01.qmd#actividad-extraclase). |
+| 5 | 120 min | [Ejercicios demostrativos L1](ejercicios-demostrativos-l1.qmd). Resuelva los ejercicios con el profesor y compare los cálculos con las simulaciones. |
+| 6 | 60 min | [Caracterización del TL084 en Multisim](caracterizacion-tl084.qmd). Inicie la actividad con la orientación del profesor y entregue el [informe de los ejercicios de la lección inicial](../01/divisor-de-voltaje.qmd#ejercicios-propuestos). |
+
+## Entregas {#entregas-de-la-leccion-inicial}
+
+- **Clase 4.** [Resumen manuscrito del video](../01/semana-01.qmd#actividad-extraclase).
+- **Clase 6.** [Informe de los ejercicios propuestos](../01/divisor-de-voltaje.qmd#ejercicios-propuestos).
+
+## Trabajo para la semana siguiente {#trabajo-para-la-semana-3}
+
+| Entrega | Evidencia |
+|:--|:--|
+| [Semana 3, segunda sesión](../03/semana-03.qmd#entregas) (clase 8) | Transcriba en su libreta la teoría básica de la [Práctica 1, Primer contacto con un op-amp](../03/practica-01-primer-contacto-opamp.qmd#preparacion), en las páginas 1 a 3 de la guía. |
+| [Semana 3, tercera sesión](../03/semana-03.qmd#entregas) (clase 9) | Entregue el [cuestionario L1 (PDF)](../../recursos/semana-02/cuestionario-l1.pdf), preparado en equipo, y el [informe de caracterización del TL084](caracterizacion-tl084.qmd#informe). |
+
+## Recursos de la semana
+
+- [Ejercicios demostrativos L1](ejercicios-demostrativos-l1.qmd)
+- [Caracterización del TL084](caracterizacion-tl084.qmd)
+- [Cuestionario de la Lección 1 (PDF)](../../recursos/semana-02/cuestionario-l1.pdf)
+- [Planificación de la semana (PDF)](../../recursos/semana-02/planificacion-semana-02.pdf)

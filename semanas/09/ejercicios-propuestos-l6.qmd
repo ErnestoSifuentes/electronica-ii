@@ -1,0 +1,86 @@
+# Ejercicios propuestos L6 · Suma y acondicionamiento {.unnumbered}
+
+**Clase 27.** Los tres ejercicios de la Lección 6 aplican el amplificador sumador inversor al **promedio de varias señales** y al **ajuste de nivel y ganancia**. La planificación solicita la entrega en la **clase 3 de la Semana 10**. Cada problema debe sustentarse con análisis simbólico, elección de resistencias, simulaciones y una conclusión propia.
+
+::: {.course-actions}
+[Enunciado original L6 (PDF)](../../recursos/semana-09/ejercicios-l6.pdf){.course-button .course-button-primary}
+[Lección 6 y ecuaciones](sumar-y-amplificar-voltajes.qmd){.course-button}
+[Simulación de Ejercicio 3 (.ms14)](../../recursos/semana-09/simulaciones/ejercicio-3.ms14){.course-button download="ejercicio-3.ms14"}
+:::
+
+## Ejercicio 1 · Promedio inversor de cinco señales {#ejercicio1-l6}
+
+Parta de la **figura 1** del PDF, que muestra un sumador de cuatro entradas con $R_{s,i}=100\ \mathrm{k\Omega}$ y $R_F=25\ \mathrm{k\Omega}$. Adapte el circuito para que incorpore una quinta entrada $V_{s5}=5\ \mathrm V$ y obtenga el **negativo del promedio** de las cinco tensiones. Verifique la magnitud y el signo por simulación.
+
+Para orientar el diseño, recuerde:
+
+$$V_o=-\frac{R_F}{R_s}\sum_{i=1}^{K}V_{s,i},\qquad \text{promediador ideal:}\quad \frac{R_F}{R_s}=\frac1K.$$
+
+No basta con colocar una quinta resistencia sin revisar $R_F$; explique cómo cambia el peso del conjunto al aumentar $K$.
+
+## Ejercicio 2 · Demostración de una cadena de acondicionamiento {#ejercicio2-l6}
+
+En la **figura 2** se combinan un divisor de referencia, un seguidor, un sumador inversor y una etapa inversora, para acondicionar una señal de sensor. Demuestre, siguiendo las conexiones originales, la expresión solicitada:
+
+$$
+\boxed{V_{o2}=\left[-\left(V_s\frac{R_3}{R_2}+V_{CC}\frac{R_B}{R_A+R_B}\frac{R_3}{R_1}\right)\right]\left(-\frac{R_5}{R_4}\right)}.
+$$
+
+**Ruta de análisis recomendada:**
+
+1. Deduzca la tensión del divisor $V_{off}=V_{CC}R_B/(R_A+R_B)$.
+2. Justifique por qué el **seguidor de voltaje** entrega la misma referencia en el modelo ideal y evita cargar significativamente el divisor.
+3. Aplique LCK al nodo sumador, con sus resistencias correspondientes, para obtener $V_{o1}$.
+4. Deduzca la relación de la segunda etapa inversora y sustitúyala en $V_{o2}$.
+5. Indique qué límites reales de alimentación y rango de salida podrían impedir una transformación ideal.
+
+El resultado debe surgir de **los índices de las resistencias del esquema original**, no de memorizar una expresión general de otra lección.
+
+## Ejercicio 3 · Ajuste del rango de salida del sensor {#ejercicio3-l6}
+
+El enunciado especifica un sensor con salida $-0.2\ \mathrm V\le V_s\le1.2\ \mathrm V$. Proponga resistencias y una referencia de offset para transformar ese rango a $0\ \mathrm V\le V_{o2}\le5\ \mathrm V$, usando **el mismo circuito del ejercicio 2**, con $V_{CC}=+5\ \mathrm V$ y $V_{EE}=-5\ \mathrm V$. Complete la tabla original de $R_A,R_B,R_1\dots R_5,V_{off},A_{CL1},A_{CL2},A_{CL3}$.
+
+Primero defina la transformación requerida:
+
+$$V_{o2}=mV_s+b,\qquad m=\frac{5-0}{1.2-(-0.2)},\qquad b=0-m(-0.2).$$
+
+Después elija relaciones de resistencia que implementen $m$ y $b$ mediante las etapas del circuito. Verifique extremos y al menos un punto intermedio; la simulación debe representar la alimentación $\pm 5\ \mathrm V$ especificada, no una fuente ideal de salida ilimitada.
+
+::: {.course-actions}
+[Circuito del Ejercicio 3 (.ms14)](../../recursos/semana-09/simulaciones/ejercicio-3.ms14){.course-button download="ejercicio-3.ms14"}
+[Archivo proporcionado como resuelto (.ms14)](../../recursos/semana-09/simulaciones/ejercicio-3-resuelto.ms14){.course-button download="ejercicio-3-resuelto.ms14"}
+:::
+
+El circuito etiquetado **resuelto** se entrega como material de comprobación; intente el diseño antes de abrirlo y contraste todas las conexiones y valores.
+
+## Informe y criterio de comprobación {#informe-ejercicios-l6}
+
+| Apartado | Evidencia requerida |
+|:--|:--|
+| Análisis | Nodo de suma, entradas, resistencias, ecuaciones e hipótesis |
+| Diseño | Valores propuestos de resistencias y referencias, con unidades |
+| Simulación | Circuito `.ms14`, puntos de prueba, voltajes y alimentación |
+| Interpretación | Diferencia entre el cálculo ideal y el modelo del op-amp simulado |
+| Conclusión | Función que cumple el circuito y limitaciones observadas |
+
+### Tutor IA · Diseñar el promediador L6 {#tutor-promediador-l6}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Sea tutor de Electrónica II y tráteme de usted. Estoy resolviendo el ejercicio 1 de la Lección 6: sumar y promediar cinco entradas con el amplificador inversor. Solicite mi esquema y los cinco voltajes. Pregúnteme por el número de entradas, la relación RF/Rs y el signo esperado de la salida, una pregunta por turno. Pídame que prediga qué ocurriría si dejo RF en el valor del circuito de cuatro entradas; espere mi respuesta antes de sugerir la corrección. No entregue el circuito completo resuelto ni invente resultados de Multisim.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+### Tutor IA · Ajustar el rango de un sensor {#tutor-diseno-offset-l6}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor de Electrónica II y tráteme de usted. Estoy trabajando en el ejercicio 2 o 3 de la Lección 6. Solicite mi número de ejercicio, figura del circuito y cálculos intentados. Si elegí el 2, guíeme a deducir la salida de divisor, seguidor, sumador e inversor, una etapa a la vez. Si elegí el 3, pídame transformar Vs de -0.2 a 1.2 V en Vo de 0 a 5 V con alimentación ±5 V, empezando por Vo=mVs+b y después por las relaciones de resistencias. Haga una sola pregunta y espere la respuesta antes de continuar; verifique signos, unidades, saturación y que el diseño se compruebe en al menos tres puntos.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::

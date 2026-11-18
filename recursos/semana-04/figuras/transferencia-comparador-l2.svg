@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 318" role="img">
+<title>Curva de transferencia y saturación</title>
+<style>
+text{fill:#203237;font:16px "Segoe UI",Arial,sans-serif}
+.s{font-size:13px}.b{font-weight:700}.x{text-anchor:middle}.y{text-anchor:end}
+.a{fill:none;stroke:#263a40;stroke-width:1.5}
+.w{fill:none;stroke:#263a40;stroke-width:2}
+.g{fill:none;stroke:#a2afb3;stroke-dasharray:5 4}
+.t{fill:none;stroke:#1d615d;stroke-width:3}
+.d{fill:none;stroke:#45566c;stroke-width:3;stroke-dasharray:8 4}
+.p{fill:#1d615d}.r{fill:#f4f7f6;stroke:#263a40;stroke-width:2}
+</style>
+<rect width="780" height="318" fill="white"/>
+<path class="g" d="M70 70H690 M70 254H690 M256 47V270 M504 47V270"/>
+<path class="a" d="M70 162H690 M380 40V270 M70 270H690"/>
+<path class="t" d="M70 254H256L504 70H690"/>
+<circle class="p" cx="256" cy="254" r="4"/><circle class="p" cx="504" cy="70" r="4"/>
+<text x="28" y="29" class="b">Salida (V)</text>
+<g class="y s"><text x="62" y="74">+10</text><text x="62" y="258">−10</text></g>
+<g class="x s"><text x="70" y="287">−250</text><text x="256" y="287">−100</text><text x="380" y="287">0</text><text x="504" y="287">+100</text><text x="690" y="287">+250</text></g>
+<text x="380" y="310" class="x">Voltaje diferencial efectivo (µV)</text>
+<text x="112" y="240" class="s">Saturación baja</text><text x="549" y="58" class="s">Saturación alta</text>
+<text x="270" y="124" class="s">Tramo lineal</text>
+</svg>

@@ -1,0 +1,34 @@
+# Ejercicios L10 · Diseño de filtros activos pasa-bajas de primer orden {.unnumbered}
+
+**Unidad III · Semana 15 · Actividad de diseño y simulación**
+
+La guía original solicita **cálculos desarrollados**, resultados teóricos, resultados de simulación e interpretación comparativa. Para cada ejercicio, determine la función de transferencia, elija una topología, seleccione componentes, obtenga la respuesta en magnitud y fase y confróntela con Multisim.
+
+| Ejercicio | Aproximación | Ganancia requerida | Frecuencia de corte |
+|:--|:--|--:|--:|
+| 1 | Butterworth | $-10$ V/V | 100 Hz |
+| 2 | Butterworth | $1$ V/V | 100 Hz |
+| 3 | Butterworth | $20$ V/V | 1 kHz |
+| 4 | Bessel | $20$ V/V | 1 kHz |
+| 5 | Chebyshev | $20$ V/V | 1 kHz |
+
+**Entrega recomendada para cada ejercicio:** esquema de circuito, deducción del modelo, cálculos de componentes, selección comercial, barrido de frecuencia, gráficas y conclusión técnica. Consulte el documento original para los enunciados completos.
+
+::: {.course-actions}
+[Descargar ejercicios originales (PDF)](../../recursos/semana-15/ejercicios-l10-primer-orden.pdf){.course-button .course-button-primary}
+[Archivo de simulación (Multisim)](../../recursos/semana-15/simulaciones/ejercicio-1-l10.ms14){.course-button}
+[Lección 10 · Primer orden](filtros-pasa-bajas-primer-orden.qmd){.course-button}
+[Tutor IA](../../tutor-ia.qmd#consignas-semana-15){.course-button}
+:::
+
+
+### Tutor IA · Ejercicios de diseño y simulación {#tutor-l10-ejercicios-s15}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Tráteme de usted y una pregunta por turno. Estoy resolviendo los ejercicios L10 originales. Pídame indicar el número de ejercicio, ganancia y frecuencia de corte; luego guíeme a escoger configuración, función de transferencia, escalamiento y componentes comerciales. Para Bessel y Chebyshev, pídame identificar primero el polinomio y la convención de normalización que realmente estoy usando. No suponga respuestas de Multisim ni dé una solución completa antes de mis cálculos.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::

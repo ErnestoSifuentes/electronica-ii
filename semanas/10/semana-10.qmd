@@ -1,0 +1,41 @@
+# Semana 10 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-10}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 28 | 120 min | **[Lección 7, sección 2.5 · Amplificador diferencial](amplificador-diferencial.qmd)**: principio de resta y amplificación de voltajes, análisis por LCK, ganancia diferencial, modo común, CMRR y ejemplos. Entrega del resumen manuscrito del video de la Lección 7, parte 1. Simular los ejemplos de la presentación. |
+| 29 | 120 min | **[Práctica 7 · Termómetro LM35 y NI myDAQ, opción 2](practica-07-termometro-opcion-2.qmd)**: desplazamiento de nivel con sumador inversor, segunda etapa inversora, adquisición y estadísticas en LabVIEW. Entregar reporte de la Práctica 6 y transcripción de teoría y diseño de la Práctica 7. |
+| 30 | 60 min | **[Examen de la Unidad 2](examen-unidad-2.qmd)**: resolución colaborativa de problemas; entrega programada para clase 3 de la semana 13. Entregar simulación de los ejemplos de la Lección 7. |
+
+## Entregas {#entregas-semana-10}
+
+| Cuándo | Evidencia solicitada |
+|:--|:--|
+| Clase 28 | Resumen manuscrito del [video de L7 (parte 1)](https://www.youtube.com/watch?v=96MRWQ4XVJw){target="_blank" rel="noopener"}; [consigna completa](amplificador-diferencial.qmd#video-l7-parte-1). |
+| Clase 29 | Reporte de la Práctica 6 y transcripción de la teoría/diseño de la Práctica 7. |
+| Clase 30 | Simulaciones de los ejemplos L7. |
+| Clase 3, Semana 13 | Examen U2 resuelto colaborativamente y transcripción de los [apuntes de teoría básica AD](teoria-basica-ad.qmd). |
+
+## Trabajo para la semana siguiente {#siguiente-semana-10}
+
+1. Transcriba a su libreta los [apuntes manuscritos de teoría básica del amplificador diferencial](teoria-basica-ad.qmd); se entregan en la **clase 3 de la semana 13**.
+2. Vea el [video preparatorio indicado en la planificación](https://www.youtube.com/watch?v=-tf_ELNwyOw){target="_blank" rel="noopener"} y elabore un resumen manuscrito, para la **clase 1 de la semana 13**.
+3. Repase las limitaciones del AD de cuatro resistencias; la [semana 11](../11/semana-11.qmd) desarrollará el amplificador de instrumentación y la Práctica 8.
+
+## Recursos de la semana {#recursos-semana-10}
+
+**Materiales ampliados y actividades de apoyo de esta semana:**
+
+- [Apuntes complementarios · Amplificador diferencial](teoria-basica-ad.qmd)
+- [Guía desarrollada de la Práctica 7 · LM35 (opción 2)](practica-07-termometro-opcion-2.qmd)
+- [Ejercicios de la Lección 7 · Amplificador diferencial](ejercicios-l7-ad.qmd)
+- [Examen de la Unidad 2 · Problemas integradores](examen-unidad-2.qmd)
+
+::: {.course-actions}
+[Ver video L7 · Parte 1](https://www.youtube.com/watch?v=96MRWQ4XVJw){.course-button .course-button-primary target="_blank" rel="noopener"}
+[Planificación original (PDF)](../../recursos/semana-10/planificacion-semana-10.pdf){.course-button}
+[Presentación L7 (PDF)](../../recursos/semana-10/presentacion-leccion-07.pdf){.course-button}
+[Ejercicios propuestos L7 (AD)](ejercicios-l7-ad.qmd){.course-button}
+:::
+

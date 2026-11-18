@@ -1,0 +1,92 @@
+# Ejercicios propuestos L7 · Amplificador diferencial {.unnumbered}
+
+**Complemento de la Lección 7, sección 2.5.** El documento del profesor incluye **cinco ejercicios** y solicita que cada informe reúna cálculos, resultados de simulación, interpretación y conclusión propia. Este capítulo organiza el procedimiento sin reemplazar los enunciados originales.
+
+::: {.course-actions}
+[Ejercicios originales completos, 3 páginas](../../recursos/semana-10/ejercicios-propuestos-l7-ad.pdf){.course-button .course-button-primary}
+[Lección y fórmulas del AD](amplificador-diferencial.qmd){.course-button}
+[Examen U2](examen-unidad-2.qmd){.course-button}
+:::
+
+## Procedimiento general para cada ejercicio {#l7-ad-procedimiento}
+
+El AD se caracteriza mediante
+
+$$A=\left(1+\frac{R_2}{R_1}\right)\frac{R_4}{R_3+R_4},\quad B=\frac{R_2}{R_1};$$
+
+$$V_o=AV_{s1}-BV_{s2},\quad G_D=\frac{A+B}2,\quad G_C=A-B.$$
+
+Luego aplique $V_{iD}=V_{s1}-V_{s2}$, $V_{iC}=(V_{s1}+V_{s2})/2$ y, si $G_C\neq0$, $\mathrm{CMRR}_{dB}=20\log_{10}|G_D/G_C|$. En circuitos senoidales calcule por fasores o por amplitudes con la **misma frecuencia**; evalúe aparte saturación y límites del dispositivo simulado.
+
+## Ejercicio 1 · Comparación de tres puentes {#l7-ad-ejercicio-1}
+
+El enunciado pide $G_D$, $G_C$, $V_o$ y CMRR bajo tres juegos de resistencias:
+
+| Caso | $R_1$ (kΩ) | $R_2$ (kΩ) | $R_3$ (kΩ) | $R_4$ (kΩ) | Interpretación |
+|:--|--:|--:|--:|--:|:--|
+| a | 33 | 100 | 33 | 100 | Puente balanceado nominal |
+| b | 33 | 100 | 31.35 | 105 | Desbalance indicado como 5 % |
+| c | 33.33 | 99 | 32.67 | 101 | Combinación de peor caso de tolerancia 1 % |
+
+Para cada caso analice los pares $V_{s1}$ y $V_{s2}$ del PDF, tanto valores de CC como senoidales de 1 kHz. **No suponga el mismo CMRR** para los tres casos; cuando el cálculo dé $G_C=0$, señale que se trata del límite ideal de la ecuación resistiva.
+
+## Ejercicios 2 y 3 · Diseñar el rechazo al modo común {#l7-ad-ejercicios-2-3}
+
+En el Ejercicio 2 se pide un AD de ganancia $k=10$ y $\mathrm{CMRR}_{AD}=60$ dB, indicando cuatro resistencias, tolerancia y alimentaciones. En el Ejercicio 3 se repite el análisis del CMRR, utilizando una tolerancia de 0.1 %.
+
+La expresión aproximada propuesta para trabajar con tolerancia $\alpha$ pequeña es
+
+$$\mathrm{CMRR}_{dB}\approx20\log_{10}\left(\frac{k+1}{4\alpha}\right).$$
+
+Primero despeje $\alpha$ en el caso objetivo y después recompute con $\alpha=0.001$. Identifique si la tolerancia obtenida es una cota del desbalance **del puente resistivo** o una especificación final del conjunto op-amp–resistencias.
+
+### Tutor IA · Diseño de CMRR {#tutor-ejercicios-cmrr-s10}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor socrático de Electrónica II y tráteme de usted. Estoy resolviendo los Ejercicios 2 y 3 de L7 del amplificador diferencial: k=10, CMRR objetivo 60 dB y luego tolerancia α=0.001. Hágame una pregunta por turno. Primero pida escribir CMRR en dB, luego convertir a razón lineal, despejar α y seleccionar parejas R1,R2 y R3,R4 conservando la condición de balance. Revise unidades y el significado físico de la tolerancia. No resuelva directamente la actividad ni invente fuentes de alimentación; exija justificar los límites con las señales y el op-amp seleccionado.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+## Ejercicio 4 · Desplazamiento de nivel {#l7-ad-ejercicio-4}
+
+Utilice el circuito con divisor de offset del documento original: $R_A=2.2\ \mathrm{k\Omega}$, $R_B=0.100\ \mathrm{k\Omega}$, $R_1=R_3=10\ \mathrm{k\Omega}$ y $R_2=R_4=47\ \mathrm{k\Omega}$. Analice los dos voltajes de sensor $V_s=0.2$ y $1.2\ \mathrm V$, con suministro 0–5 V tal como aparece en el enunciado.
+
+1. Obtenga primero el voltaje de referencia generado por el divisor y su conexión efectiva a una entrada del AD.
+2. Escriba $V_o=f(V_{off},V_s)$, sin reemplazar todavía los componentes.
+3. Sustituya valores y determine si cada voltaje calculado cabe en la excursión permitida del amplificador elegido.
+4. Explique qué hace el circuito con el offset y el intervalo de la señal.
+
+## Ejercicio 5 · Acondicionar LM35 para Arduino Uno {#l7-ad-ejercicio-5}
+
+El enunciado fija $20$ a $120\ ^\circ\mathrm C$, resolución deseada $0.1\ ^\circ\mathrm C$, sensor LM35 de 10 mV/°C, AD con TLC274 y ADC del ATmega328 de **10 bits**, alimentado a +5 V.
+
+Complete el diagrama de margen dinámico del PDF y deduzca cada bloque:
+
+$$T\longrightarrow V_s=S\,T\longrightarrow
+V_o=G(V_s-V_{off})\longrightarrow D.$$
+
+Compruebe al final el número de incrementos de temperatura frente a los códigos digitales teóricos, la excursión real del TLC274 y si la entrada ADC puede trabajar con la referencia escogida. El diseño del circuito debe incluir el esquema eléctrico con las cuatro resistencias, referencia y alimentación. 
+
+### Tutor IA · Resolver un ejercicio L7 sin saltar etapas {#tutor-ejercicios-ad-s10}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Sea tutor de Electrónica II, tráteme de usted y ayúdeme a resolver uno de los cinco ejercicios propuestos L7 (AD). Pregunte cuál elegí y solicite el enunciado, esquema y mis cálculos iniciales. Haga una sola pregunta cada vez; revise condición de balance, GC residual, CMRR, offset y si la salida cabe en los rieles. Para el termómetro distinga margen térmico, resolución nominal, cuantificación y exactitud real. No produzca una entrega completa en mi lugar; cierre pidiéndome comparar cálculo y simulación y escribir mi conclusión.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+## Formato breve del informe
+
+| Ejercicio | Datos y esquema | Desarrollo analítico | Simulación | Conclusión |
+|:--|:--|:--|:--|:--|
+| 1 | Tabla de casos resistivos | $G_D$, $G_C$, $V_o$, CMRR | Salidas en cada caso | Efecto del desbalance |
+| 2–3 | Ganancia y tolerancias | Selección de resistencias | Prueba diferencial/común | CMRR esperado y observado |
+| 4 | Offset, sensor y alimentación | $V_o=f(V_s,V_{off})$ | Barrido de $V_s$ | Alcance y límites |
+| 5 | LM35, TLC274 y ADC 10 bits | Diseño de toda la cadena | Bloques y barrido térmico | Resolución frente a exactitud |

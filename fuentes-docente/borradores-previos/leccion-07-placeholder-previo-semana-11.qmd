@@ -1,0 +1,11 @@
+# Lección 7 · Restar y amplificar voltajes {.unnumbered}
+
+La lección se centra en circuitos cuya salida depende de la diferencia entre dos voltajes de entrada. La comprobación experimental se realiza con el amplificador diferencial.
+
+## Trabajo previsto
+
+| Clase | Actividad |
+|--:|:--|
+| [31](../11/semana-11.qmd) | Prepare el resumen y la simulación de la Lección 7. |
+| [32](../11/semana-11.qmd) | Realice la Práctica 8, amplificador diferencial, y documente la evidencia experimental. |
+| [33](../11/semana-11.qmd) | Responda el cuestionario y entregue las simulaciones de la Lección 7. |

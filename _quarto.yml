@@ -1,0 +1,129 @@
+project:
+  type: book
+  output-dir: _book
+  resources:
+    - recursos/**
+    - fuentes-docente/semana-12/Semana_12_original.zip
+    - fuentes-docente/semana-13/Semana_13_original.zip
+    - fuentes-docente/semana-14/Semana_14_original.zip
+    - fuentes-docente/semana-15/Semana_15_original.zip
+    - fuentes-docente/semana-16/Semana_16_original.zip
+
+lang: es
+
+book:
+  title: Electrónica II
+  author: Ernesto Sifuentes de la Hoya
+  search: true
+  page-navigation: true
+  navbar:
+    background: '#f8f8f5'
+    left:
+      - text: Calendario
+        href: calendario.qmd
+      - text: Lecciones
+        href: lecciones.qmd
+      - text: Tutor IA
+        href: tutor-ia.qmd
+  sidebar:
+    style: docked
+    collapse-level: 1
+  chapters:
+    - index.qmd
+    - calendario.qmd
+    - lecciones.qmd
+    - tutor-ia.qmd
+    - part: semanas/01/semana-01.qmd
+      chapters:
+        - semanas/01/encuadre.qmd
+        - semanas/01/divisor-de-voltaje.qmd
+    - part: semanas/02/semana-02.qmd
+      chapters:
+        - semanas/02/introduccion-opamp.qmd
+        - semanas/02/ejercicios-demostrativos-l1.qmd
+        - semanas/02/caracterizacion-tl084.qmd
+    - part: semanas/03/semana-03.qmd
+      chapters:
+        - semanas/03/practica-01-primer-contacto-opamp.qmd
+        - semanas/03/ejercicios-propuestos-l1.qmd
+    - part: semanas/04/semana-04.qmd
+      chapters:
+        - semanas/04/comparador-de-voltaje.qmd
+        - semanas/04/practica-02-comparador-voltaje.qmd
+    - part: semanas/05/semana-05.qmd
+      chapters:
+        - semanas/05/retroalimentacion-negativa.qmd
+        - semanas/05/ejercicios-demostrativos-l3.qmd
+        - semanas/05/ejercicios-propuestos-l3.qmd
+        - semanas/05/actividad-retroalimentacion.qmd
+    - part: semanas/06/semana-06.qmd
+      chapters:
+        - semanas/06/adaptar-impedancias.qmd
+        - semanas/06/practica-03-seguidor.qmd
+        - semanas/06/ejercicios-l4.qmd
+    - part: semanas/07/semana-07.qmd
+      chapters:
+        - semanas/07/amplificar-e-invertir-voltajes.qmd
+        - semanas/07/practica-04-amplificadores.qmd
+        - semanas/07/ejercicios-propuestos-l5.qmd
+        - semanas/07/adquisicion-con-labview.qmd
+    - part: semanas/08/semana-08.qmd
+      chapters:
+        - semanas/08/software-adquisicion-labview.qmd
+        - semanas/08/resultado-de-medida.qmd
+        - semanas/08/practica-05-labview.qmd
+        - semanas/08/ejercicios-medio-semestre.qmd
+    - part: semanas/09/semana-09.qmd
+      chapters:
+        - semanas/09/sumar-y-amplificar-voltajes.qmd
+        - semanas/09/practica-06-termometro-lm35.qmd
+        - semanas/09/ejercicios-propuestos-l6.qmd
+    - part: semanas/10/semana-10.qmd
+      chapters:
+        - semanas/10/amplificador-diferencial.qmd
+        - semanas/10/teoria-basica-ad.qmd
+        - semanas/10/practica-07-termometro-opcion-2.qmd
+        - semanas/10/ejercicios-l7-ad.qmd
+        - semanas/10/examen-unidad-2.qmd
+    - part: semanas/11/semana-11.qmd
+      chapters:
+        - semanas/11/amplificador-instrumentacion.qmd
+        - semanas/11/practica-08-amplificador-diferencial.qmd
+        - semanas/11/cuestionario-l7.qmd
+    - part: semanas/12/semana-12.qmd
+      chapters:
+        - semanas/12/integrar-y-diferenciar-parte-1.qmd
+        - semanas/12/practica-09-termometro-opcion-3.qmd
+        - semanas/12/simulaciones-ejemplos-l8.qmd
+    - part: semanas/13/semana-13.qmd
+      chapters:
+        - semanas/13/integrar-y-diferenciar-parte-2.qmd
+        - semanas/13/practica-10-amplificador-instrumentacion.qmd
+        - semanas/13/simulaciones-l8-parte-2.qmd
+        - semanas/13/lecturas-integrador-derivador.qmd
+    - part: semanas/14/semana-14.qmd
+      chapters:
+        - semanas/14/introduccion-al-filtrado-analogico.qmd
+        - semanas/14/experimentos-filtros-l9.qmd
+        - semanas/14/practica-11-rtd-puente-ai.qmd
+        - semanas/14/cuestionario-l9.qmd
+    - part: semanas/15/semana-15.qmd
+      chapters:
+        - semanas/15/filtros-pasa-bajas-primer-orden.qmd
+        - semanas/15/filtros-pasa-bajas-segundo-orden.qmd
+        - semanas/15/ejercicios-l10-primer-orden.qmd
+    - part: semanas/16/semana-16.qmd
+      chapters:
+        - semanas/16/actividad-3-sallen-key-bessel.qmd
+        - semanas/16/examen-u3.qmd
+
+format:
+  html:
+    theme: [cosmo, tema.scss]
+    css: estilos.css
+    toc: true
+    toc-title: En esta página
+    toc-depth: 3
+    number-sections: false
+    html-math-method: mathml
+    include-after-body: _includes/tutor-copia.html

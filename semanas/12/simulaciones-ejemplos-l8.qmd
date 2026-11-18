@@ -1,0 +1,76 @@
+# Lección 8 · Simulaciones guiadas en Multisim {.unnumbered}
+
+**Semana 12 · Actividad de la Lección 8.** La planificación solicita implementar en Multisim los ejemplos y entregar la **simulación de la parte 1 en la clase 36**. Los archivos `.ms14` siguientes corresponden a los ejemplos originales del docente; se conservan también los respaldos de seguridad dentro del [ZIP original de la Semana 12](../../fuentes-docente/semana-12/Semana_12_original.zip).
+
+::: {.course-actions}
+[Volver a la Lección 8](integrar-y-diferenciar-parte-1.qmd){.course-button .course-button-primary}
+[Presentación original](../../recursos/semana-12/presentacion-leccion-08-integrar-y-derivar.pdf){.course-button}
+[Tutor IA · Semana 12](../../tutor-ia.qmd#consignas-semana-12){.course-button}
+:::
+
+## 1. Circuitos originales y archivos {#l8-archivos-ms14}
+
+| Archivo principal | Parámetros del ejemplo | Qué comparar |
+|:--|:--|:--|
+| [Integrador inversor · Ejemplo 1](../../recursos/semana-12/simulaciones/ejemplo-1-integrador-inversor.ms14) | $R_1=100$ kΩ, $C_F=0.1$ µF, ±50 mV, $T_s=2$ s | Rampas de ±5 V/s y continuidad de $V_o$ |
+| [Integrador inversor · Ejemplo 2](../../recursos/semana-12/simulaciones/ejemplo-2-integrador-inversor.ms14) | $R_1=50$ kΩ, $C_F=10$ µF, escalón +2 V | Tiempo de llegada al nivel de saturación |
+| [Integrador inversor · Ejemplo 3](../../recursos/semana-12/simulaciones/ejemplo-3-integrador-inversor.ms14) | $R_1=10$ kΩ, $R_F=100$ kΩ, $C_F=10$ µF | Ganancia 0, 1 y 100 Hz; $f_c$ |
+| [Derivador inversor · Ejemplo 1](../../recursos/semana-12/simulaciones/ejemplo-1-derivador.ms14) | $R_F=100$ kΩ, $C_1=10$ µF | Polaridad y niveles ±5 V |
+| [Derivador inversor · Ejemplo 2](../../recursos/semana-12/simulaciones/ejemplo-2-derivador.ms14) | $R_1=1$ kΩ, $R_F=10$ kΩ, $C_1=1$ µF | $|H|$ a 1, 100 y 1000 Hz |
+
+**Compatibilidad:** `.ms14` es un formato de circuito de Multisim; estos archivos **no se ejecutan** directamente en el navegador. Puede descargarlos desde el libro y abrirlos en una instalación compatible. No se modificaron los esquemas guardados en los archivos originales.
+
+## 2. Protocolo común de simulación {#l8-protocolo-sim}
+
+1. Identifique en el archivo el circuito, el modelo del op-amp, el voltaje de alimentación, los valores de R y C, las fuentes, y las referencias de medición.
+2. Determine analíticamente $H(s)$ o $V_o(t)$, incluidos la condición inicial y el margen de saturación.
+3. Seleccione el análisis apropiado: **transitorio** para las formas de onda y **AC Sweep** para las ganancias sinusoidales por frecuencia. En la simulación transitoria, configure un intervalo suficiente para representar más de un periodo.
+4. Registre las trazas **$V_s$ y $V_o$** con las mismas unidades y etiquetas, y calcule $|V_o/V_s|$ solo cuando la medición corresponda a las condiciones previstas.
+5. Compare resultado matemático, simulación y límites físicos del op-amp. Documente si alguna diferencia se debe a componentes, configuración, condiciones iniciales o un error aritmético en el enunciado.
+
+## 3. Comprobaciones numéricas por ejemplo {#l8-tabla-sim}
+
+Estos valores son **predicciones de los modelos**, no datos simulados ni medidos.
+
+| Ejemplo | Predicción teórica | Evidencia que debe guardar |
+|:--|:--|:--|
+| Integrador 1 | $m=-5$ V/s con entrada +50 mV y $m=+5$ V/s con −50 mV | Captura de ambas ondas y pendientes |
+| Integrador 2 | $V_o(2\ \mathrm s)=-8$ V; inicio de saturación idealizado $t=3.375$ s a −13.5 V | Captura con escala temporal y límite de salida |
+| Integrador 3 | $f_c=0.159$ Hz; $|H(1\ \mathrm{Hz})|=1.572$, $|H(100\ \mathrm{Hz})|=0.0159$ | Tabla de ganancia y gráfica de amplitud/frecuencia |
+| Derivador 1 | Salida +5 V para $dV_s/dt=-5$ V/s y −5 V para +5 V/s | Captura de entrada y salida con tiempos |
+| Derivador 2 | $f_c=159.2$ Hz; $|H(1)|=0.0628$, $|H(100)|=5.320$, $|H(1000)|=9.876$ | Tabla de barrido; identificación de zona de transición |
+
+
+## 4. Evidencia y criterios de autoevaluación {#l8-evidencia-sim}
+
+| Entregable | Pregunta de revisión |
+|:--|:--|
+| Archivo de Multisim identificado | ¿Es posible distinguir el circuito ideal del práctico y comprobar los componentes? |
+| Ecuaciones y sustitución con unidades | ¿Coinciden la transferencia, las pendientes y las ganancias con el circuito? |
+| Capturas de $V_s$, $V_o$ y/o Bode | ¿Se leen las escalas, las condiciones y la leyenda? |
+| Comparación matemática–simulación | ¿Están cuantificadas las diferencias observadas? |
+| Comentario técnico | ¿Explicó saturación, offset, ruido o regiones de frecuencia cuando sea pertinente? |
+
+### Tutor IA · Simulación del integrador {#tutor-l8-sim-integrador-s12}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Tráteme de usted y actúe como tutor de Multisim para la Lección 8. Estoy simulando uno de los tres ejemplos del integrador inversor. Pregunte cuál ejemplo seleccioné, cuáles son los valores R1, CF, RF, el op-amp y la forma de onda. Espere mi respuesta y luego haga solo una pregunta a la vez para verificar el circuito, escoger análisis transitorio o AC, fijar límites de salida y comparar con las pendientes o ganancias teóricas. Si comparto captura, pídame interpretar ejes y señales antes de decirme la conclusión. No invente resultados de Multisim ni modifique el archivo.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+### Tutor IA · Simulación del derivador {#tutor-l8-sim-derivador-s12}
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Sea mi tutor de Multisim para el derivador inversor y hábleme de usted. Pregúnteme si empleo el circuito ideal o práctico, si R1 está realmente en serie con C1 y cuáles son los valores de RF. Una sola pregunta por turno, esperando mi respuesta. Ayúdeme a comparar el cambio de una señal triangular a rectangular y, en el ejemplo de frecuencia variable, calcular la magnitud a 1, 100 y 1000 Hz. Haga que yo detecte si la diapositiva contiene un desacuerdo numérico y me explique cómo lo comprobaré en la simulación. No atribuya el desacuerdo a ruido sin evidencia.
+:::
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+**Fecha de entrega:** clase 3, semana 12 (clase 36), para las simulaciones de ejemplos L8 **parte 1**, según su planificación. Los ejemplos de la presentación se ofrecen como material de consulta, sin adelantar las actividades específicas de la semana 13.

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8"/>
+<meta content="quarto-1.11.9" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Actividad L1 · Caracterización del TL084 – Electrónica II</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta content="../../" name="quarto:offset"/>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet"/>
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" id="quarto-text-highlighting-styles" rel="stylesheet"/>
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet"/>
+<link append-hash="true" data-mode="light" href="../../site_libs/bootstrap/bootstrap-d6970b4ea02e6afb950d4af755796862.min.css" id="quarto-bootstrap" rel="stylesheet"/>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<link href="../../estilos.css" rel="stylesheet"/>
+<link href="ejercicios-demostrativos-l1.html" rel="prev"/><link href="../03/semana-03.html" rel="next"/></head>
+<body class="nav-sidebar docked nav-fixed quarto-light"><a class="visually-hidden-focusable" href="#quarto-document-content" id="quarto-skip-link">Saltar al contenido principal</a>
+<div id="quarto-search-results"></div>
+<header class="headroom fixed-top" id="quarto-header">
+<nav aria-label="Sitio web" class="navbar navbar-expand-lg" data-bs-theme="dark">
+<div class="navbar-container container-fluid">
+<div class="navbar-brand-container mx-auto">
+<a class="navbar-brand" href="../../index.html">
+<span class="navbar-title">Electrónica II</span>
+</a>
+</div>
+<button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" class="navbar-toggler" data-bs-target="#navbarCollapse" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+<a aria-current="page" class="nav-link active" href="../../calendario.html">
+<span class="menu-text">Calendario</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../lecciones.html">
+<span class="menu-text">Lecciones</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="../../tutor-ia.html">
+<span class="menu-text">Tutor IA</span></a>
+</li>
+</ul>
+</div> <!-- /navcollapse -->
+<div class="quarto-navbar-tools">
+</div>
+<div class="" id="quarto-search" title="Buscar"></div>
+</div> <!-- /container-fluid -->
+</nav>
+<nav aria-label="Barra de herramientas" class="quarto-secondary-nav">
+<div class="container-fluid d-flex">
+<button aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" class="quarto-btn-toggle btn" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="button" type="button">
+<i class="bi bi-layout-text-sidebar-reverse"></i>
+</button>
+<nav aria-label="Hilo de Ariadna" class="quarto-page-breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../semanas/02/semana-02.html">Semana 02</a></li><li class="breadcrumb-item"><a href="../../semanas/02/caracterizacion-tl084.html">Actividad L1 · Caracterización del TL084</a></li></ol></nav>
+<a class="flex-grow-1" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+</a>
+</div>
+</nav>
+</header>
+<!-- content -->
+<div class="quarto-container page-columns page-rows-contents page-layout-article page-navbar" id="quarto-content">
+<!-- sidebar -->
+<nav aria-label="Sección" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" id="quarto-sidebar">
+<div class="sidebar-menu-container">
+<ul class="list-unstyled mt-1"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../../index.html"><span class="menu-text">Inicio</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../../calendario.html"><span class="menu-text">Calendario</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../../lecciones.html"><span class="menu-text">Lecciones</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../../tutor-ia.html"><span class="menu-text">Tutor IA</span></a></div></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../01/semana-01.html"><span class="menu-text" id="quarto-sidebar-section-1-label">Semana 01</span></a><button aria-controls="quarto-sidebar-section-1" aria-expanded="false" aria-label="Alternar sección: Semana 01" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-1" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-1"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../01/encuadre.html"><span class="menu-text">Encuadre del curso</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../01/divisor-de-voltaje.html"><span class="menu-text">Lección inicial · Divisor de voltaje</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="./semana-02.html"><span class="menu-text" id="quarto-sidebar-section-2-label">Semana 02</span></a><button aria-controls="quarto-sidebar-section-2" aria-expanded="true" aria-label="Alternar sección: Semana 02" class="sidebar-item-toggle text-start" data-bs-target="#quarto-sidebar-section-2" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show" id="quarto-sidebar-section-2"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="./introduccion-opamp.html"><span class="menu-text">Lección 1 · Introducción al op-amp</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="./ejercicios-demostrativos-l1.html"><span class="menu-text">Ejercicios demostrativos L1</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a aria-current="page" class="sidebar-item-text sidebar-link active" href="./caracterizacion-tl084.html"><span class="menu-text">Actividad L1 · Caracterización del TL084</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../03/semana-03.html"><span class="menu-text" id="quarto-sidebar-section-3-label">Semana 03</span></a><button aria-controls="quarto-sidebar-section-3" aria-expanded="false" aria-label="Alternar sección: Semana 03" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-3" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-3"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../03/practica-01-primer-contacto-opamp.html"><span class="menu-text">Práctica 1 · Primer contacto con un op-amp</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../03/ejercicios-propuestos-l1.html"><span class="menu-text">Ejercicios propuestos L1</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../04/semana-04.html"><span class="menu-text" id="quarto-sidebar-section-4-label">Semana 04</span></a><button aria-controls="quarto-sidebar-section-4" aria-expanded="false" aria-label="Alternar sección: Semana 04" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-4" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-4"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../04/comparador-de-voltaje.html"><span class="menu-text">Lección 2 · Comparar voltajes</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../04/practica-02-comparador-voltaje.html"><span class="menu-text">Práctica 2 · Comparador de voltaje</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/semana-05.html"><span class="menu-text" id="quarto-sidebar-section-5-label">Semana 05</span></a><button aria-controls="quarto-sidebar-section-5" aria-expanded="false" aria-label="Alternar sección: Semana 05" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-5" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-5-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-5"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/retroalimentacion-negativa.html"><span class="menu-text">Lección 3 · Retroalimentación negativa</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/ejercicios-demostrativos-l3.html"><span class="menu-text">Ejercicios demostrativos L3</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/ejercicios-propuestos-l3.html"><span class="menu-text">Ejercicios propuestos L3</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../05/actividad-retroalimentacion.html"><span class="menu-text">Actividad L3 · Retroalimentación con NI myDAQ</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../06/semana-06.html"><span class="menu-text" id="quarto-sidebar-section-6-label">Semana 06</span></a><button aria-controls="quarto-sidebar-section-6" aria-expanded="false" aria-label="Alternar sección: Semana 06" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-6" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-6-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-6"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../06/adaptar-impedancias.html"><span class="menu-text">Lección 4 · Adaptar impedancias</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../06/practica-03-seguidor.html"><span class="menu-text">Práctica 3 · Seguidor de voltaje (Buffer)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../06/ejercicios-l4.html"><span class="menu-text">Ejercicios Lección 4 · Adaptación sensor–ADC</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/semana-07.html"><span class="menu-text" id="quarto-sidebar-section-7-label">Semana 07</span></a><button aria-controls="quarto-sidebar-section-7" aria-expanded="false" aria-label="Alternar sección: Semana 07" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-7" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-7-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-7"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/amplificar-e-invertir-voltajes.html"><span class="menu-text">Lección 5 · Amplificar e invertir voltajes</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/practica-04-amplificadores.html"><span class="menu-text">Práctica 4 · Amplificador inversor y no inversor</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/ejercicios-propuestos-l5.html"><span class="menu-text">Ejercicios propuestos L5 · Amplificadores</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../07/adquisicion-con-labview.html"><span class="menu-text">Adquisición y procesamiento con LabVIEW</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/semana-08.html"><span class="menu-text" id="quarto-sidebar-section-8-label">Semana 08</span></a><button aria-controls="quarto-sidebar-section-8" aria-expanded="false" aria-label="Alternar sección: Semana 08" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-8" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-8-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-8"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/software-adquisicion-labview.html"><span class="menu-text">Software de adquisición y procesamiento de señales</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/resultado-de-medida.html"><span class="menu-text">El resultado de una medida: media, dispersión e incertidumbre</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/practica-05-labview.html"><span class="menu-text">Práctica 5 · Adquisición y análisis de señales con LabVIEW</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../08/ejercicios-medio-semestre.html"><span class="menu-text">Ejercicios integradores de medio semestre</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../09/semana-09.html"><span class="menu-text" id="quarto-sidebar-section-9-label">Semana 09</span></a><button aria-controls="quarto-sidebar-section-9" aria-expanded="false" aria-label="Alternar sección: Semana 09" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-9" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-9-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-9"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../09/sumar-y-amplificar-voltajes.html"><span class="menu-text">Lección 6 · Sumar y amplificar voltajes</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../09/practica-06-termometro-lm35.html"><span class="menu-text">Práctica 6 · Termómetro con LM35 y NI myDAQ (opción 1)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../09/ejercicios-propuestos-l6.html"><span class="menu-text">Ejercicios propuestos L6 · Suma y acondicionamiento</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/semana-10.html"><span class="menu-text" id="quarto-sidebar-section-10-label">Semana 10</span></a><button aria-controls="quarto-sidebar-section-10" aria-expanded="false" aria-label="Alternar sección: Semana 10" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-10" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-10-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-10"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/amplificador-diferencial.html"><span class="menu-text">Lección 7 · Restar y amplificar voltajes: amplificador diferencial (2.5)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/teoria-basica-ad.html"><span class="menu-text">Teoría básica del amplificador diferencial · Apuntes del profesor</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/practica-07-termometro-opcion-2.html"><span class="menu-text">Práctica 7 · Termómetro con LM35 y NI myDAQ (opción 2)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/ejercicios-l7-ad.html"><span class="menu-text">Ejercicios propuestos L7 · Amplificador diferencial</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../10/examen-unidad-2.html"><span class="menu-text">Examen de la Unidad 2 · Problemas integradores</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../11/semana-11.html"><span class="menu-text" id="quarto-sidebar-section-11-label">Semana 11</span></a><button aria-controls="quarto-sidebar-section-11" aria-expanded="false" aria-label="Alternar sección: Semana 11" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-11" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-11-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-11"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../11/amplificador-instrumentacion.html"><span class="menu-text">Lección 7 · Restar y amplificar voltajes: amplificador de instrumentación (2.6)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../11/practica-08-amplificador-diferencial.html"><span class="menu-text">Práctica 8 · Amplificador diferencial (AD)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../11/cuestionario-l7.html"><span class="menu-text">Cuestionario L7 · Amplificador de instrumentación</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../12/semana-12.html"><span class="menu-text" id="quarto-sidebar-section-12-label">Semana 12</span></a><button aria-controls="quarto-sidebar-section-12" aria-expanded="false" aria-label="Alternar sección: Semana 12" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-12" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-12-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-12"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../12/integrar-y-diferenciar-parte-1.html"><span class="menu-text">Lección 8 · Integrar y diferenciar voltajes, parte 1</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../12/practica-09-termometro-opcion-3.html"><span class="menu-text">Práctica 9 · Termómetro LM35 y NI myDAQ (opción 3)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../12/simulaciones-ejemplos-l8.html"><span class="menu-text">Lección 8 · Simulaciones guiadas en Multisim</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/semana-13.html"><span class="menu-text" id="quarto-sidebar-section-13-label">Semana 13</span></a><button aria-controls="quarto-sidebar-section-13" aria-expanded="false" aria-label="Alternar sección: Semana 13" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-13" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-13-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-13"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/integrar-y-diferenciar-parte-2.html"><span class="menu-text">Lección 8 · Integrar y diferenciar voltajes, parte 2</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/practica-10-amplificador-instrumentacion.html"><span class="menu-text">Práctica 10 · Amplificador de instrumentación (AI)</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/simulaciones-l8-parte-2.html"><span class="menu-text">Lección 8, parte 2 · Simulaciones Multisim</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../13/lecturas-integrador-derivador.html"><span class="menu-text">Material complementario · Integradores y derivadores</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/semana-14.html"><span class="menu-text" id="quarto-sidebar-section-14-label">Semana 14</span></a><button aria-controls="quarto-sidebar-section-14" aria-expanded="false" aria-label="Alternar sección: Semana 14" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-14" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-14-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-14"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/introduccion-al-filtrado-analogico.html"><span class="menu-text">Lección 9 · Introducción al filtrado analógico</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/experimentos-filtros-l9.html"><span class="menu-text">Experimentos de la Lección 9 · Filtros RC y LabVIEW</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/practica-11-rtd-puente-ai.html"><span class="menu-text">Práctica 11 · Termómetro TD5A, puente de Wheatstone y amplificador de instrumentación</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../14/cuestionario-l9.html"><span class="menu-text">Cuestionario L9 · Filtros analógicos</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../15/semana-15.html"><span class="menu-text" id="quarto-sidebar-section-15-label">Semana 15</span></a><button aria-controls="quarto-sidebar-section-15" aria-expanded="false" aria-label="Alternar sección: Semana 15" class="sidebar-item-toggle text-start collapsed" data-bs-target="#quarto-sidebar-section-15" data-bs-toggle="collapse" type="button"><i aria-hidden="true" class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-15-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-15"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../15/filtros-pasa-bajas-primer-orden.html"><span class="menu-text">Lección 10 · Primer orden</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../15/filtros-pasa-bajas-segundo-orden.html"><span class="menu-text">Lección 10 · Segundo orden</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../15/ejercicios-l10-primer-orden.html"><span class="menu-text">Ejercicios L10 · Primer orden</span></a></div></li></ul></li><li class="sidebar-item sidebar-item-section"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../16/semana-16.html"><span class="menu-text" id="quarto-sidebar-section-16-label">Semana 16</span></a><button aria-controls="quarto-sidebar-section-16" aria-expanded="false" aria-label="Alternar sección: Semana 16" class="sidebar-item-toggle text-start" data-bs-target="#quarto-sidebar-section-16" data-bs-toggle="collapse" type="button"><i class="bi bi-chevron-right ms-2"></i></button></div><ul aria-labelledby="quarto-sidebar-section-16-label" class="collapse list-unstyled sidebar-section depth1" id="quarto-sidebar-section-16"><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../16/actividad-3-sallen-key-bessel.html"><span class="menu-text">Actividad 3 · Filtro Bessel Sallen–Key</span></a></div></li><li class="sidebar-item"><div class="sidebar-item-container"><a class="sidebar-item-text sidebar-link" href="../16/examen-u3.html"><span class="menu-text">Examen U3 · Filtros activos</span></a></div></li></ul></li></ul>
+</div>
+</nav>
+<div class="quarto-sidebar-collapse-item" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" id="quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+<div class="sidebar margin-sidebar" id="quarto-margin-sidebar">
+<nav aria-labelledby="toc-title" class="toc-active" id="TOC" role="doc-toc">
+<h2 id="toc-title">En esta página</h2>
+<ul>
+<li><a class="nav-link active" data-scroll-target="#experimento-bode" href="#experimento-bode" id="toc-experimento-bode">Experimento 1. Ganancia en lazo abierto y Bode</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#tutor-bode" href="#tutor-bode" id="toc-tutor-bode">Tutor IA · Revise su Bode</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#experimento-slew-rate" href="#experimento-slew-rate" id="toc-experimento-slew-rate">Experimento 2. Slew rate en seguidor</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#tutor-slew-rate" href="#tutor-slew-rate" id="toc-tutor-slew-rate">Tutor IA · Compruebe la pendiente</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#ensayo-opcional" href="#ensayo-opcional" id="toc-ensayo-opcional">Ensayo opcional en lazo abierto</a></li>
+<li><a class="nav-link" data-scroll-target="#informe" href="#informe" id="toc-informe">Informe y entrega</a></li>
+</ul>
+</nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+<header class="quarto-title-block default" id="title-block-header"><nav aria-label="Hilo de Ariadna" class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../semanas/02/semana-02.html">Semana 02</a></li><li class="breadcrumb-item"><a href="../../semanas/02/caracterizacion-tl084.html">Actividad L1 · Caracterización del TL084</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Actividad L1 · Caracterización del TL084</h1>
+</div>
+<div class="quarto-title-meta">
+</div>
+</header>
+<p>En esta actividad simulará un TL084 en Multisim. Medirá la ganancia en lazo abierto y su respuesta en frecuencia con un barrido AC. Después, usará un seguidor de voltaje para estimar la velocidad máxima de cambio de la salida ante un escalón.</p>
+<div class="course-actions">
+<p><a class="course-button course-button-primary" download="actividad-l1-caracterizacion-tl084.docx" href="../../../recursos/semana-02/actividad-l1-caracterizacion-tl084.docx">Descargar la actividad editable (Word)</a> <a class="course-button" href="https://www.ti.com/lit/ds/symlink/tl084.pdf" rel="noopener" target="_blank">Consultar la hoja de datos del TL084</a></p>
+</div>
+<section class="level2" id="experimento-bode">
+<h2 class="anchored" data-anchor-id="experimento-bode">Experimento 1. Ganancia en lazo abierto y Bode</h2>
+<ol type="1">
+<li>Seleccione el TL084 y use un canal. Alimente el dispositivo con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>15</mn><mspace width="0.167em"></mspace><mi mathvariant="normal">V</mi></mrow><annotation encoding="application/x-tex">\pm15\,\mathrm V</annotation></semantics></math>. Conecte la entrada inversora a tierra y la no inversora a una fuente con componente DC de 0 V y amplitud de análisis AC de 1 mV. Si añade la carga resistiva de 10 kΩ indicada en la guía, anótela junto con el resultado.</li>
+<li>Revise el punto de operación de continua antes del barrido. Si la salida está saturada, ajuste el nivel de continua de entrada para centrarla antes de interpretar la curva. El análisis AC de Multisim linealiza el circuito alrededor de ese punto de operación.</li>
+<li>En <strong>Simulate → Analyses → AC Analysis</strong>, configure un barrido por décadas de 1 Hz a 10 MHz, con 100 puntos por década. Grafique <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>o</mi></msub><mi>/</mi><msub><mi>V</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">V_o/V_s</annotation></semantics></math> en magnitud y fase. Si registra ambas señales por separado, use su cociente para obtener la ganancia.</li>
+<li>Localice la meseta de baja frecuencia. Lea <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>0</mn></msub><annotation encoding="application/x-tex">A_0</annotation></semantics></math> en dB y conviértala a V/V. Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>p</mi></msub><annotation encoding="application/x-tex">f_p</annotation></semantics></math> en el punto que esté 3 dB por debajo de la meseta. Registre el cruce de 0 dB y la fase en ese punto. Compare la frecuencia de cruce con <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>0</mn></msub><msub><mi>f</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">A_0 f_p</annotation></semantics></math> y describa el intervalo donde observa una pendiente próxima a −20 dB/década.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Un canal del TL084 con fuente en la entrada no inversora, entrada inversora a tierra, alimentación dual de 15 V y una carga de 10 kiloohmios." class="img-fluid figure-img" src="../../../recursos/semana-02/figuras/tl084-lazo-abierto.png"/></p>
+<figcaption>Conexión del TL084 en lazo abierto para el barrido AC. Se muestra la carga resistiva opcional de 10 kΩ.</figcaption>
+</figure>
+</div>
+<p>El modelo de pequeña señal con un polo dominante usa la ganancia de baja frecuencia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>0</mn></msub><annotation encoding="application/x-tex">A_0</annotation></semantics></math> y la frecuencia del polo <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>p</mi></msub><annotation encoding="application/x-tex">f_p</annotation></semantics></math>.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo form="prefix" stretchy="false">(</mo><mi>j</mi><mn>2</mn><mi>π</mi><mi>f</mi><mo form="postfix" stretchy="false">)</mo><mo>≈</mo><mfrac><msub><mi>A</mi><mn>0</mn></msub><mrow><mn>1</mn><mo>+</mo><mi>j</mi><mi>f</mi><mi>/</mi><msub><mi>f</mi><mi>p</mi></msub></mrow></mfrac><mi>.</mi></mrow><annotation encoding="application/x-tex">
+A(j2\pi f)\approx\frac{A_0}{1+j f/f_p}.
+</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>G</mi><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></msub><mo>=</mo><mn>20</mn><msub><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mn>10</mn></msub><mrow><mo form="prefix" stretchy="true">|</mo><mfrac><msub><mi>V</mi><mi>o</mi></msub><msub><mi>V</mi><mi>s</mi></msub></mfrac><mo form="postfix" stretchy="true">|</mo></mrow><mo>,</mo><mspace width="2.0em"></mspace><msub><mi>A</mi><mn>0</mn></msub><mo>=</mo><msup><mn>10</mn><mrow><msub><mi>G</mi><mrow><mn>0</mn><mo>,</mo><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">B</mi></mrow></mrow></msub><mi>/</mi><mn>20</mn></mrow></msup><mi>.</mi></mrow><annotation encoding="application/x-tex">
+G_{\mathrm{dB}}=20\log_{10}\left|\frac{V_o}{V_s}\right|,
+\qquad A_0=10^{G_{0,\mathrm{dB}}/20}.
+</annotation></semantics></math></p>
+<p>La fase del modelo de un polo es aproximadamente −45° en <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>p</mi></msub><annotation encoding="application/x-tex">f_p</annotation></semantics></math> y se acerca a −90° para frecuencias mucho mayores que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>p</mi></msub><annotation encoding="application/x-tex">f_p</annotation></semantics></math>. Use la curva de fase para contrastar la aproximación e identificar el efecto de polos adicionales si la simulación los muestra.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Registro</th>
+<th style="text-align: left;">Unidad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ganancia de la meseta de baja frecuencia, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>0</mn></msub><annotation encoding="application/x-tex">A_0</annotation></semantics></math></td>
+<td style="text-align: left;">dB y V/V</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Frecuencia del polo dominante, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>p</mi></msub><annotation encoding="application/x-tex">f_p</annotation></semantics></math></td>
+<td style="text-align: left;">Hz</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Producto <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mn>0</mn></msub><msub><mi>f</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">A_0 f_p</annotation></semantics></math> y frecuencia de cruce de 0 dB</td>
+<td style="text-align: left;">Hz</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fase en el cruce de 0 dB</td>
+<td style="text-align: left;">grados</td>
+</tr>
+</tbody>
+</table>
+<section class="level3" id="tutor-bode">
+<h3 class="anchored" data-anchor-id="tutor-bode">Tutor IA · Revise su Bode</h3>
+<div class="tutor-box">
+<div class="tutor-texto">
+<p>Actúe como tutor de Electrónica II y tráteme de usted. Estoy analizando un barrido AC del TL084. Pídame la magnitud y la fase, el voltaje de salida de continua, la carga y la expresión que graficó Multisim. Guíeme con una pregunta a la vez para localizar la meseta de baja frecuencia, la caída de 3 dB y el cruce de 0 dB. Espere mi respuesta antes de dar la siguiente pista.</p>
+<p>Pídame que convierta la ganancia de dB a V/V y que compare el producto de esa ganancia por la frecuencia del polo con la frecuencia del cruce. Use los datos que yo le proporcione y ayúdeme a decidir qué parte de la curva describe el modelo de un polo.</p>
+</div>
+<div class="tutor-acciones">
+<p><a class="course-button" href="https://chatgpt.com/" rel="noopener" target="_blank">Abrir ChatGPT</a></p>
+</div>
+</div>
+</section>
+</section>
+<section class="level2" id="experimento-slew-rate">
+<h2 class="anchored" data-anchor-id="experimento-slew-rate">Experimento 2. Slew rate en seguidor</h2>
+<ol type="1">
+<li>Conecte la salida del TL084 a la entrada inversora y aplique la señal a la entrada no inversora. Mantenga la alimentación dual de 15 V. Configure una onda cuadrada de 0 a 10 V a 1 kHz, con flancos de entrada rápidos.</li>
+<li>En <strong>Transient Analysis</strong>, use una duración de 2 a 5 ms y un paso máximo de 100 ns. Grafique la entrada y la salida. Amplíe la vista en cada flanco y reduzca el paso máximo si hacen falta más puntos para identificar la rampa.</li>
+<li>Coloque los cursores en dos puntos del tramo de pendiente aproximadamente constante. Repita la medición en subida y bajada. Reporte las magnitudes en V/µs y anote los valores usados de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>V</mi><mi>o</mi></msub></mrow><annotation encoding="application/x-tex">\Delta V_o</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>.</li>
+<li>Repita con 0 pF, 100 pF y 200 pF de carga capacitiva. Registre los cambios que observe en los flancos y explique cómo eligió los puntos de medición.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Un canal del TL084 con realimentación directa de salida a entrada inversora, una fuente pulsada en la otra entrada y una carga capacitiva en la salida." class="img-fluid figure-img" src="../../../recursos/semana-02/figuras/tl084-seguidor.png"/></p>
+<figcaption>Conexión del seguidor de voltaje del TL084. Configure la fuente y la carga capacitiva según el ensayo que realice.</figcaption>
+</figure>
+</div>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><mrow><mo form="prefix" stretchy="true">|</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><msub><mi>V</mi><mi>o</mi></msub></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac><mo form="postfix" stretchy="true">|</mo></mrow><mi>.</mi></mrow><annotation encoding="application/x-tex">
+\mathrm{SR}=\left|\frac{\Delta V_o}{\Delta t}\right|.
+</annotation></semantics></math></p>
+<p>Una salida con limitación por <em>slew rate</em> muestra un tramo en rampa durante el flanco. Para identificar saturación de amplitud, revise si la salida se mantiene en un nivel límite y compare ese nivel con el punto de operación y la carga.</p>
+<section class="level3" id="tutor-slew-rate">
+<h3 class="anchored" data-anchor-id="tutor-slew-rate">Tutor IA · Compruebe la pendiente</h3>
+<div class="tutor-box">
+<div class="tutor-texto">
+<p>Actúe como tutor de Electrónica II y tráteme de usted. Estoy midiendo el slew rate del TL084 como seguidor. Pídame mi gráfica de entrada y salida, la carga capacitiva, el paso máximo de simulación y los tiempos y voltajes que leí con los cursores. Revise conmigo un flanco a la vez. Ayúdeme a elegir dos puntos de la rampa y a expresar la magnitud de la pendiente en V/µs.</p>
+<p>Pídame que compare subida y bajada para las cargas que simulé y que explique qué parte de la gráfica distingue una limitación de pendiente de una saturación de salida. Si faltan datos, solicítemelos antes de evaluar mi conclusión.</p>
+</div>
+<div class="tutor-acciones">
+<p><a class="course-button" href="https://chatgpt.com/" rel="noopener" target="_blank">Abrir ChatGPT</a></p>
+</div>
+</div>
+</section>
+</section>
+<section class="level2" id="ensayo-opcional">
+<h2 class="anchored" data-anchor-id="ensayo-opcional">Ensayo opcional en lazo abierto</h2>
+<p>Para observar una respuesta temporal en la región lineal, estime el máximo voltaje diferencial con la excursión de salida del modelo y la ganancia de baja frecuencia. Ajuste el punto de operación cerca de 0 V. La guía propone un escalón de 20 a 30 µV como punto de partida. Verifique en su simulación que la salida permanezca dentro de su excursión lineal.</p>
+</section>
+<section class="level2" id="informe">
+<h2 class="anchored" data-anchor-id="informe">Informe y entrega</h2>
+<p>Entregue el informe en la <a href="../../semanas/03/semana-03.html#entregas">tercera sesión de la Semana 3</a>. Incluya la identificación del equipo, el modelo del op-amp, las condiciones de prueba, las tablas del Word y las capturas anotadas de Bode y del análisis transitorio. Muestre cómo obtuvo cada parámetro. Use el cuestionario de retroalimentación de la actividad para discutir la región de validez del modelo, el efecto de la carga y las diferencias con la hoja de datos. Cierre con tres a cinco conclusiones sustentadas en sus resultados.</p>
+<p>Si utilizó el Tutor IA, indique qué punto del análisis revisó y cómo lo comprobó con sus datos.</p>
+<p><a href="https://www.ni.com/docs/en-US/bundle/multisim/page/topics/fundamental-analysis-ac-analysis.html" rel="noopener" target="_blank">Manual de NI sobre el análisis AC de Multisim</a>.</p>
+</section>
+</main> <!-- /main -->
+<script>
+(() => {
+  function copyWithSelection(text) {
+    const field = document.createElement('textarea');
+    const previousFocus = document.activeElement;
+    field.value = text;
+    field.readOnly = true;
+    field.style.position = 'fixed';
+    field.style.opacity = '0';
+    document.body.append(field);
+    field.select();
+    try {
+      return document.execCommand('copy');
+    } finally {
+      field.remove();
+      previousFocus?.focus();
+    }
+  }
+
+  async function copyText(text) {
+    if (navigator.clipboard?.writeText) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        return copyWithSelection(text);
+      }
+    }
+    return copyWithSelection(text);
+  }
+
+  for (const panel of document.querySelectorAll('.tutor-box')) {
+    const prompt = panel.querySelector('.tutor-texto');
+    const actions = panel.querySelector('.tutor-acciones');
+    if (!prompt || !actions) continue;
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'course-button course-button-primary';
+    button.textContent = 'Copiar consigna';
+
+    const status = document.createElement('span');
+    status.className = 'tutor-estado';
+    status.setAttribute('role', 'status');
+    actions.prepend(button);
+    actions.append(status);
+
+    button.addEventListener('click', async () => {
+      const text = [...prompt.querySelectorAll('p')]
+        .map(paragraph => paragraph.innerText.trim())
+        .join('\n\n');
+      let copied = false;
+      try {
+        copied = await copyText(text);
+      } catch {
+        // The prompt remains selectable when the browser blocks clipboard access.
+      }
+      status.textContent = copied ? 'Consigna copiada.' : 'Seleccione el texto para copiarlo.';
+    });
+  }
+})();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Código desplazable","output":"Salida desplazable"};
+  </script>
+<nav aria-label="Página" class="page-navigation"><div class="nav-page nav-page-previous"><a class="pagination-link" href="ejercicios-demostrativos-l1.html"><span class="nav-page-text">Ejercicios demostrativos l1</span></a></div><div class="nav-page nav-page-next"><a class="pagination-link" href="../03/semana-03.html"><span class="nav-page-text">Semana 03</span></a></div></nav>
+</div> <!-- /content -->
+</body></html>

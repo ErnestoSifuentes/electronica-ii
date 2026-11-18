@@ -1,0 +1,204 @@
+# Tutor IA {.unnumbered}
+
+Use el tutor para revisar su razonamiento, contrastar una simulación con sus cálculos o interpretar datos de laboratorio. Abra la consigna del tema que esté trabajando y comparta su avance, con las unidades, las condiciones del circuito y el paso que desea revisar.
+
+## Consignas de la Semana 1 {#consignas-semana-1}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| El análisis de un divisor con carga | [Revisar el efecto de carga](semanas/01/divisor-de-voltaje.qmd#tutor-efecto-de-carga) |
+| La comparación de teoría, simulación y medición | [Interpretar mis mediciones](semanas/01/divisor-de-voltaje.qmd#tutor-mediciones) |
+
+## Consignas de la Semana 2 {#consignas-semana-2}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| La pendiente y la región lineal en lazo abierto | [Elegir el tramo lineal](semanas/02/introduccion-opamp.qmd#tutor-curva-transferencia) |
+| La ganancia y el polo dominante del TL084 | [Revisar mi diagrama de Bode](semanas/02/caracterizacion-tl084.qmd#tutor-bode) |
+| Los flancos del seguidor de voltaje | [Comprobar el slew rate](semanas/02/caracterizacion-tl084.qmd#tutor-slew-rate) |
+
+## Consignas de la Semana 3 {#consignas-semana-3}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| La transición entre niveles de saturación en el laboratorio | [Revisar mis capturas de la Práctica 1](semanas/03/practica-01-primer-contacto-opamp.qmd#tutor-capturas-laboratorio) |
+| La atenuación en la entrada y la salida de un amplificador | [Comparar la carga en ambos puertos](semanas/03/ejercicios-propuestos-l1.qmd#tutor-carga-amplificador) |
+
+## Consignas de la Semana 4 {#consignas-semana-4}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| La relación entre la referencia y la transición de un comparador | [Predecir la transición](semanas/04/comparador-de-voltaje.qmd#tutor-transicion-comparador) |
+| Las capturas del detector en el laboratorio | [Revisar el umbral en la Práctica 2](semanas/04/practica-02-comparador-voltaje.qmd#tutor-umbral-practica-02) |
+
+## Consignas de la Semana 5 {#consignas-semana-5}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| La ganancia y la diferencia de voltaje entre las entradas | [Explicar el corto virtual](semanas/05/retroalimentacion-negativa.qmd#tutor-corto-virtual) |
+| El ancho de banda del no inversor en los ejercicios propuestos | [Revisar la frecuencia de corte](semanas/05/ejercicios-propuestos-l3.qmd#tutor-frecuencia-corte) |
+| La medición de ganancia o del error diferencial con NI myDAQ | [Comprobar la medición de lazo cerrado](semanas/05/actividad-retroalimentacion.qmd#tutor-medicion-l3) |
+
+## Consignas de la Semana 6 {#consignas-semana-6}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Demostración de la ganancia y lazo cerrado del seguidor | [Analizar el seguidor ideal y real](semanas/06/adaptar-impedancias.qmd#tutor-ganancia-seguidor-l4) |
+| Carga de un divisor y aislamiento con buffer | [Diagnosticar el efecto de carga](semanas/06/adaptar-impedancias.qmd#tutor-carga-buffer-l4) |
+| Mediciones de carga con TL084, Práctica 3 | [Interpretar la Práctica 3](semanas/06/practica-03-seguidor.qmd#tutor-practica-3-seguidor) |
+| Interfaz de sensor TMP36 y ADC de Arduino | [Diseñar la interfaz TMP36–ADC](semanas/06/ejercicios-l4.qmd#tutor-tmp36-adc-l4) |
+
+## Consignas de la Semana 7 {#consignas-semana-7}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Análisis de ganancia no inversora | [Deducir la ganancia no inversora](semanas/07/amplificar-e-invertir-voltajes.qmd#tutor-no-inversor-l5) |
+| Análisis de ganancia inversora | [Deducir la ganancia inversora](semanas/07/amplificar-e-invertir-voltajes.qmd#tutor-inversor-l5) |
+| Comparación de las dos topologías | [Elegir una configuración](semanas/07/amplificar-e-invertir-voltajes.qmd#tutor-elegir-topologia-l5) |
+| Mediciones de ganancia, fase y error, Práctica 4 | [Revisar la Práctica 4](semanas/07/practica-04-amplificadores.qmd#tutor-practica-4-amplificadores) |
+| Ejercicio 4: circuito inversor con red en T | [Analizar una red T](semanas/07/ejercicios-propuestos-l5.qmd#tutor-red-t-l5) |
+| Ejercicio 5: preamplificador de micrófono | [Diseñar un preamplificador](semanas/07/ejercicios-propuestos-l5.qmd#tutor-microfono-l5) |
+| Reconocimiento del entorno LabVIEW, clase 21 | [Identificar controles e indicadores](semanas/07/adquisicion-con-labview.qmd#tutor-labview-intro-s7) |
+
+## Consignas de la Semana 8 {#consignas-semana-8}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Reconocimiento del VI y flujo de datos | [Identificar estructura y conexiones](semanas/08/software-adquisicion-labview.qmd#tutor-flujo-labview-s8) |
+| Muestreo y espectro de una señal | [Revisar el muestreo y la FFT](semanas/08/software-adquisicion-labview.qmd#tutor-muestreo-espectro-s8) |
+| Media, dispersión e incertidumbre | [Interpretar una medida](semanas/08/resultado-de-medida.qmd#tutor-incertidumbre-s8) |
+| Práctica 5 · Eventos y estadísticas | [Revisar mi VI](semanas/08/practica-05-labview.qmd#tutor-practica5-s8) |
+| Ejercicios 1–5 de medio semestre | [Deducir ganancias y cascadas](semanas/08/ejercicios-medio-semestre.qmd#tutor-medio-ganancia-s8) |
+| Ejercicios 6–8, diferencial y termómetro | [Diseñar la cadena y comprobar relaciones](semanas/08/ejercicios-medio-semestre.qmd#tutor-medio-termometro-s8) |
+
+## Consignas de la Semana 9 {#consignas-semana-9}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Análisis del sumador por LCK | [Deducir el sumador inversor](semanas/09/sumar-y-amplificar-voltajes.qmd#tutor-deduccion-sumador-l6) |
+| Escala, offset y varias etapas | [Diseñar el acondicionamiento](semanas/09/sumar-y-amplificar-voltajes.qmd#tutor-offset-l6) |
+| Simulación de los ejemplos 1–3 | [Revisar las simulaciones](semanas/09/sumar-y-amplificar-voltajes.qmd#tutor-simulacion-sumador-l6) |
+| Práctica 6 · Cadena LM35–ADC | [Analizar la cadena de medida](semanas/09/practica-06-termometro-lm35.qmd#tutor-cadena-lm35-s9) |
+| Práctica 6 · Validación y alarmas | [Interpretar mis mediciones](semanas/09/practica-06-termometro-lm35.qmd#tutor-alarmas-lm35-s9) |
+| Ejercicio L6: promedio de 5 señales | [Diseñar el promediador](semanas/09/ejercicios-propuestos-l6.qmd#tutor-promediador-l6) |
+| Ejercicios L6: offset y amplificación | [Diseñar el acondicionamiento](semanas/09/ejercicios-propuestos-l6.qmd#tutor-diseno-offset-l6) |
+
+## Consignas de la Semana 10 {#consignas-semana-10}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Distinguir entradas diferenciales y comunes | [Identificar ambos modos](semanas/10/amplificador-diferencial.qmd#tutor-modos-ad-s10) |
+| Deducir salida, ganancias y CMRR del AD | [Analizar el circuito resistivo](semanas/10/amplificador-diferencial.qmd#tutor-deduccion-ad-s10) |
+| Comparar ejemplos L7 en simulación | [Revisar esquemas y medidas](semanas/10/amplificador-diferencial.qmd#tutor-simulacion-ad-s10) |
+| Calcular tolerancia para un CMRR deseado | [Diseñar el puente resistivo](semanas/10/ejercicios-l7-ad.qmd#tutor-ejercicios-cmrr-s10) |
+| Resolver los cinco ejercicios propuestos L7 | [Avanzar con pistas](semanas/10/ejercicios-l7-ad.qmd#tutor-ejercicios-ad-s10) |
+| Práctica 7, opción 2: diseño de LM35 y dos inversores | [Diseñar la cadena de señal](semanas/10/practica-07-termometro-opcion-2.qmd#tutor-practica7-diseno-s10) |
+| Práctica 7: análisis de voltajes y estadísticas | [Revisar mis mediciones](semanas/10/practica-07-termometro-opcion-2.qmd#tutor-practica7-medidas-s10) |
+| Examen U2 colaborativo | [Preparar el razonamiento](semanas/10/examen-unidad-2.qmd#tutor-examen-u2-s10) |
+
+## Consignas de la Semana 11 {#consignas-semana-11}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Deducir la ganancia del AI de tres operacionales | [Analizar las dos etapas](semanas/11/amplificador-instrumentacion.qmd#tutor-deduccion-ai-s11) |
+| Diseñar ganancia ajustable y verificar CMRR del AI | [Diseñar y simular un AI](semanas/11/amplificador-instrumentacion.qmd#tutor-diseno-ai-s11) |
+| Práctica 8: error de cero con ambas entradas a tierra | [Interpretar offset de salida](semanas/11/practica-08-amplificador-diferencial.qmd#tutor-p8-offset-s11) |
+| Práctica 8: GD, GC y CMRR frente a frecuencia | [Procesar mis resultados](semanas/11/practica-08-amplificador-diferencial.qmd#tutor-p8-cmrr-s11) |
+| Responder los once reactivos del Cuestionario L7 | [Revisar mis respuestas](semanas/11/cuestionario-l7.qmd#tutor-cuestionario-l7-s11) |
+
+## Consignas de la Semana 12 {#consignas-semana-12}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| L8: deducir el integrador ideal y considerar el voltaje inicial | [Obtener la ecuación del integrador](semanas/12/integrar-y-diferenciar-parte-1.qmd#tutor-l8-lck-integrador-s12) |
+| L8: analizar pendientes, saturación y ganancia del integrador práctico | [Analizar los ejemplos del integrador](semanas/12/integrar-y-diferenciar-parte-1.qmd#tutor-l8-saturacion-integrador-s12) |
+| L8: derivador ideal y práctico | [Deducir y comparar el derivador](semanas/12/integrar-y-diferenciar-parte-1.qmd#tutor-l8-derivador-s12) |
+| L8: comparación de formas de onda y limitaciones | [Comparar ambas funciones](semanas/12/integrar-y-diferenciar-parte-1.qmd#tutor-l8-comparacion-s12) |
+| Simulaciones: ejemplos del integrador | [Revisar mi simulación del integrador](semanas/12/simulaciones-ejemplos-l8.qmd#tutor-l8-sim-integrador-s12) |
+| Simulaciones: ejemplos del derivador | [Revisar mi simulación del derivador](semanas/12/simulaciones-ejemplos-l8.qmd#tutor-l8-sim-derivador-s12) |
+| Práctica 9: diseñar el AD y la referencia | [Diseñar el acondicionamiento](semanas/12/practica-09-termometro-opcion-3.qmd#tutor-p9-diseno-s12) |
+| Práctica 9: resolución y cuantificación | [Distinguir resolución y exactitud](semanas/12/practica-09-termometro-opcion-3.qmd#tutor-p9-adc-s12) |
+| Práctica 9: adaptar el VI de LabVIEW | [Revisar el programa de adquisición](semanas/12/practica-09-termometro-opcion-3.qmd#tutor-p9-labview-s12) |
+| Práctica 9: interpretar datos y errores | [Revisar mis mediciones](semanas/12/practica-09-termometro-opcion-3.qmd#tutor-p9-mediciones-s12) |
+| Práctica 9: estructurar el informe | [Preparar el reporte técnico](semanas/12/practica-09-termometro-opcion-3.qmd#tutor-p9-informe-s12) |
+
+## Consignas de la Semana 13 {#consignas-semana-13}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Derivador inversor: hipótesis y deducción por LCK | [Deducir el derivador ideal](semanas/13/integrar-y-diferenciar-parte-2.qmd#tutor-l8p2-lck-s13) |
+| Derivador: entrada triangular y salida rectangular | [Interpretar el ejemplo 1](semanas/13/integrar-y-diferenciar-parte-2.qmd#tutor-l8p2-triangular-s13) |
+| Derivador práctico: frecuencia de transición y ganancia | [Comprobar el ejemplo 2](semanas/13/integrar-y-diferenciar-parte-2.qmd#tutor-l8p2-frecuencia-s13) |
+| Derivador: diagnóstico de discrepancias en Multisim | [Revisar mi simulación](semanas/13/integrar-y-diferenciar-parte-2.qmd#tutor-l8p2-multisim-s13) |
+| Práctica 10: circuitería, signos y ganancia diferencial | [Deducir el modelo del AI](semanas/13/practica-10-amplificador-instrumentacion.qmd#tutor-p10-modelo-s13) |
+| Práctica 10: error de cero con dos resistencias RG | [Interpretar el offset](semanas/13/practica-10-amplificador-instrumentacion.qmd#tutor-p10-offset-s13) |
+| Práctica 10: ganancia diferencial por RMS y frecuencia | [Validar las medidas de GD](semanas/13/practica-10-amplificador-instrumentacion.qmd#tutor-p10-gd-s13) |
+| Práctica 10: respuesta en modo común | [Calcular GC](semanas/13/practica-10-amplificador-instrumentacion.qmd#tutor-p10-gc-s13) |
+| Práctica 10: CMRR y desbalance resistivo | [Revisar CMRR](semanas/13/practica-10-amplificador-instrumentacion.qmd#tutor-p10-cmrr-s13) |
+| Práctica 10: reporte con tablas 1 a 8 | [Estructurar el informe](semanas/13/practica-10-amplificador-instrumentacion.qmd#tutor-p10-informe-s13) |
+| Lección 8, parte 2: evidencias de los ejemplos Multisim | [Revisar mi entrega](semanas/13/simulaciones-l8-parte-2.qmd#tutor-sim-l8p2-s13) |
+| Lectura de integrador/derivador NI | [Profundizar en el comportamiento](semanas/13/lecturas-integrador-derivador.qmd#tutor-l8p2-complemento-s13) |
+
+## Consignas de la Semana 14 {#consignas-semana-14}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Resumen manuscrito del video de Lección 9 | [Comprensión del video](semanas/14/introduccion-al-filtrado-analogico.qmd#tutor-l9-video-s14) |
+| Señal compuesta de 100 y 600 Hz | [Separar componentes espectrales](semanas/14/introduccion-al-filtrado-analogico.qmd#tutor-l9-espectro-s14) |
+| Función de transferencia y respuesta Bode | [Magnitud, dB y fase](semanas/14/introduccion-al-filtrado-analogico.qmd#tutor-l9-bode-s14) |
+| Filtro RC pasa-bajas | [Deducir H(s) pasa-bajas](semanas/14/introduccion-al-filtrado-analogico.qmd#tutor-l9-pb-s14) |
+| Filtro RC pasa-altas | [Deducir H(s) pasa-altas](semanas/14/introduccion-al-filtrado-analogico.qmd#tutor-l9-pa-s14) |
+| Aproximaciones Butterworth/Chebyshev/Bessel | [Elegir aproximación](semanas/14/introduccion-al-filtrado-analogico.qmd#tutor-l9-aproximaciones-s14) |
+| Práctica 11: cadena de señal | [Comprender T→Rx→Vd→Vo→D](semanas/14/practica-11-rtd-puente-ai.qmd#tutor-p11-cadena-s14) |
+| Práctica 11: modelos del TD5A | [Comparar modelos Rx(T)](semanas/14/practica-11-rtd-puente-ai.qmd#tutor-p11-td5a-s14) |
+| Práctica 11: puente de Wheatstone | [Equilibrar puente](semanas/14/practica-11-rtd-puente-ai.qmd#tutor-p11-puente-s14) |
+| Práctica 11: ganancia del AI | [Seleccionar RG y evitar saturación](semanas/14/practica-11-rtd-puente-ai.qmd#tutor-p11-ganancia-s14) |
+| Práctica 11: ecuación inversa | [Despejar Rx y T](semanas/14/practica-11-rtd-puente-ai.qmd#tutor-p11-inversion-s14) |
+| Práctica 11: medición física | [Diagnosticar el montaje](semanas/14/practica-11-rtd-puente-ai.qmd#tutor-p11-laboratorio-s14) |
+| Práctica 11: estadística y reporte | [Revisar media y dispersión](semanas/14/practica-11-rtd-puente-ai.qmd#tutor-p11-reporte-s14) |
+| Experimento RC pasa-bajas | [Interpretar respuestas de Multisim](semanas/14/experimentos-filtros-l9.qmd#tutor-l9-exp-pb-s14) |
+| Experimento RC pasa-altas | [Comparar filtros](semanas/14/experimentos-filtros-l9.qmd#tutor-l9-exp-pa-s14) |
+| Reporte de experimentos L9 | [Contrastar teoría y evidencias](semanas/14/experimentos-filtros-l9.qmd#tutor-l9-reporte-s14) |
+| Cuestionario L9: preguntas 1–20 | [Examinar conceptos](semanas/14/cuestionario-l9.qmd#tutor-l9-cuestionario-s14) |
+| Cuestionario L9: pasa-bajas de 1 kHz | [Resolver el diseño 21](semanas/14/cuestionario-l9.qmd#tutor-l9-diseno-pb-s14) |
+| Cuestionario L9: pasa-altas de 100 Hz | [Resolver el diseño 22](semanas/14/cuestionario-l9.qmd#tutor-l9-diseno-pa-s14) |
+
+## Consignas de la Semana 15 {#consignas-semana-15}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Red RC con seguidor de voltaje | [Deducir H(s) y el polo](semanas/15/filtros-pasa-bajas-primer-orden.qmd#tutor-l10-rc-seguidor-s15) |
+| Filtro activo no inversor | [Relacionar la red RC y la ganancia](semanas/15/filtros-pasa-bajas-primer-orden.qmd#tutor-l10-no-inversor-s15) |
+| Filtro inversor con RC en realimentación | [Deducir magnitud y fase](semanas/15/filtros-pasa-bajas-primer-orden.qmd#tutor-l10-inversor-s15) |
+| Prototipo Butterworth de primer orden | [Escalar frecuencia e impedancia](semanas/15/filtros-pasa-bajas-primer-orden.qmd#tutor-l10-escalamiento-s15) |
+| Simulación de filtros activos | [Interpretar Bode y frecuencia de corte](semanas/15/filtros-pasa-bajas-primer-orden.qmd#tutor-l10-simulacion-s15) |
+| Ejercicios L10 originales | [Diseñar y comparar cálculos](semanas/15/ejercicios-l10-primer-orden.qmd#tutor-l10-ejercicios-s15) |
+
+## Consignas de la Semana 16 {#consignas-semana-16}
+
+| Si está trabajando en… | Abra la consigna |
+|:--|:--|
+| Modelo de segundo orden | [Interpretar K, Q y f0](semanas/15/filtros-pasa-bajas-segundo-orden.qmd#tutor-l10-modelo-s16) |
+| Sallen–Key de ganancia unitaria | [Deducir la transferencia](semanas/15/filtros-pasa-bajas-segundo-orden.qmd#tutor-l10-sk-unidad-s16) |
+| Sallen–Key con ganancia | [Analizar nodos y efecto de K](semanas/15/filtros-pasa-bajas-segundo-orden.qmd#tutor-l10-sk-ganancia-s16) |
+| Butterworth de segundo orden | [Diseñar por prototipo normalizado](semanas/15/filtros-pasa-bajas-segundo-orden.qmd#tutor-l10-diseno-butterworth-s16) |
+| Factor de calidad y transitorios | [Relacionar Q con amortiguamiento](semanas/15/filtros-pasa-bajas-segundo-orden.qmd#tutor-l10-q-s16) |
+| Actividad 3 Bessel 150 Hz | [Revisar diseño y normalización](semanas/16/actividad-3-sallen-key-bessel.qmd#tutor-actividad3-bessel-s16) |
+| Informe de la Actividad 3 | [Revisar el reporte y video](semanas/16/actividad-3-sallen-key-bessel.qmd#tutor-actividad3-informe-s16) |
+| Examen U3 | [Preparación razonada](semanas/16/examen-u3.qmd#tutor-examen-u3-s16) |
+
+## Revisar otro ejercicio
+
+::: {.tutor-box}
+::: {.tutor-texto}
+Actúe como tutor de Electrónica II y tráteme de usted. Pídame el enunciado, el esquema y el paso que ya intenté. Revise conmigo una decisión a la vez, usando una pregunta o una pista breve. Espere mi respuesta antes de continuar y reserve la solución para después de que yo haya justificado el procedimiento.
+
+Cuando le comparta datos, distinga los valores calculados, los simulados y los medidos. Pídame las unidades o condiciones que falten y use solo las mediciones que yo le proporcione. Para cerrar, pídame que explique la corrección que haría y cómo podría comprobarla con el circuito.
+:::
+
+::: {.tutor-acciones}
+[Abrir ChatGPT](https://chatgpt.com/){.course-button target="_blank" rel="noopener"}
+:::
+:::
+
+Si utiliza el tutor en un informe, describa en sus propias palabras qué revisó con la IA y qué comprobó con el cálculo, la simulación o la medición. Cite las fuentes técnicas que haya consultado.

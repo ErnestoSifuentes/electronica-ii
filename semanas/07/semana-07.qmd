@@ -1,0 +1,39 @@
+# Semana 07 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-07}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 19 | 120 min | [Lección 5 · Amplificar e invertir voltajes](amplificar-e-invertir-voltajes.qmd). Analice las configuraciones inversora y no inversora; entregue el resumen del video y simule los ejemplos en Multisim. |
+| 20 | 120 min | [Práctica 4 · Amplificadores inversor y no inversor](practica-04-amplificadores.qmd). Monte los circuitos, mida las ganancias y compare con el modelo teórico. Entregue el reporte de la Práctica 3. |
+| 21 | 60 min | [Introducción a LabVIEW](adquisicion-con-labview.qmd) para adquisición y procesamiento de señales. Entregue las simulaciones de la Lección 5 y el examen de la Unidad I. |
+
+## Entregas {#entregas}
+
+| Entrega | Evidencia |
+|:--|:--|
+| Clase 19, Semana 7 | Resumen manuscrito del [video de la Lección 5](https://www.youtube.com/watch?v=N_pxayWx7eg){target="_blank" rel="noopener"}; [consigna completa](amplificar-e-invertir-voltajes.qmd#video-l5). |
+| Clase 20, Semana 7 | Informe de la [Práctica 3 · Seguidor de voltaje](../06/practica-03-seguidor.qmd#informe-practica-3). |
+| Clase 21, Semana 7 | [Simulaciones de la Lección 5](amplificar-e-invertir-voltajes.qmd#simulacion-l5) y examen de la Unidad I. |
+
+## Trabajo para la semana siguiente {#actividad-extraclase-7}
+
+| Entrega | Evidencia |
+|:--|:--|
+| [Clase 24, Semana 8](../08/semana-08.qmd) | Resuelva colaborativamente los [Ejercicios propuestos L5](ejercicios-propuestos-l5.qmd). Entregue un informe con desarrollo analítico, simulaciones y conclusiones por ejercicio. |
+
+## Recursos de la semana {#recursos-para-la-semana-7}
+
+La introducción de la clase 21 continúa con la [presentación original de adquisición y procesamiento con LabVIEW](../08/software-adquisicion-labview.qmd), integrada con los materiales entregados para la Semana 8.
+
+**Materiales ampliados y actividades de apoyo de esta semana:**
+
+- [Guía desarrollada de la Práctica 4 · Inversor y no inversor](practica-04-amplificadores.qmd)
+- [Ejercicios propuestos L5](ejercicios-propuestos-l5.qmd)
+- [Introducción a LabVIEW · Clase 21](adquisicion-con-labview.qmd)
+
+::: {.course-actions}
+[Ver video L5](https://www.youtube.com/watch?v=N_pxayWx7eg){.course-button .course-button-primary target="_blank" rel="noopener"}
+[Consultar la planificación original (PDF)](../../recursos/semana-07/planificacion.pdf){.course-button}
+[Presentación de la Lección 5 (PDF)](../../recursos/semana-07/presentacion-leccion.pdf){.course-button}
+:::

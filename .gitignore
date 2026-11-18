@@ -1,0 +1,11 @@
+# Archivos temporales de Quarto y Python
+.quarto/
+_freeze/
+_publicar/
+__pycache__/
+*.py[cod]
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IMPORTANTE: _book/ SÍ debe subirse; es el HTML listo para publicar.

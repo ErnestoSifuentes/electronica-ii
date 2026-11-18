@@ -1,0 +1,41 @@
+# Semana 14 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-14}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| **40** | **120 min** | **[Lección 9 · Introducción al filtrado analógico de señales](introduccion-al-filtrado-analogico.qmd)**: espectro de una señal, respuesta en magnitud y fase, pasa-bajas y pasa-altas RC, tipos de aproximación. Entregar el **[resumen manuscrito del video L9](introduccion-al-filtrado-analogico.qmd#video-l9-s14)** asignado en la semana 13. Comenzar los [experimentos y simulaciones de la Lección 9](experimentos-filtros-l9.qmd). |
+| **41** | **120 min** | **[Práctica 11 · Termómetro TD5A + puente de Wheatstone + AI + myDAQ](practica-11-rtd-puente-ai.qmd)**. Entregar el **diseño teórico de la práctica 11** y el **reporte de la Práctica 10**; desarrollar el montaje y la programación LabVIEW. |
+| **42** | **60 min** | Continuar la [Práctica 11](practica-11-rtd-puente-ai.qmd); presentar el **reporte de los experimentos L9** y resolver el [Cuestionario L9](cuestionario-l9.qmd). Su **entrega está programada para la clase 3 de la semana 15 (clase 45)**. |
+
+## Entregas {#entregas-semana-14}
+
+| Cuándo | Evidencia solicitada |
+|:--|:--|
+| **Clase 40** | Resumen **elaborado a mano** del [video de la Lección 9](https://www.youtube.com/watch?v=WGq5t4VUoQQ){target="_blank" rel="noopener"}, asignado en el trabajo para la semana siguiente de la planificación de semana 13. |
+| **Clase 41** | Diseño teórico de la **[Práctica 11](practica-11-rtd-puente-ai.qmd)** y **reporte de la [Práctica 10](../13/practica-10-amplificador-instrumentacion.qmd)**. |
+| **Clase 42** | Reporte de **[experimentos de la Lección 9](experimentos-filtros-l9.qmd)**, incluyendo las pruebas del pasa-bajas y pasa-altas; iniciar respuesta del cuestionario. |
+| **Clase 45 · semana 15** | Entrega del **[Cuestionario L9](cuestionario-l9.qmd)** (22 reactivos), de acuerdo con la planificación de la semana 14. |
+
+## Trabajo para la semana siguiente {#siguiente-semana-14}
+
+1. Conservar registros de **$V_o$, $V_d$, $R_x$ y temperatura** de la Práctica 11, junto con la media y desviación estándar de 20 lecturas por condición; no utilizar valores simulados como mediciones.
+2. Completar el **Cuestionario L9** para su entrega en la clase 45. Las actividades de las semanas 15 y 16 podrán ajustarse cuando se disponga de sus planificaciones definitivas.
+3. Preparar una comparación de la respuesta en frecuencia de filtros RC de primer orden y conservar los archivos de Multisim/LabVIEW.
+
+## Recursos de la semana {#recursos-semana-14}
+
+**Materiales ampliados y actividades de apoyo de esta semana:**
+
+- [Guía desarrollada de la Práctica 11 · Termómetro TD5A](practica-11-rtd-puente-ai.qmd)
+- [Experimentos L9 · Filtros RC y LabVIEW](experimentos-filtros-l9.qmd)
+- [Cuestionario de la Lección 9](cuestionario-l9.qmd)
+
+::: {.course-actions}
+[Planificación original (PDF)](../../recursos/semana-14/planificacion-semana-14.pdf){.course-button .course-button-primary}
+[Video L9 y resumen](introduccion-al-filtrado-analogico.qmd#video-l9-s14){.course-button}
+[Presentación de la Lección 9 (PDF)](../../recursos/semana-14/presentacion-leccion-09.pdf){.course-button}
+[Práctica 11 (PDF)](../../recursos/semana-14/practica-11-rtd-puente-ai.pdf){.course-button}
+[Experimentos de filtros](experimentos-filtros-l9.qmd){.course-button}
+[Cuestionario L9](cuestionario-l9.qmd){.course-button}
+:::

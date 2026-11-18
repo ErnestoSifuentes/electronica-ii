@@ -1,0 +1,42 @@
+# Semana 13 {.unnumbered}
+
+## Lecciones y actividades {#agenda-semana-13}
+
+| Clase | Duración | Trabajo en clase |
+|:--|:--|:--|
+| 37 | 120 min | **[Lección 8, parte 2 · Integrar y diferenciar voltajes](integrar-y-diferenciar-parte-2.qmd)**: derivador inversor, análisis temporal y en frecuencia, problemas demostrativos. Entregar el **resumen manuscrito** del [video preparatorio asignado para esta clase](https://www.youtube.com/watch?v=aGGxoPQJmRg){target="_blank" rel="noopener"}, según la planificación de la semana 12, y comenzar las [simulaciones Multisim L8 (parte 2)](simulaciones-l8-parte-2.qmd). |
+| 38 | 120 min | **[Práctica 10 · Amplificador de instrumentación](practica-10-amplificador-instrumentacion.qmd)**: montaje de tres op-amp y siete resistencias, ganancia diferencial, ganancia común y CMRR. Entregar el reporte de la **[Práctica 9](../12/practica-09-termometro-opcion-3.qmd)**. |
+| 39 | 60 min | Continuar la **[Práctica 10](practica-10-amplificador-instrumentacion.qmd)**, revisar mediciones y entregar las **[simulaciones de los ejemplos de L8, parte 2](simulaciones-l8-parte-2.qmd)**. |
+
+## Entregas {#entregas-semana-13}
+
+| Cuándo | Evidencia solicitada |
+|:--|:--|
+| Clase 37 | Resumen **elaborado a mano** del video de la Lección 8, parte 2, asignado como preparación en la semana 12. [Ver video](https://www.youtube.com/watch?v=aGGxoPQJmRg){target="_blank" rel="noopener"} · [Instrucciones del resumen](integrar-y-diferenciar-parte-2.qmd#video-l8-parte-2). |
+| Clase 38 | **Reporte de la [Práctica 9 · LM35 y myDAQ, opción 3](../12/practica-09-termometro-opcion-3.qmd)**. |
+| Clase 39 | **[Simulaciones Multisim de los ejemplos de la Lección 8, parte 2](simulaciones-l8-parte-2.qmd)**. |
+
+**Práctica 10.** Su realización corresponde a las clases 38 y 39. La planificación semanal **no fija una fecha de entrega para su reporte**; conviene registrar evidencias de ambos días y atender la indicación del docente.
+
+## Trabajo para la semana siguiente {#siguiente-semana-13}
+
+1. Ver la [presentación en YouTube](https://www.youtube.com/watch?v=WGq5t4VUoQQ){target="_blank" rel="noopener"} y elaborar **a mano** un resumen de sus conceptos principales, con extensión proporcional al contenido. **Entrega: clase 1, semana 14 (clase 40)**.
+2. Realizar el **diseño teórico de la Práctica 11: Termómetro con sensor RTD, puente W y amplificador de instrumentación**. **Entrega: clase 2, semana 15 (clase 44)**, conforme a la planificación original de la semana 13. La guía de esa práctica todavía no forma parte de los materiales recibidos.
+3. Conservar los archivos `.ms14`, capturas de entrada/salida, cálculos de ganancia y tablas de la Práctica 10 para el informe correspondiente.
+
+## Recursos de la semana {#recursos-semana-13}
+
+**Materiales ampliados y actividades de apoyo de esta semana:**
+
+- [Guía desarrollada de la Práctica 10 · Amplificador de instrumentación](practica-10-amplificador-instrumentacion.qmd)
+- [Simulaciones de la Lección 8 (parte 2)](simulaciones-l8-parte-2.qmd)
+- [Lecturas complementarias · Integrador y derivador](lecturas-integrador-derivador.qmd)
+
+::: {.course-actions}
+[Planificación original (PDF)](../../recursos/semana-13/planificacion-semana-13.pdf){.course-button .course-button-primary}
+[Video y resumen L8, parte 2](integrar-y-diferenciar-parte-2.qmd#video-l8-parte-2){.course-button}
+[Presentación L8 (PDF)](../../recursos/semana-13/presentacion-leccion-08-parte2.pdf){.course-button}
+[Práctica 10 (PDF)](../../recursos/semana-13/practica-10-amplificador-instrumentacion.pdf){.course-button}
+[Ejemplos Multisim](simulaciones-l8-parte-2.qmd){.course-button}
+[Lecturas complementarias](lecturas-integrador-derivador.qmd){.course-button}
+:::

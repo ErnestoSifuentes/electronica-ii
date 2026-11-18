@@ -1,0 +1,20 @@
+# Lecciones {.unnumbered}
+
+Esta sección reúne **únicamente las lecciones** de Electrónica II. Para consultar prácticas, ejercicios, simulaciones, lecturas y materiales ampliados, abra **Recursos** en la página de la semana correspondiente. Los videos y las consignas de resumen se encuentran al comienzo de cada lección y en las agendas semanales.
+
+| Lección | Clases |
+|:--|:--|
+| [Lección inicial · Divisor de voltaje](semanas/01/divisor-de-voltaje.qmd) | 1 a 4 y 6 |
+| [Lección 1 · Introducción al amplificador operacional](semanas/02/introduccion-opamp.qmd) | 4 a 10 |
+| [Lección 2 · Comparar voltajes](semanas/04/comparador-de-voltaje.qmd) | 11 y 12 |
+| [Lección 3 · Retroalimentación negativa](semanas/05/retroalimentacion-negativa.qmd) | 13 a 15 |
+| [Lección 4 · Adaptar impedancias](semanas/06/adaptar-impedancias.qmd) | 16 y 17 |
+| [Lección 5 · Amplificar e invertir voltajes](semanas/07/amplificar-e-invertir-voltajes.qmd) | 19 y 20 |
+| [Lección 6 · Sumar y amplificar voltajes](semanas/09/sumar-y-amplificar-voltajes.qmd) | 25 |
+| [Lección 7 · Amplificador diferencial (parte 1)](semanas/10/amplificador-diferencial.qmd) | 28 |
+| [Lección 7 · Amplificador de instrumentación (parte 2)](semanas/11/amplificador-instrumentacion.qmd) | 31 |
+| [Lección 8 · Integrar y diferenciar voltajes (parte 1)](semanas/12/integrar-y-diferenciar-parte-1.qmd) | 34 |
+| [Lección 8 · Integrar y diferenciar voltajes (parte 2)](semanas/13/integrar-y-diferenciar-parte-2.qmd) | 37 |
+| [Lección 9 · Introducción al filtrado analógico](semanas/14/introduccion-al-filtrado-analogico.qmd) | 40 |
+| [Lección 10 · Filtros activos pasa-bajas de primer orden](semanas/15/filtros-pasa-bajas-primer-orden.qmd) | 43 |
+| [Lección 10 · Filtros activos pasa-bajas de segundo orden](semanas/15/filtros-pasa-bajas-segundo-orden.qmd) | 44 y 47 |
