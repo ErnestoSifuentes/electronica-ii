@@ -307,3 +307,35 @@ body {
   overflow-x:auto;
   max-width:100%;
 }
+
+
+/* Portada académica del curso Electrónica II (sin cambios a capítulos). */
+.course-home {max-width: 930px; margin: .25rem auto 2.5rem;}
+.course-home-intro {margin: 0 0 1.4rem;}
+.course-home-kicker {margin: 0 0 .42rem; font-size: .76rem; font-weight: 750; letter-spacing: .105em; text-transform: uppercase; color: var(--course-accent, #225c59);}
+#quarto-document-content .course-home h1 {margin: 0 0 .45rem; font-family: var(--course-display, Georgia, serif); color: var(--course-ink,#202f37); font-size: clamp(2.55rem,5vw,3.75rem); line-height: 1.08; letter-spacing: -.025em;}
+.course-home-subtitle {margin: 0 0 .75rem; color: var(--course-ink,#202f37); font-size: clamp(1.17rem,2vw,1.5rem); font-weight: 560; line-height: 1.32;}
+.course-home-author {margin: 0 0 1.2rem; color: var(--course-muted,#526168); font-size: .92rem;}
+.course-home-lead {max-width: 81ch; margin: 0 0 1.2rem; font-size: 1.06rem; line-height: 1.66;}
+.course-home-actions {display: flex; flex-wrap: wrap; gap: .56rem; margin: 1rem 0 1.4rem;}
+.course-home-actions .course-button {min-height: 2.6rem; font-size: .95rem;}
+.course-home-image {margin: 0 0 2.3rem;}
+.course-home-image img {display: block; width: 100%; height: auto; border-radius: .4rem; background: #123647; border: 1px solid #dce2df;}
+#quarto-document-content .course-home-image figcaption {margin: .55rem .15rem 0; font-size: .83rem; color: var(--course-muted,#526168); text-align: left;}
+.course-home-section {margin: 2rem 0 2.4rem;}
+#quarto-document-content .course-home-section h2 {margin: 0 0 .68rem; font-size: clamp(1.6rem,2.5vw,1.94rem); border-bottom: 1px solid var(--course-line,#dce2df); padding-bottom: .45rem;}
+.course-home-section > p {line-height: 1.63; max-width: 83ch;}
+.course-home-areas {display: grid;grid-template-columns: repeat(2,minmax(0,1fr)); gap: .7rem 1.7rem; margin-top: 1.1rem;}
+.course-home-areas > div {padding: .1rem 0 .6rem; border-bottom: 1px solid var(--course-line,#dce2df);}
+#quarto-document-content .course-home-areas h3 {margin: .25rem 0 .37rem; color: var(--course-ink,#202f37); font-size: 1.05rem;}
+.course-home-areas p {margin: 0; color: var(--course-muted,#526168); line-height: 1.55; font-size: .94rem;}
+#quarto-document-content .course-home-units {width: 100%; margin: 1.1rem 0 0; border-collapse: collapse;}
+#quarto-document-content .course-home-units th {background: #f5f7f5; font-weight: 700;}
+#quarto-document-content .course-home-units td:first-child {width: 92px; font-weight: 700;}
+.course-home-weeks {display: grid;grid-template-columns: repeat(4,minmax(0,1fr)); gap: .54rem; margin-top: 1rem;}
+.course-home-weeks a {display:flex;justify-content:space-between;align-items:center;gap:.55rem;padding:.74rem .82rem;border:1px solid var(--course-line,#dce2df);border-radius:.3rem;color:var(--course-ink,#202f37);background:#fff;text-decoration:none;font-size:.94rem;transition:border-color .15s,background .15s;}
+.course-home-weeks a strong {font-size:1.02rem;font-variant-numeric:tabular-nums;color:var(--course-accent,#225c59);}
+.course-home-weeks a:hover,.course-home-weeks a:focus-visible {background:#eff5f2;border-color:var(--course-accent,#225c59);text-decoration:none;outline-offset:2px;}
+.course-home-last {margin-bottom: 1rem;}
+@media (max-width:800px){.course-home-weeks{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media (max-width:590px){.course-home-areas{grid-template-columns:1fr;}.course-home-weeks{grid-template-columns:repeat(2,minmax(0,1fr));}.course-home-author span{display:none;}.course-home-actions .course-button{width:100%;}}

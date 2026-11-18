@@ -1,57 +1,30 @@
 ---
-toc: false
+title: "Electrónica II"
 sidebar-title: Inicio
+title-block-style: none
+toc: false
 ---
 
-# Inicio {.unnumbered .unlisted .inicio-etiqueta}
-
-::: {.course-intro}
-**Universidad Autónoma de Ciudad Juárez** · Ingeniería Eléctrica · IEC2704-96
-
-Apuntes para analizar, diseñar y experimentar con circuitos analógicos. El curso se organiza en 16 semanas. Cada semana reúne su agenda y las lecciones, ejercicios y prácticas correspondientes.
-
-::: {.course-actions}
-[Empezar la Semana 1](semanas/01/semana-01.qmd){.course-button .course-button-primary}
-[Ir a la Semana 2](semanas/02/semana-02.qmd){.course-button}
-[Ir a la Semana 3](semanas/03/semana-03.qmd){.course-button}
-[Ir a la Semana 4](semanas/04/semana-04.qmd){.course-button}
-[Ir a la Semana 5](semanas/05/semana-05.qmd){.course-button}
-[Ir a la Semana 6](semanas/06/semana-06.qmd){.course-button}
-[Ir a la Semana 7](semanas/07/semana-07.qmd){.course-button}
-[Ir a la Semana 8](semanas/08/semana-08.qmd){.course-button}
-[Ir a la Semana 9](semanas/09/semana-09.qmd){.course-button}
-[Ir a la Semana 10](semanas/10/semana-10.qmd){.course-button}
-[Ir a la Semana 11](semanas/11/semana-11.qmd){.course-button}
-[Ir a la Semana 12](semanas/12/semana-12.qmd){.course-button}
-[Ir a la Semana 13](semanas/13/semana-13.qmd){.course-button}
-[Ir a la Semana 14](semanas/14/semana-14.qmd){.course-button}
-[Ir a la Semana 15](semanas/15/semana-15.qmd){.course-button}
-[Ir a la Semana 16](semanas/16/semana-16.qmd){.course-button}
-[Ver el calendario](calendario.qmd){.course-button}
-[Abrir Tutor IA](tutor-ia.qmd){.course-button}
-:::
-:::
-
-## Primera semana
-
-::: {.featured-lesson}
-::: {.featured-lesson-copy}
-### [Lección inicial · Divisor de voltaje](semanas/01/divisor-de-voltaje.qmd)
-
-Calcule el voltaje de salida, simule el circuito en Multisim y compare los resultados con las mediciones en NI myDAQ. Use el efecto de carga para explicar por qué cambia el voltaje al conectar otro circuito.
-
-[Ir a los ejercicios](semanas/01/divisor-de-voltaje.qmd#ejercicios-propuestos) · [Abrir el Tutor IA](tutor-ia.qmd)
-:::
-
-![](recursos/semana-01/figuras/divisor-esquema.png){fig-alt="Divisor de voltaje con R1 entre la fuente y el nodo de salida y R2 entre la salida y tierra."}
-:::
-
-## Contenido del curso
-
-| Unidad | Temas |
-|:--|:--|
-| I | Fundamentos del amplificador operacional |
-| II | Circuitos con op-amp, parte I |
-| III | Circuitos con op-amp, parte II |
-
-[Consultar el encuadre y los criterios de evaluación](semanas/01/encuadre.qmd)
+<div class="course-home">
+<section class="course-home-intro" aria-labelledby="course-home-title">
+<p class="course-home-kicker">Curso universitario · IEC2704-96 · Ingeniería Eléctrica</p>
+<h1 id="course-home-title">Electrónica II</h1>
+<p class="course-home-subtitle">Circuitos electrónicos analógicos con amplificadores operacionales</p>
+<p class="course-home-author"><strong>Ernesto Sifuentes de la Hoya</strong><span aria-hidden="true"> · </span>Universidad Autónoma de Ciudad Juárez</p>
+<p class="course-home-lead">Este curso reúne fundamentos teóricos, modelos matemáticos, ejemplos resueltos, ejercicios, simulaciones y prácticas de laboratorio para estudiar y aplicar los circuitos electrónicos analógicos. A lo largo de <strong>16 semanas</strong>, el estudiante avanza de la comprensión de los principios del amplificador operacional al análisis, diseño y comprobación experimental de sus aplicaciones.</p>
+<div class="course-home-actions"><a class="course-button course-button-primary" href="semanas/01/semana-01.html">Comenzar la Semana 1</a><a class="course-button" href="lecciones.html">Explorar las lecciones</a><a class="course-button" href="calendario.html">Consultar el calendario</a></div>
+</section>
+<figure class="course-home-image"><img src="recursos/portada/curso-electronica-ii.svg" alt="Ilustración técnica de circuitos con amplificadores operacionales, señales de osciloscopio, respuesta en frecuencia y prototipos electrónicos." width="1200" height="430" loading="eager" decoding="async"/><figcaption>De los modelos de circuito a la simulación y a la comprobación en el laboratorio.</figcaption></figure>
+<section class="course-home-section" aria-labelledby="course-home-metodo"><h2 id="course-home-metodo">Aprender mediante el análisis y la experimentación</h2>
+<p>El material se ha organizado para relacionar los conceptos con resultados observables: primero se estudia el circuito y se formulan sus ecuaciones; después se predice su comportamiento, se simula y se contrasta con mediciones o actividades prácticas.</p>
+<div class="course-home-areas">
+<div><h3>Fundamentos y modelos</h3><p>Explicaciones, esquemas y ecuaciones que permiten interpretar el comportamiento de los circuitos.</p></div>
+<div><h3>Ejemplos y ejercicios</h3><p>Problemas desarrollados y actividades para practicar el análisis y el diseño.</p></div>
+<div><h3>Simulación y laboratorio</h3><p>Guías, circuitos y recursos para comparar los resultados teóricos con los experimentales.</p></div>
+<div><h3>Estudio asistido</h3><p>Videos, materiales complementarios y consignas del Tutor IA para reforzar el razonamiento.</p></div>
+</div></section>
+<section class="course-home-section" aria-labelledby="course-home-unidades"><h2 id="course-home-unidades">Organización del curso</h2><p>El recorrido académico comprende tres unidades y se distribuye a lo largo de 16 semanas.</p>
+<table class="course-home-units"><thead><tr><th scope="col">Unidad</th><th scope="col">Campo de estudio</th></tr></thead><tbody><tr><td>I</td><td>Fundamentos del amplificador operacional</td></tr><tr><td>II</td><td>Circuitos con amplificadores operacionales, parte I</td></tr><tr><td>III</td><td>Circuitos con amplificadores operacionales, parte II</td></tr></tbody></table></section>
+<section class="course-home-section" aria-labelledby="course-home-semanas"><h2 id="course-home-semanas">Acceso por semanas</h2><p>Seleccione la semana correspondiente para consultar las lecciones, actividades, entregas y recursos de apoyo.</p><nav class="course-home-weeks" aria-label="Acceso directo a las 16 semanas"><a href="semanas/01/semana-01.html"><span>Semana</span><strong>01</strong></a><a href="semanas/02/semana-02.html"><span>Semana</span><strong>02</strong></a><a href="semanas/03/semana-03.html"><span>Semana</span><strong>03</strong></a><a href="semanas/04/semana-04.html"><span>Semana</span><strong>04</strong></a><a href="semanas/05/semana-05.html"><span>Semana</span><strong>05</strong></a><a href="semanas/06/semana-06.html"><span>Semana</span><strong>06</strong></a><a href="semanas/07/semana-07.html"><span>Semana</span><strong>07</strong></a><a href="semanas/08/semana-08.html"><span>Semana</span><strong>08</strong></a><a href="semanas/09/semana-09.html"><span>Semana</span><strong>09</strong></a><a href="semanas/10/semana-10.html"><span>Semana</span><strong>10</strong></a><a href="semanas/11/semana-11.html"><span>Semana</span><strong>11</strong></a><a href="semanas/12/semana-12.html"><span>Semana</span><strong>12</strong></a><a href="semanas/13/semana-13.html"><span>Semana</span><strong>13</strong></a><a href="semanas/14/semana-14.html"><span>Semana</span><strong>14</strong></a><a href="semanas/15/semana-15.html"><span>Semana</span><strong>15</strong></a><a href="semanas/16/semana-16.html"><span>Semana</span><strong>16</strong></a></nav></section>
+<section class="course-home-section course-home-last" aria-labelledby="course-home-tutor"><h2 id="course-home-tutor">Tutor IA y orientación de estudio</h2><p>El <a href="tutor-ia.html">Tutor IA</a> ofrece consignas que pueden copiarse en ChatGPT para explorar conceptos, revisar procedimientos y comprobar la comprensión. Es un apoyo al estudio, no un sustituto de los cálculos, las simulaciones ni las mediciones del estudiante.</p><p>Se recomienda seguir la secuencia semanal; para consultas específicas, puede acceder directamente al <a href="lecciones.html">índice de lecciones</a>.</p></section>
+</div>
