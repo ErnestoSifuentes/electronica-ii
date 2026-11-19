@@ -42,12 +42,6 @@ El libro incorpora un apartado de **Tutor IA** con consignas de estudio orientad
 
 **[Iniciar con la Semana 1](https://ernestosifuentes.github.io/electronica-ii/semanas/01/semana-01.html)**
 
-## Sobre el proyecto
-
-El material se edita con **Quarto** y se publica como un libro HTML mediante **GitHub Pages**. Este repositorio conserva las fuentes editables, la versión web y los recursos asociados a las actividades del curso. Las actualizaciones pueden incorporarse sin cambiar la dirección pública del libro.
-
-Las instrucciones técnicas para mantener la publicación se encuentran en [PUBLICAR_EN_GITHUB_PAGES.md](PUBLICAR_EN_GITHUB_PAGES.md).
-
 ## Derechos de autor y licencias
 
 **© 2026 Ernesto Sifuentes de la Hoya.**
